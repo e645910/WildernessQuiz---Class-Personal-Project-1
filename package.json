@@ -12,5 +12,13 @@
     "start": "node server.js"
   },
   "author": "Rick Wightman",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e645910/WildernessQuiz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e645910/WildernessQuiz/issues"
+  },
+  "homepage": "https://github.com/e645910/WildernessQuiz"
 }
