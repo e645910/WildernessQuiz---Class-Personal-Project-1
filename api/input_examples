@@ -1,0 +1,18 @@
+api/register: example
+{
+	"name": "Rick Wightman",
+	"email": "rick.wigtman1@gmail.com",
+	"password": "howdy",
+	"gender": "male",
+	"age": "100",
+	"bio": "seafood industry, USAF, oil field fracker, semi-truck driver, avonics electronic tech, reliablity enigneer, international marketing, CS marketing, database analsyst, aerospace CS manager, machine shop production superintendent, hopful web developer, former ultra runner, adventure racer and tri-athlete, scuba diver, ski bum, pilot, father & husband of 27 years "
+}
+
+Questions/answers example
+{
+	"question": "The first thing you should do when fitting a backpack is:",
+	"answer": "Load the pack with some weight.",
+	"badAnswer1": "Adjust the shoulder straps.",
+	"badAnswer2": "Buy a matching outfit.",
+	"badAnswer3": "Fasten and tighten the hipbelt."
+}

@@ -1,0 +1,54 @@
+<section id="todos">
+	<div class="container">
+		<div class="text-center">
+			<h1>TODAY'S TODOS:</h1>
+			<hr class="star-primary">
+		</div>
+		<div class="row text-center">
+			<div class="col-md-5 text-left"></div>
+			<div class="col-md-5 text-left">
+				<ul class="list-unstyled">
+					<li class="todo" ng-repeat="todo in todos"><input type="checkbox" ng-model="todo.completed" ng-click="saveTodo(todo)" /> {{todo.title}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<input ng-model="newTodo" /> <button class="btn btn-xs" ng-click="createTodo()">Create</button>
+		</div>
+	</div>
+</section>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+	        <div class="container">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header page-scroll">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="/#/">My-Todos</a>
+	            </div>
+
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li class="hidden active">
+	                        <a href="#page-top"></a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a href="/#/todos">Todos</a>
+	                    </li>
+	                    <li class="page-scroll">
+	                        <a href="/#/profile">My Profile</a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container-fluid -->
+	    </nav>
+		<div ng-app="MyTodos">
+			<div ng-view></div>
+		</div>
