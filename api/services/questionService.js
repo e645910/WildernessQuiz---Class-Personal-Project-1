@@ -1,9 +1,9 @@
-var QuizModel = require('../models/quizModel');
+var QuestionModel = require('../models/questionModel');
 var q = require('q');
 
-module.exports.save = function(quiz){
+module.exports.save = function(question){
 	var dfd = q.defer();
-	QuizModel(quiz).save(function(err, res){
+	QuestionModel(question).save(function(err, res){
 		if(!err) {
 			dfd.resolve(res);
 		}else {
@@ -15,7 +15,7 @@ module.exports.save = function(quiz){
 
 module.exports.find = function(query){
 	var dfd = q.defer();
-	QuizModel.find(query, function(err, results){
+	QuestionModel.findOne(query, function(err, results){
 		if(!err){
 			dfd.resolve(results)
 		}else {

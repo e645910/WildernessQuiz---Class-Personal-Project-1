@@ -2,27 +2,29 @@ angular.module('wildernessQuiz', ['ngRoute'])
 .config(function($routeProvider){
 	$routeProvider
 		.when('/', {
-			templateUrl: '/views/login/login-view.html',
-			controller: 'authCtrl',
+			templateUrl: 'views/login-view.html',
+			controller: 'authCtrl'
+		 })
+		.when('/profile', {
+			templateUrl: 'views/profile-view.html',
+			controller: 'profileCtrl'
 		})
-	// .when('/profile', {
-	// 	templateUrl: '/views/profile-view.html',
-	// 	controller: 'profileCtrl',
-	// 	resolve: {
-	// 		profile: function(profileCtrl){
-	// 			return profileCtrl.getProfile();
-	// 		}	
-	// 	}	
-	.when('/question', {
-		templateUrl: '/views/quiz/question-view.html',
-		controller: 'questionCtrl'
-	 	// resolve: {	
-	// 	// 	mainQuiz: function(mainQuizService) {
-	// 	// 		return mainQuizService.getMainQuiz();
-	// 	// 	}
-	})
-	.otherwise({
-		redirectTo: '/'});
+		.when('/nav',{
+			templateUrl: 'views/navBar-view.html'
+		})
+		.when('/question', {
+			templateUrl: 'views/question-view.html',
+			controller: 'questCtrl'
+		})
+		.when('/quiz', {
+			templateUrl: 'views/quiz-view.html',
+			controller: 'quizCtrl',
+			resolve: {
+				quiz: function(quizService) {
+				return quizService.getQuiz();
+				}
+			}
+		})
+		.otherwise({
+			redirectTo: '/'});
 });
-	
-

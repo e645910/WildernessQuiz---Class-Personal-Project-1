@@ -1,0 +1,38 @@
+
+<div class="body4"></div>
+<div class="grad"></div>
+<div class="header">
+
+    <div>Wilderness Quiz Site:  <br><span>Test Your Backpacking Knowledge</span></div>
+	<div>How Prepared Are You for the Wild?</div>
+</div>
+
+
+     <div class="q"><strong>Q:</strong><input type="text" class="output" ng-model="test.question"/></div><br><br>
+    <ol>
+    	<li><input type="text" ng-model="test.answer"/></li><br><br>
+      	<li><input type="text" ng-model="test.badAnswer1"/></li><br><br>
+      	<li><input type="text" ng-model="test.badAnswer2"/></li><br><br>
+      	<li><input type="text" ng-model="test.badAnswer3"/></li><br><br>
+	</ol>
+	<button ng-click="nextQuestion()">Next</button>
+
+	<div class="sqs" >
+		 	<pre>
+				{{survey | json}}
+			</pre>
+
+			<survey-checkbox questions="quizQuestions" ng-model="test" ng-init="qizQuestions = [
+                { 'value':'value1', 'name': 'The unit' }, 
+                { 'value': 'value2', 'name': 'Patient Threw Up'}, 
+                { 'value':'value3', 'name': 'Unsafe for children' }, 
+                { 'value':'value4', 'name': 'Actively dying, reached life goal'}]">
+			</survey-checkbox>
+
+		 	<survey-checkbox ng-model="test" ng-init="quizQuestions = [
+					{ 'value':'value1', 'name': 'The unit' }, 
+					{ 'value': 'value2', 'name': 'Patient Threw Up'}, 
+					{ 'value':'value3', 'name': 'Unsafe for children' }, 
+					{ 'value':'value4', 'name': 'Actively dying, reached life goal'}]">
+				</survey-checkbox>
+		 </div>

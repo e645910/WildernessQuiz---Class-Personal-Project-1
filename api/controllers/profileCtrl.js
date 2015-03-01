@@ -1,7 +1,7 @@
-var QuizServices = require('../services/quizService');
+var profileService = require('../services/profileService');
 
 module.exports.post = function(req, res){
-	QuizServices.save(req.body)
+	profileService.save(req.body)
 		.then(function(response){
 			res.status(200).json(response);
 		}, function(err){
@@ -9,7 +9,7 @@ module.exports.post = function(req, res){
 		})
 };
 module.exports.get =function(req, res){
-	QuizServices.find({})
+	profileService.find({})
 	.then(function(response){
 		if(response.length){
 			res.status(200).json(response);

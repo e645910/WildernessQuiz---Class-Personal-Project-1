@@ -1,21 +1,19 @@
 var express = require('express');
+var app = express();
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/wildernessQuiz');
 
-var User = require('./api/models/userModel');
-var UserController = require('./api/controllers/userCtrl');
-var quizController = require('./api/controllers/quizCtrl');
-var app = express();
+// Routing =======================
+var User = require('./api/models/profileModel');
+var AuthCtrl = require('./api/controllers/authCtrl');
+var ProfileCtrl = require('./api/controllers/profileCtrl');
+var QuestionCtrl = require('./api/controllers/questionCtrl');
 
-mongoose.connect('mongodb://localhost/wildernessQuiz', function (error) {
-    if (error) {
-        console.log(error);
-    }
-});
-
+// Middleware =========================
 passport.use(new localStrategy({
 	//require the defualt username to be the person's email address 
 	usernameField: 'email',
@@ -49,41 +47,44 @@ passport.deserializeUser(function(obj, done){
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
-
 app.use(session({secret: 'WILDSEEKRIT', 
 	saveUninitialized: true,
     resave: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Authentication ========================
 app.post('/api/auth', passport.authenticate('local'), function(req, res){
 	//if auth was successful, this will happen
 	return res.status(200).end();
 });
-
-app.post('/api/register', function(req, res){
-	//creates a new user
+app.post('/api/register', function(req, res) {
+	//create a user
 	var newUser = new User(req.body);
-	newUser.save(function(err, user){
-		if(err) {
-			return res.status(500).json(err);
+	newUser.save(function(err, user) {
+		if (err) {
+			return res.status(500).end();
 		}
 		return res.json(user);
 	});
 });
-app.post('/api/quiz', quizController.post);
-app.get('/api/quiz', quizController.get);
 
 
-// var isAuthed = function(req, res){
-// 	if(!req.isAuthenticated()){
-// 		return res.status(403).end();
-// 	}
-// 	return next();
-// };
- 
-app.get('/api/profile', quizController.get);
-app.post('/api/post', quizController.post);
+// --------- doesn't appear to be working
+var isAuthed = function(req, res, next) {
+	if (!req.isAuthenticated()) {
+		return res.status(403).end();
+	}
+	return next();
+};
+
+// Endpoints =============================== 
+app.get('/api/auth', AuthCtrl.profile);
+app.get('/api/getProfile', ProfileCtrl.get);
+app.post('/api/postProfile', ProfileCtrl.post);
+
+app.post('/api/postQuestion', QuestionCtrl.post);
+app.get('/api/getQuestion', QuestionCtrl.get);
 
 
 app.listen(8000);

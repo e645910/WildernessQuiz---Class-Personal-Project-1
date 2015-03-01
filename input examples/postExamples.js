@@ -1,6 +1,6 @@
 api/register: example
 {
-	"name": "Rick Wightman",
+	"fullName": "Rick Wightman",
 	"email": "rick.wigtman1@gmail.com",
 	"password": "howdy",
 	"gender": "male",
@@ -16,3 +16,12 @@ Questions/answers example
 	"badAnswer2": "Buy a matching outfit.",
 	"badAnswer3": "Fasten and tighten the hipbelt."
 }
+{
+	"question": "What’s the most important thing to do when breaking in a new pair of hiking boots:",
+	"answer": "Treat the leather.",
+	"badAnswer1": "Run a steep and rocky trail as fast as you can.",
+	"badAnswer2": "Invest in quality insoles and socks.",
+	"badAnswer3": "Customize the boot to better fit your foot."
+}
+
+api/auth

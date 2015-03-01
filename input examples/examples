@@ -1,4 +1,12 @@
-<section id="profile">
+question: $scope.question,
+    answer: $scope.answer,
+      badAnswer1: $scope.badAnswer1,
+      badAnswer2: $scope.badAnswer2,
+      badAnswer3: $scope.badAnswer3
+
+
+
+  <section id="profile">
 	<div class="container">
 		<div class="text-center">
 			<h1>MY PROFILE:</h1>
@@ -25,3 +33,24 @@
 		</div>
 	</div>
 </section>
+
+angular.module('MyTodos').controller('ProfileController', function($scope, profile) {
+	$scope.profile = profile;
+});
+
+angular.module('MyTodos').service('ProfileService', function($q, $http) {
+	this.getProfile = function() {
+		var deferred = $q.defer();
+		$http({
+			method: 'GET',
+			url: '/api/profile'
+		}).then(function(response) {
+			deferred.resolve(response.data);
+		});
+		return deferred.promise;
+	};
+});
+
+app.get('/api/profile', isAuthed, function(req, res) {
+	return req.json(req.user);
+});

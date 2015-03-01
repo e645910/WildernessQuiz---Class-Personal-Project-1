@@ -1,26 +1,24 @@
 angular.module('wildernessQuiz')
-.questionService('questionService', function($q, $http) {
-  this.create = function(){
+.service('questionService', function($q, $http) {
+  this.createQuestion = function(){
     var dfd = $q.defer();
       $http({
         method: 'POST',
-        url: '/api/post'
-        // data: {
-        // }
+        url: '/api/question'
       }).success(function(response){
             console.log(response)
             dfd.resolve(response);
         }).catch(function(err){
-            console.log("error logging in", err);
+            console.log("error Posting question", err);
             dfd.reject(err);
         });
         return dfd.promise;
     };
-  this.getProfile = function() {
+  this.getQuestion = function() {
     var deferred = $q.defer();
     $http({
       method: 'GET',
-      url: '/api/profile'
+      url: '/api/question'
     }).then(function(response) {
       deferred.resolve(response.data);
     });
