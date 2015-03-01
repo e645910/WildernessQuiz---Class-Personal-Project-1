@@ -1,5 +1,5 @@
 angular.module('wildernessQuiz')
-.service('profileService', function($q, $http) {
+.service('profileService', function($q, $http, $location) {
 	this.getProfile = function() {
 		var deferred = $q.defer();
 		$http({
@@ -32,8 +32,8 @@ angular.module('wildernessQuiz')
 			}
 		}).then(function(response) {
 			deferred.resolve(response.data);
+			$location.path('/nav').replace();
 		});
 		return deferred.promise;
-		$location.path('/nav');
 	};
 });
