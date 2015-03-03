@@ -10,11 +10,17 @@ angular.module('wildernessQuiz', ['ngRoute'])
 			controller: 'profileCtrl'
 		})
 		.when('/nav',{
-			templateUrl: 'views/navBar-view.html'
+			templateUrl: 'views/navBar-view.html',
+			controller: 'navBarCtrl'
 		})
 		.when('/question', {
 			templateUrl: 'views/question-view.html',
-			controller: 'questCtrl'
+			controller: 'questionCtrl',
+			resolve: {
+				question: function(questionService){
+					return questionService.getQuestion();
+				}
+			}
 		})
 		.when('/quiz', {
 			templateUrl: 'views/quiz-view.html',

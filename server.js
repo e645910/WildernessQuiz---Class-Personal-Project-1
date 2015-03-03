@@ -80,6 +80,7 @@ var isAuthed = function(req, res, next) {
 
 // Endpoints =============================== 
 app.get('/api/auth', AuthCtrl.profile);
+
 app.get('/api/getProfile', ProfileCtrl.get);
 app.post('/api/postProfile', ProfileCtrl.post);
 

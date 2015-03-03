@@ -1,18 +1,19 @@
-<div class="body3"></div>
+<div class="body2"></div>
 <div class="grad"></div>
 <div class="header">
 
-    <div>Wilderness Quiz Site:  <br><span>Select Option</span></div>
+    <div>Wilderness Quiz Site:  <br><span>Select Option</span>
+    </div>
 <h2>Create Questions and Answers</h2>
 </div>
 <div class="row">
-      <input type="text" ng-model="quiz.question" placeholder="write a question..."/><br><br>
-      <input type="text" ng-model="quiz.answer" placeholder="write the correct answer..."/><br><br>
-      <input type="text" ng-model="quiz.badAnswer1" placeholder="write an incorrect answer..."/><br><br>
-      <input type="text" ng-model="quiz.badAnswer2" placeholder="write an incorrect answer..."/><br><br>
-      <input type="text" ng-model="quiz.badAnswer3" placeholder="write an incorrect answer..."/><br>
+      <input type="text" ng-model="question" placeholder="write a question..."/>
+      <input type="text" ng-model="answer" placeholder="write the correct answer..."/>
+      <input type="text" ng-model="badAnswer1" placeholder="write an incorrect answer..."/>
+      <input type="text" ng-model="badAnswer2" placeholder="write an incorrect answer..."/>
+      <input type="text" ng-model="badAnswer3" placeholder="write an incorrect answer..."/>
       <br>
-      <button ng-click="saveQuestion()">Save</button>
+      <button ng-click="clickSaveQuestion()" onClick="alert('enter your next question and answers')">Save</button>
 </div>
 
 <!--     <ul class="box" style="list-style: none;"><li>

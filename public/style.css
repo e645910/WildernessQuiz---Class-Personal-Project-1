@@ -5,12 +5,12 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #fff;
-	color: #fff;
+	color: #772B2B
 	font-family: Arial;
 	font-size: 12px;
 }
-
-.bg{
+/* .body{ css code left in as an example for inserting an image*/
+.body{
 	position: absolute;
 	top: -20px;
 	left: -20px;
@@ -24,7 +24,7 @@ body{
 	background-attachment: fixed; 
 }
 
-/*.bg1{
+.body1{
 	position: absolute;
 	top: -20px;
 	left: -20px;
@@ -32,11 +32,25 @@ body{
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url("./img/profile1.jpg");
+	background-image: url("./img/navBar.jpg");
 	background-size: cover;
 	z-index: 0;
 	background-attachment: fixed; 
-}*/
+}
+
+.body2{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url("./img/question.jpg");
+	background-size: cover;
+	z-index: 0;
+	background-attachment: fixed; 
+}
 
 #bg {
 	position: fixed; 
@@ -72,8 +86,8 @@ body{
 
 .header{
 	position: absolute;
-	top: calc(15% - 30px);
-	left: calc(50% - 260px);
+	top: calc(20% - 40px);
+	left: calc(35% - 260px);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -99,6 +113,12 @@ body{
 	font-weight: bold;
 	z-index: 2;
 }
+.row h1{
+	color: #000080;
+	font-family: 'Exo', sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+}
 
 .row input[type=text]{
 	width: 250px;
@@ -111,16 +131,25 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	padding: 4px;
-}
-
-.row h4{
-	color: #000080;
-	font-family: 'Exo', sans-serif;
-	font-size: 18px;
-	font-weight: 500;
+	padding: 4px;
+	margin-top: 10px;
 }
 
 .row input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: #F7F7F0;
+	border: 1px solid #835C3B;
+	border-radius: 2px;
+	color: #3B6182;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.row input[type=email]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;

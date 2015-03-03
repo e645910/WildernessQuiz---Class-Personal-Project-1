@@ -1,27 +1,14 @@
-<div class="body2"></div>
+<div class="body1"></div>
 <div class="grad"></div>
 <div class="header">
 
     <div>Wilderness Quiz:  <br><span>Select Option</span></div>
 </div>
 
-  <div class="row">
-    <h3>Menu Item</h3>
-    
-<nav>
-    <ul class="row">
-        <li>
-            <a href="/views/question-view.html"/>Create Questions and Answers</a>
-        </li>
-        <li>
-         	  <a href="/views/quiz-view.html"/>Take Quiz</a>
-        </li> 
-        <li>
-            <a href="/views/question-view.html"/>Update Questions and Answers</a>
-        </li>   
-        <li>
-            <a href="/views/profile-view.html"/>Update Profile</a>
-        </li>
-        
-    </ul>
-</nav>
+<div class="row">
+    <h1>Menu Item</h1>
+    <input type="button" value="Create Questions/Answers" ng-click="selectQuestionForm()" />
+    <input type="button" value="Take Quiz" ng-click="selectQuizForm()" />
+    <input type="button" value="Update Questions/Answers" ng-click="selectUpdateQuestionForm()" />
+    <input type="button" value="Update Profile" ng-click="selectUpdateProfileForm()" />
+</div>

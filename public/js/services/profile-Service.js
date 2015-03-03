@@ -1,14 +1,14 @@
 angular.module('wildernessQuiz')
 .service('profileService', function($q, $http, $location) {
 	this.getProfile = function() {
-		var deferred = $q.defer();
+		var dfd = $q.defer();
 		$http({
 			method: 'GET',
 			url: '/api/getProfile'
 		}).then(function(response) {
-			deferred.resolve(response.data);
+			dfd.resolve(response.data);
 		});
-		return deferred.promise;
+		return dfd.promise;
 	};
 	this.postProfile = function(
 			fullName,
@@ -17,8 +17,8 @@ angular.module('wildernessQuiz')
 			gender,
 			age,
 			bio
-		) {
-		var deferred = $q.defer();
+		){
+		var dfd = $q.defer();
 		$http({
 			method: 'POST',
 			url: '/api/postProfile',
@@ -31,9 +31,11 @@ angular.module('wildernessQuiz')
 				bio: bio
 			}
 		}).then(function(response) {
-			deferred.resolve(response.data);
+			dfd.resolve(response.data);
 			$location.path('/nav').replace();
-		});
-		return deferred.promise;
-	};
+		}).catch(function(err){
+            dfd.reject(err);
+        });
+        return dfd.promise;
+    };
 });

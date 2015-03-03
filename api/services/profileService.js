@@ -12,6 +12,7 @@ module.exports.save = function(profile){
 	});
 	return dfd.promise;
 };
+
 module.exports.find = function(query){
 	var dfd = q.defer();
 	ProfileModel.find(query, function(err, results){

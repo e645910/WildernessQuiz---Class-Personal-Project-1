@@ -1,20 +1,19 @@
-<!-- <div class="bg1"></div> -->
+<div id="bg">
+  <img src="./img/profile.jpg" alt="">
+</div>
 <div class="grad"></div>
 <div class="header">
 
-    <div>Wilderness Quiz Site:  <br><Span>Test Your Backpacking Knowledge Profile Page</Span></div>
+    <div>Wilderness Quiz Site:  <br><Span>Profile Page</Span></div>
 
 </div>
     <div class="row">
         <h1>MY PROFILE:</h1>
-        <input type="text" placeholder="Enter Full Name" ng-model="fullName"><br>
-        <input type="text" placeholder="Enter Email" ng-model="email"><br>
-        <input type="text" placeholder="Enter password" ng-model="password"><br>
-        <input type="text" placeholder="Enter Gender" ng-model="gender"><br>
-        <input type="text" placeholder="Enter Age" ng-model="age"><br>
-        <input type="text" placeholder="Enter Bio" ng-model="bio"><br>
+        <input type="text" placeholder="Enter Full Name -- required field" ng-model="fullName"/>
+        <input type="email" placeholder="Enter Email -- required field" ng-model="email" />
+        <input type="text" placeholder="Enter password -- required field" ng-model="password" />
+        <input type="text" placeholder="Enter Gender" ng-model="gender" />
+        <input type="text" placeholder="Enter Age" ng-model="age" />
+        <input type="text" placeholder="Enter Bio" ng-model="bio" />
         <button class="button" ng-click="clickRegister()">Save</button>
     </div>
-    <div id="bg">
-  <img src="./img/question.jpg" alt="">
-</div>

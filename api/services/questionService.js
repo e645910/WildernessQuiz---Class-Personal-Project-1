@@ -15,7 +15,7 @@ module.exports.save = function(question){
 
 module.exports.find = function(query){
 	var dfd = q.defer();
-	QuestionModel.findOne(query, function(err, results){
+	QuestionModel.find(query, function(err, results){
 		if(!err){
 			dfd.resolve(results)
 		}else {
