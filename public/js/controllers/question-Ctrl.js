@@ -1,4 +1,4 @@
-var app = angular.module('wildernessQuiz')
+angular.module('wildernessQuiz')
 .controller('questionCtrl', function($scope, questionService){
  	$scope.clickSaveQuestion = function(){
  		questionService.postQuestion(
@@ -14,8 +14,8 @@ var app = angular.module('wildernessQuiz')
 		    $scope.badAnswer2 = '';
 		    $scope.badAnswer3 = '';
 	 	};
-var app = angular.module('wildernessQuiz')
-.controller('questionCtrl', function($scope, question) {
- 	$scope.question = question;
- });
+// var app = angular.module('wildernessQuiz')
+// .controller('questionCtrl', function($scope, question) {
+//  	$scope.question = question;
+//  });
 });

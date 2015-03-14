@@ -9,20 +9,6 @@ body{
 	font-family: Arial;
 	font-size: 12px;
 }
-/* .body{ css code left in as an example for inserting an image*/
-.body{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background-image: url("./img/login.jpg");
-	background-size: cover;
-	z-index: 0;
-	background-attachment: fixed; 
-}
 
 .body1{
 	position: absolute;
@@ -103,7 +89,7 @@ body{
 	color: #3B6182 !important;
 }
 
-.row{
+.login-container{
 	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);
@@ -113,14 +99,14 @@ body{
 	font-weight: bold;
 	z-index: 2;
 }
-.row h1{
+.login-container h1{
 	color: #000080;
 	font-family: 'Exo', sans-serif;
 	font-size: 25px;
 	font-weight: 500;
 }
 
-.row input[type=text]{
+.login-container input[type=text]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -135,7 +121,7 @@ body{
 	margin-top: 10px;
 }
 
-.row input[type=password]{
+.login-container input[type=password]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -149,7 +135,7 @@ body{
 	margin-top: 10px;
 }
 
-.row input[type=email]{
+.login-container input[type=email]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -163,7 +149,7 @@ body{
 	margin-top: 10px;
 }
 
-.row input[type=button]{
+.login-container input[type=button]{
 	width: 260px;
 	height: 35px;
 	background: #FFF;
@@ -178,25 +164,50 @@ body{
 	margin-top: 10px;
 }
 
-.row input[type=button]:hover{
+.login-btn {
+	width: 100px;
+	height: 35px;
+	background: #FFF;
+	border: 1px solid #3B6182;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #835C3B;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.register{
+  text-decoration: underline;
+  color: Blue;
+}
+
+.login{
+  text-decoration: underline;
+  color: Blue;
+}
+
+.login-container input[type=button]:hover{
 	opacity: 0.8;
 }
 
-.row input[type=button]:active{
+.login-container input[type=button]:active{
 	opacity: 0.6;
 }
 
-.row input[type=text]:focus{
+.login-container input[type=text]:focus{
 	outline: none;
 	border: 1px solid #3B6182;
 }
 
-.row input[type=password]:focus{
+.login-container input[type=password]:focus{
 	outline: none;
 	border: 1px solid #3B6182;
 }
 
-.row input[type=button]:focus{
+.login-container input[type=button]:focus{
 	outline: none;
 }
 

@@ -4,9 +4,9 @@ module.exports.post = function(req, res){
 	profileService.save(req.body)
 		.then(function(response){
 			res.status(200).json(response);
-		}, function(err){
+		}), function(err){
 			res.status(400).json(err);
-		})
+		}
 };
 module.exports.get =function(req, res){
 	profileService.find({})

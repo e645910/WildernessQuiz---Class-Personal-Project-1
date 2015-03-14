@@ -8,10 +8,11 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/wildernessQuiz');
 
 // Routing =======================
-var User = require('./api/models/profileModel');
+var User = require('./api/models/authModel');
 var AuthCtrl = require('./api/controllers/authCtrl');
 var ProfileCtrl = require('./api/controllers/profileCtrl');
 var QuestionCtrl = require('./api/controllers/questionCtrl');
+var QuizCtrl = require('./api/controllers/quizCtrl');
 
 // Middleware =========================
 passport.use(new localStrategy({
@@ -47,7 +48,7 @@ passport.deserializeUser(function(obj, done){
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
-app.use(session({secret: 'WILDSEEKRIT', 
+app.use(session({secret: 'GROUPSEEKRIT', 
 	saveUninitialized: true,
     resave: true}));
 app.use(passport.initialize());
@@ -69,17 +70,8 @@ app.post('/api/register', function(req, res) {
 	});
 });
 
-
-// --------- doesn't appear to be working
-var isAuthed = function(req, res, next) {
-	if (!req.isAuthenticated()) {
-		return res.status(403).end();
-	}
-	return next();
-};
-
 // Endpoints =============================== 
-app.get('/api/auth', AuthCtrl.profile);
+app.get('/api/auth', AuthCtrl.authenticate);
 
 app.get('/api/getProfile', ProfileCtrl.get);
 app.post('/api/postProfile', ProfileCtrl.post);
@@ -87,5 +79,5 @@ app.post('/api/postProfile', ProfileCtrl.post);
 app.post('/api/postQuestion', QuestionCtrl.post);
 app.get('/api/getQuestion', QuestionCtrl.get);
 
-
+app.get('/api/getQuiz', QuizCtrl.get);
 app.listen(8000);

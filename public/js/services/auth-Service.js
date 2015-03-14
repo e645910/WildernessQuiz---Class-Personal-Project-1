@@ -1,5 +1,5 @@
 var app = angular.module('wildernessQuiz')
-.service('authService', function($q, $http){
+.service('AuthService', function($q, $http) {
 	this.register = function(email, password) {
 		var deferred = $q.defer();
 		$http({
@@ -14,21 +14,22 @@ var app = angular.module('wildernessQuiz')
 		});
 		return deferred.promise;
 	};
-	this.login = function(email, password){
-		var dfd = $q.defer();
+	this.login = function(email, password) {
+		var deferred = $q.defer();
 		$http({
 			method: 'POST',
 			url: '/api/auth',
 			data: {
 				email: email,
 				password: password
-			} 
-		}).then(function(response){
-			dfd.resolve(response.data);
-		}).catch(function(err){
+			}
+		}).then(function(response) {
+			//console.log(response.data);
+			deferred.resolve(response.data);
+		}).catch(function(err) {
 			console.log("error logging in");
-			dfd.reject(err);
-		}); 
-		return dfd.promise;
+			deferred.reject(err);
+		});
+		return deferred.promise;
 	};
 });
