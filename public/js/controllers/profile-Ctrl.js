@@ -1,13 +1,9 @@
 var app = angular.module('wildernessQuiz')
 .controller('profileCtrl', function($scope, profileService){
- 	$scope.clickRegister = function(){
+ 	$scope.clickProfile = function(){
  		profileService.postProfile(
-	 		$scope.fullName,
-	 		$scope.email,
-	 		$scope.password,
 	 		$scope.gender,
-	 		$scope.age,
-	 		$scope.bio
+	 		$scope.age
  		)
  	}
  });

@@ -14,8 +14,16 @@ angular.module('wildernessQuiz')
 		    $scope.badAnswer2 = '';
 		    $scope.badAnswer3 = '';
 	 	};
-// var app = angular.module('wildernessQuiz')
-// .controller('questionCtrl', function($scope, question) {
-//  	$scope.question = question;
-//  });
-});
+	$scope.clickUpDate = function(){
+ 		questionService.getQuestion()
+ 		.then(function(res){
+ 			console.log(111111111, res)
+	 		$scope.question = res.question;
+ 			$scope.answer = res.answer;
+ 			$scope.badAnswer1 = res.badAnswer1;
+ 			$scope.badAnswer2 = res.badAnswer2;
+ 			$scope.badAnswer3 = res.badAnswer3;
+ 		})
+ 	};
+});	
+ 

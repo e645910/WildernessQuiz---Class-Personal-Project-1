@@ -10,7 +10,7 @@ body{
 	font-size: 12px;
 }
 
-/* -------- login view -------- */
+/*   login page format   */
 
 .loginBody{
 	position: absolute;
@@ -24,17 +24,15 @@ body{
 	background-size: cover;
 	z-index: 0;
 	background-attachment: fixed; 
-}
 
-.header{
-	position: absolute;
-	top: calc(20% - 40px);
-	left: calc(35% - 260px);
+.loginHeader{
+	position: fixed;
+	top: calc(30% - 40px);
+	left: calc(0% - 260px);
 	font-weight: bold;
-	z-index: 2;
+	z-index: 1;
 }
-
-.header div{
+.loginHeader div{
 	float: left;
 	color: #835C3B;
 	font-family: 'Exo', sans-serif;
@@ -42,28 +40,28 @@ body{
 	font-weight: 250;
 }
 
-.header div span{
+.loginHeader div span{
 	color: #3B6182 !important;
 }
 
-.login-container{
+.login-Container{
 	position: absolute;
-	top: calc(50% - 75px);
+	top: calc(40% - 75px);
 	left: calc(50% - 50px);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
 	font-weight: bold;
-	z-index: 2;
+	z-index: 1;
 }
-.login-container h1{
+.login-Container h1{
 	color: #000080;
 	font-family: 'Exo', sans-serif;
 	font-size: 25px;
 	font-weight: 500;
 }
 
-.login-container input[type=text]{
+.login-Container input[type=text]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -78,7 +76,7 @@ body{
 	margin-top: 10px;
 }
 
-.login-container input[type=password]{
+.login-Container input[type=password]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -92,7 +90,7 @@ body{
 	margin-top: 10px;
 }
 
-.login-container input[type=email]{
+.login-Container input[type=email]{
 	width: 250px;
 	height: 30px;
 	background: #F7F7F0;
@@ -106,7 +104,7 @@ body{
 	margin-top: 10px;
 }
 
-.login-container input[type=button]{
+.login-Container input[type=button]{
 	width: 260px;
 	height: 35px;
 	background: #FFF;
@@ -146,25 +144,25 @@ body{
   color: Blue;
 }
 
-.login-container input[type=button]:hover{
+.login-Container input[type=button]:hover{
 	opacity: 0.8;
 }
 
-.login-container input[type=button]:active{
+.login-Container input[type=button]:active{
 	opacity: 0.6;
 }
 
-.login-container input[type=text]:focus{
+.login-Container input[type=text]:focus{
 	outline: none;
 	border: 1px solid #3B6182;
 }
 
-.login-container input[type=password]:focus{
+.login-Container input[type=password]:focus{
 	outline: none;
 	border: 1px solid #3B6182;
 }
 
-.login-container input[type=button]:focus{
+.login-Container input[type=button]:focus{
 	outline: none;
 }
 
@@ -175,10 +173,10 @@ body{
 ::-moz-input-placeholder{
    color: #835C3B;
 }
-   
-/* -------- navBar view --------  */
 
-.navBody{
+ /*   NavBar page format   */
+
+ .navBody{
 	position: absolute;
 	top: -20px;
 	left: -20px;
@@ -245,26 +243,12 @@ body{
 	margin-top: 10px;
 }
 
-/* -------- question/answer create view format -------- */
-
-.questionBody{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background-image: url("./img/question.jpg");
-	background-size: cover;
-	z-index: 0;
-	background-attachment: fixed; 
-}
+/*   question/answer create page format   */
 
 .questHeader{
 	position: absolute;
 	top: calc(10% - 40px);
-	left: calc(80% - 260px);
+	left: calc(50% - 260px);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -284,7 +268,7 @@ body{
 .question{
 	position: absolute;
 	top: calc(40% - 75px);
-	left: calc(30% - 50px);
+	left: calc(60% - 50px);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
@@ -292,23 +276,15 @@ body{
 	z-index: 2;
 }
 
-.question input[type=text]{
-	width: 300px;
-	height: 20px;
-	background: #FFF;
-	border: 1px solid #3B6182;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #835C3B;
+.question h1{
+	color: #000080;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	font-size: 25px;
+	font-weight: 500;
 }
 
-.question-btn {
-	width: 100px;
+.question input[type=button]{
+	width: 260px;
 	height: 35px;
 	background: #FFF;
 	border: 1px solid #3B6182;
@@ -321,112 +297,3 @@ body{
 	padding: 6px;
 	margin-top: 10px;
 }
-
- /* -------- Quiz view -------- */
-
-.quizBody{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background-image: url("./img/quiz.jpg");
-	background-size: cover;
-	z-index: 0;
-	background-attachment: fixed; 
-}
-
-.quizHeader{
-	position: absolute;
-	top: calc(15% - 40px);
-	left: calc(25% - 260px);
-	font-weight: bold;
-	z-index: 2;
-}
-
-.quizHeader div{
-	float: left;
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
-	font-size: 40px;
-	font-weight: 250;
-}
-
-.quizHeader div span{
-	color: #3B6182 !important;
-}
-
-.q{
-	position: absolute;
-	top: calc(38% - 75px);
-	left: calc(35% - 50px);
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
-	font-size: 60px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-	padding: 10px;
-	font-weight: bold;
-	z-index: 2;
-}
-
-.question{
-	position: absolute;
-	top: calc(42% - 75px);
-	left: calc(40% - 50px);
-	width: 500px;
-	height: 20px;
-	border: 1px solid #835C3B;
-	border-radius: 2px;
-	color: #3B6182;
-	font-family: 'Exo', sans-serif;
-	font-size: 18px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-}
-
-.quiz{
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(40% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	font-weight: bold;
-	z-index: 2;
-}
-
-.quiz input[type=radio]{
-	width: 300px;
-	height: 20px;
-	background: #FFF;
-	border: 1px solid #3B6182;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-}
-
-.quiz-btn {
-	width: 100px;
-	height: 35px;
-	background: #FFF;
-	border: 1px solid #3B6182;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-}
-

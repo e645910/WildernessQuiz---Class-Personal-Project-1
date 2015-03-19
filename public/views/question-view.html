@@ -1,32 +1,35 @@
-<div class="body2"></div>
-<div class="grad"></div>
-<div class="header">
+<div class="questionBody">
+	<div class="questHeader">
 
-    <div>Wilderness Quiz Site:  <br><span>Select Option</span>
-    </div>
-<h2>Create Questions and Answers</h2>
+		<div>Wilderness Quiz Site:  <br><span>Select Option</span>
+		</div>
+		<h2>Create Questions and Answers</h2>
+
+	</div>
+	<div class="question">
+		<input type="text" ng-model="question" placeholder="write a question..."/>
+		<input type="text" ng-model="answer" placeholder="write the correct answer..."/>
+		<input type="text" ng-model="badAnswer1" placeholder="write an incorrect answer..."/>
+		<input type="text" ng-model="badAnswer2" placeholder="write an incorrect answer..."/>
+		<input type="text" ng-model="badAnswer3" placeholder="write an incorrect answer..."/>
+		<button class="question-btn"ng-click="clickSaveQuestion()" onClick="alert('enter your next question and answers')">Save</button>
+		<button class="question-btn" ng-click="clickUpDate()" >Update</button>
+		<button class="question-btn" ng-click="nextPage()" >Next</button>
+		<button class="question-btn" ng-click="prevPage()" >Back</button>
+
+	</div>
+<!-- 
+	       <h3>Update Questions and Answers</h3>
+
+          <li ng-repeat="item in questions" ng-repeat='item in answers'>
+          <input id="update" ng-model="item.question" ng-change="saveQuestion(item)"/>
+          <input id="update" ng-model="item.answer" ng-change="saveQuestion(item)"/>
+          <input id="update" ng-model="item.badAnswer1" ng-change="saveQuestion(item)"/>
+          <input id="update" ng-model="item.badAnswer2" ng-change="saveQuestion(item)"/>
+          <input id="update" ng-model="item.badAnswer3" ng-change="saveQuestion(item)"/>
+          <a href="#" ng-click="questions.$remove(item)">  Delete</a></li>
+      </ul> 
+
+  			<pre><code>{{ formDataTwo || json }}</code></pre> -->
+ -->
 </div>
-<div class="row">
-      <input type="text" ng-model="question" placeholder="write a question..."/>
-      <input type="text" ng-model="answer" placeholder="write the correct answer..."/>
-      <input type="text" ng-model="badAnswer1" placeholder="write an incorrect answer..."/>
-      <input type="text" ng-model="badAnswer2" placeholder="write an incorrect answer..."/>
-      <input type="text" ng-model="badAnswer3" placeholder="write an incorrect answer..."/>
-      <br>
-      <button ng-click="clickSaveQuestion()" onClick="alert('enter your next question and answers')">Save</button>
-</div>
-
-<!--     <ul class="box" style="list-style: none;"><li>
-      <h3>Update Questions and Answers</h3>
-
-        <li ng-repeat="item in questions" ng-repeat='item in answers'>
-        <input id="update" ng-model="item.question" ng-change="saveQuestion(item)"/>
-        <input id="update" ng-model="item.answer" ng-change="saveQuestion(item)"/>
-        <input id="update" ng-model="item.badAnswer1" ng-change="saveQuestion(item)"/>
-        <input id="update" ng-model="item.badAnswer2" ng-change="saveQuestion(item)"/>
-        <input id="update" ng-model="item.badAnswer3" ng-change="saveQuestion(item)"/>
-        <a href="#" ng-click="questions.$remove(item)">  Delete</a></li>
-    </ul> 
-
-<pre><code>{{ formDataTwo || json }}</code></pre>
-

@@ -1,44 +1,23 @@
-<div id="bg">
-  <img src="./img/quiz.jpg" alt="">
-</div>
-<div class="grad"></div>
-<div class="header">
+<div class="quizBody">
+	<div class="quizHeader">
 
-    <div>Wilderness Quiz Site:  <br><span>Test Your Backpacking Knowledge</span></div>
-	<div>How Prepared Are You for the Wild?</div>
-</div>
-
-
-     <div class="q"><strong>Q:</strong><input type="text" class="output" ng-model="test.question"/>
-     </div>
-
-    <div class="row">
-    <ol>
-    	<li><input type="text" ng-model="answer"/></li>
-      	<li><input type="text" ng-model="badAnswer1"/></li>
-      	<li><input type="text" ng-model="badAnswer2"/></li>
-      	<li><input type="text" ng-model="badAnswer3"/></li>
-	</ol>
-		<button ng-click="nextQuestion()">Next</button>
+    	<div>Wilderness Quiz Site:  <br><span>Test Your Backpacking Knowledge</span></div>
 	</div>
 
-<!-- 	<div class="sqs" >
-		 	<pre>
-				{{quiz | json}}
-			</pre>
+     <div class="q"><strong>Q:</strong></div>
+     <div class="question" type="text">{{currentQuestion.question}}</div>
+     
+	
+    <div class="quiz"> 
+    	<ol>
+    		<li ng-repeat="answer in currentQuestion.answers">
+    			<input type="radio" name="answerString" ng-click="setAnswerValues(answer.answerString, answer.correct)">{{answer.answerString}}</input>
+    		</li>
+    	</ol>
 
-			<quiz-checkbox questions="quizQuestions" ng-model="test" ng-init="qizQuestions = [
-                { 'value':'value1', 'name': 'The unit' }, 
-                { 'value': 'value2', 'name': 'Patient Threw Up'}, 
-                { 'value':'value3', 'name': 'Unsafe for children' }, 
-                { 'value':'value4', 'name': 'Actively dying, reached life goal'}]">
-			</quiz-checkbox>
+		<button class="question-btn" ng-click="nextQuestion()" >Next</button>
+		<button class="question-btn" ng-click="prevQuestion()" >Back</button>
+		Selected Answer: {{selectedAnswer}}
+	</div>
 
-		 	<quiz-checkbox ng-model="test" ng-init="quizQuestions = [
-					{ 'value':'value1', 'name': 'The unit' }, 
-					{ 'value': 'value2', 'name': 'Patient Threw Up'}, 
-					{ 'value':'value3', 'name': 'Unsafe for children' }, 
-					{ 'value':'value4', 'name': 'Actively dying, reached life goal'}]">
-				</quiz-checkbox>
-		 </div>
- -->
+</div>

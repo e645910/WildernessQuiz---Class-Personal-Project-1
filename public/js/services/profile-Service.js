@@ -10,25 +10,14 @@ angular.module('wildernessQuiz')
 		});
 		return dfd.promise;
 	};
-	this.postProfile = function(
-			fullName,
-			email,
-			password,
-			gender,
-			age,
-			bio
-		){
+	this.postProfile = function(gender, age){
 		var dfd = $q.defer();
 		$http({
 			method: 'POST',
 			url: '/api/postProfile',
 			data: {
-				fullName: fullName,
-				email: email,
-				password: password,
 				gender: gender,
-				age: age,
-				bio: bio
+				age: age
 			}
 		}).then(function(response) {
 			dfd.resolve(response.data);

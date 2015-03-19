@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
-var q = require('q');
 
 var ProfileSchema = mongoose.Schema({
 	fullName: {type: String, required: true},
