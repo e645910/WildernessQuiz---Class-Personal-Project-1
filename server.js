@@ -16,7 +16,6 @@ var QuizCtrl = require('./api/controllers/quizCtrl');
 
 // Middleware =========================
 passport.use(new localStrategy({
-	//require the defualt username to be the person's email address 
 	usernameField: 'email',
 	passwordField: 'password'
 }, 	function(username, password, done){
@@ -38,7 +37,6 @@ passport.use(new localStrategy({
 }));
 
 passport.serializeUser(function(user, done){
-	//input user model (mongoose)
 	done(null, user);
 });
 passport.deserializeUser(function(obj, done){
@@ -56,7 +54,6 @@ app.use(passport.session());
 
 // Authentication ========================
 app.post('/api/auth', passport.authenticate('local'), function(req, res){
-	//if auth was successful, this will happen
 	return res.status(200).end();
 });
 app.post('/api/register', function(req, res) {
@@ -68,53 +65,6 @@ app.post('/api/register', function(req, res) {
 		}
 		return res.json(user);
 	});
-});
-// pagination ==============================
-var Quiz = require('./api/models/questionModel');
-var q = require('q');
-
-app.get('/api/quizer', function(req, res){
-
-	//pagination
-	var limit = req.query.limit || 10;
-	var skip = req.query.skip || 0;
-
-	//we'll warp the count call in a promise (that way, we can parallelize it with the Post find)
-	var countFunction = function(){
-		var dfd = q.defer();
-		Quiz.count(function(err, count){
-			dfd.resolve(count);
-		});
-		return dfd.promise;
-	};
-
-	//call both these promises in parallel, (counting and finding)
-	q.all([
-		countFunction(),
-		Quiz
-			.find()
-			.limit(limit)
-			.skip(skip)
-			.sort('createdAt')
-			.exec()
-
-		]).spread(function(count, quizer){
-			return res.json({
-				quizer: quizer,
-				total_quizer: count
-			});
-	});
-
-	//simpler version of just finding (without count)
-	// Post
-	// 	.find()
-	// 	.limit(limit)
-	// 	.skip(skip)
-	// 	.sort('-createdAt')
-	// 	.exec()
-	// ]).spread(function(count, posts) {
-	// 	return res.json(posts);
-	// });
 });
 
 // Endpoints =============================== 

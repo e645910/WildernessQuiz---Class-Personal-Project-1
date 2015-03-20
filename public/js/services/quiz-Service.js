@@ -4,17 +4,17 @@ angular.module('wildernessQuiz')
 		var dfd = $q.defer();
 		$http({
 			method: 'GET',
-			url: '/api/quizer'
+				url: '/api/getQuiz'
 		}).then(function(response){
-			console.log(11111111, response.data.quizer)
-			var quiz = createAnswersArrays(response.data.quizer);
+			//console.log(11111111, response.data)
+			var quiz = createAnswersArrays(response.data);
 			dfd.resolve(quiz);
 		},
 		function(errors){
 			dfd.reject(errors);
 		});
 			return dfd.promise;
-	};	
+	};
 
 	function createAnswersArrays (quizArr) {
 		for(var i = 0; i < quizArr.length; i++){
@@ -28,7 +28,7 @@ angular.module('wildernessQuiz')
 			quizArr[i].answers = randomizeOrder(answers);
 		}
 		return quizArr;
-	}
+	};
 
 	function randomizeOrder(arr){
 		var newArr = [];
@@ -39,5 +39,6 @@ angular.module('wildernessQuiz')
 		}
 
 		return newArr;
-	}
+	};
+	
 });

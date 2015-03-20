@@ -4,10 +4,8 @@
 body{
 	margin: 0;
 	padding: 0;
-	background: #fff;
-	color: #772B2B
-	font-family: Arial;
-	font-size: 12px;
+	width: 0;
+	height: 0;
 }
 
 /* -------- login view -------- */
@@ -55,27 +53,6 @@ body{
 	padding: 10px;
 	font-weight: bold;
 	z-index: 2;
-}
-.login-container h1{
-	color: #000080;
-	font-family: 'Exo', sans-serif;
-	font-size: 25px;
-	font-weight: 500;
-}
-
-.login-container input[type=text]{
-	width: 250px;
-	height: 30px;
-	background: #F7F7F0;
-	border: 1px solid #835C3B;
-	border-radius: 2px;
-	color: #3B6182;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 4px;
-	padding: 4px;
-	margin-top: 10px;
 }
 
 .login-container input[type=password]{
@@ -136,27 +113,23 @@ body{
 	margin-top: 10px;
 }
 
-.register{
-  text-decoration: underline;
-  color: Blue;
+#loginLabel{
+  	color: #000;
+	font-family: 'Exo', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
 }
 
-.login{
-  text-decoration: underline;
-  color: Blue;
-}
-
-.login-container input[type=button]:hover{
-	opacity: 0.8;
+.loginLabel1{
+  	text-decoration: underline;
+  	color: #0000FF;
+	font-family: 'Exo', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 .login-container input[type=button]:active{
 	opacity: 0.6;
-}
-
-.login-container input[type=text]:focus{
-	outline: none;
-	border: 1px solid #3B6182;
 }
 
 .login-container input[type=password]:focus{
@@ -261,7 +234,7 @@ body{
 	background-attachment: fixed; 
 }
 
-.questHeader{
+.questionHeader{
 	position: absolute;
 	top: calc(10% - 40px);
 	left: calc(80% - 260px);
@@ -269,7 +242,7 @@ body{
 	z-index: 2;
 }
 
-.questHeader div{
+.questionHeader div{
 	float: left;
 	color: #835C3B;
 	font-family: 'Exo', sans-serif;
@@ -277,7 +250,7 @@ body{
 	font-weight: 250;
 }
 
-.questHeader div span{
+.questionHeader div span{
 	color: #3B6182 !important;
 }
 
@@ -373,20 +346,19 @@ body{
 	z-index: 2;
 }
 
-.question{
+.quizQuestion{
 	position: absolute;
-	top: calc(42% - 75px);
+	top: calc(40% - 75px);
 	left: calc(40% - 50px);
 	width: 500px;
 	height: 20px;
-	border: 1px solid #835C3B;
-	border-radius: 2px;
 	color: #3B6182;
 	font-family: 'Exo', sans-serif;
-	font-size: 18px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	font-size: 22px;
+	font-weight: 600;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
 }
 
 .quiz{
@@ -400,20 +372,31 @@ body{
 	z-index: 2;
 }
 
-.quiz input[type=radio]{
-	width: 300px;
-	height: 20px;
-	background: #FFF;
-	border: 1px solid #3B6182;
-	cursor: pointer;
-	border-radius: 2px;
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin-left: 1em;
 	color: #835C3B;
 	font-family: 'Exo', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	width: 500px;
 }
+
+.quiz input[type=radio]{
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.quizAnswers {
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(40% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	font-weight: bold;
+	z-index: 2;
 
 .quiz-btn {
 	width: 100px;

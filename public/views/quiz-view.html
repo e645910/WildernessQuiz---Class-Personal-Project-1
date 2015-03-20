@@ -5,18 +5,18 @@
 	</div>
 
      <div class="q"><strong>Q:</strong></div>
-     <div class="question" type="text">{{currentQuestion.question}}</div>
+     <div class="quizQuestion" type="text">{{currentQuestion.question}}</div>
      
 	
     <div class="quiz"> 
-    	<ol>
+    	<ul>
     		<li ng-repeat="answer in currentQuestion.answers">
-    			<input type="radio" name="answerString" ng-click="setAnswerValues(answer.answerString, answer.correct)">{{answer.answerString}}</input>
+    			<input type="radio" name="answerString" ng-click="setAnswerValues(answer.answerString, answer.correct)"/>{{answer.answerString}}
     		</li>
-    	</ol>
+    	</ul>
 
 		<button class="question-btn" ng-click="nextQuestion()" >Next</button>
-		<button class="question-btn" ng-click="prevQuestion()" >Back</button>
+<!-- 		<button class="question-btn" ng-click="prevQuestion()" >Back</button> -->
 		Selected Answer: {{selectedAnswer}}
 	</div>
 

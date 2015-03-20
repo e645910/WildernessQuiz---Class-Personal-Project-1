@@ -8,9 +8,9 @@ var app = angular.module('wildernessQuiz')
 		quizService.getQuiz()
 			.then(function(res){
 				quiz = res;
-				console.log(2222222, quiz)
+				//console.log(2222222, quiz)
 				$scope.currentQuestion = quiz[currentIndex];
-				console.log(2222222, quiz[currentIndex])
+				console.log(3333333, quiz[currentIndex])
 			}, 
 			function(err){
 				console.log(err)
