@@ -10,14 +10,16 @@
 	
     <div class="quiz"> 
     	<ul>
-    		<li ng-repeat="answer in currentQuestion.answers">
-    			<input type="radio" name="answerString" ng-click="setAnswerValues(answer.answerString, answer.correct)"/>{{answer.answerString}}
+    		<li ng-repeat="choice in currentQuestion.choices">
+    			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.isCorrect)"/>{{choice.choiceString}}
     		</li>
     	</ul>
 
 		<button class="question-btn" ng-click="nextQuestion()" >Next</button>
-<!-- 		<button class="question-btn" ng-click="prevQuestion()" >Back</button> -->
-		Selected Answer: {{selectedAnswer}}
+		<button class="question-btn" ng-click="saveUserInput()">Save</button>
+<!--         Selected Answer: {{selectedAnswer}}
+ -->
+
 	</div>
 
 </div>

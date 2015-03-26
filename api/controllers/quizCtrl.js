@@ -6,9 +6,10 @@ module.exports.get = function(req,res){
         if(response.length){
             res.status(200).json(response);
         }else {
-            res.status(400).json('nothing to get')
+            res.status(400).json('nothing to get');
         }
-    }), function(err){
+    }, 
+    function(err){
         res.status(500).json(err);
-    }
+    });
 };

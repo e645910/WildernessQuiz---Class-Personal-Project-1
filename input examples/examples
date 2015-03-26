@@ -6,51 +6,46 @@ question: $scope.question,
 
 
 
-  <section id="profile">
-	<div class="container">
-		<div class="text-center">
-			<h1>MY PROFILE:</h1>
-			<hr class="star-primary">
-		</div>
-		<div class="row">
-			<div class="col-sm-6 text-right"><strong>Email:</strong></div>
-			<div class="col-sm-6 text-left"><input type="text" ng-model="profile.email" /></div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 text-right"><strong>Gender:</strong></div>
-			<div class="col-sm-6 text-left"><input type="text" ng-model="profile.gender" /></div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 text-right"><strong>Age:</strong></div>
-			<div class="col-sm-6 text-left"><input type="text" ng-model="profile.age" /></div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 text-right"><strong>Bio:</strong></div>
-			<div class="col-sm-6 text-left"><textarea ng-model="profile.bio" /></textarea>
-		</div>
-		<div class="row text-center">
-			<button class="btn btn-primary btn-xs">Save</button>
-		</div>
-	</div>
-</section>
 
-angular.module('MyTodos').controller('ProfileController', function($scope, profile) {
-	$scope.profile = profile;
-});
+/* Another model. Saves UserId and answer array
+Format list of answers into an object that has those two properties 
 
-angular.module('MyTodos').service('ProfileService', function($q, $http) {
-	this.getProfile = function() {
-		var deferred = $q.defer();
-		$http({
-			method: 'GET',
-			url: '/api/profile'
-		}).then(function(response) {
-			deferred.resolve(response.data);
-		});
-		return deferred.promise;
-	};
-});
+var mongoose = require('mongoose');
 
-app.get('/api/profile', isAuthed, function(req, res) {
-	return req.json(req.user);
-});
+var schema = mongoose.Schema({
+
+	userId: { type: mongoose.Schema.Types.ObjectId, ref: 'Authenticate' },
+	answers: Array
+
+})
+--------------------------------------
+{
+	userId: 234234234,
+	answerArray: [...]
+}
+
+		answerArray: [
+		question: String,
+		answer: String,
+		selectedAnswer: String,
+		isCorrect: String,
+		supportData: string
+		]
+/*
+
+			// $scope.currentQuestion = quiz[currentIndex];
+			// function userSelection(quiz){
+			// 	for(var i = 0; i < userArr.length; i++){
+			// 	var userSelection = 
+			// 		[
+			// 			{userAnswer: $rootScope.user},
+			// 			{userAnswer: quiz[i].question},
+			// 			{userAnswer: quiz[i].answer},
+			// 			{userAnswer: quiz[i].isCorrect},
+			// 			{userAnswer: quiz[i].selectedAnswer},
+			// 			{userAnswer: quiz[i].supportData},
+			// 			{userAnswer: quiz[i].isCorrect}
+			// 		];
+			// 	}
+			// 	return quiz;
+			// };

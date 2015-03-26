@@ -1,11 +1,9 @@
-api/register: example
+api/profile: example
 {
-	"fullName": "Rick Wightman",
-	"email": "rick.wigtman1@gmail.com",
-	"password": "howdy",
+	
 	"gender": "male",
 	"age": "100",
-	"bio": "seafood industry, USAF, oil field fracker, semi-truck driver, avonics electronic tech, reliablity enigneer, international marketing, CS marketing, database analsyst, aerospace CS manager, machine shop production superintendent, hopful web developer, former ultra runner, adventure racer and tri-athlete, scuba diver, ski bum, pilot, father & husband of 27 years "
+	
 }
 
 Questions/answers example
@@ -24,4 +22,34 @@ Questions/answers example
 	"badAnswer3": "Customize the boot to better fit your foot."
 }
 
-api/auth
+api/postAnswer
+{	
+	"userId": "12345678",
+	"question": "question",
+	"answer": "answer",
+	"isCorrect": "true",
+	"correctAnwer": "correctAnwer",
+	"supportdata": "supportdata" 
+}
+
+userId,
+question,
+answer,
+isCorrect,
+selectedAnswer,
+supportData,
+gender,
+age
+
+
+/api/getAnswer
+{
+    "userId": "55037e6f1af1c6c56fa12a3d",
+	"answer": "Load the pack with some weight.",
+	"isCorrect": true,
+	"question": "The first thing you should do when fitting a backpack is:",
+	"selectedAnswer": "Load the pack with some weight.",
+	"supportData": "Loading the pack with weight will help ensure proper fit.",
+	"age" : "100",
+	"gender" : "male"
+}

@@ -8,7 +8,7 @@ angular.module('wildernessQuiz')
 		}).then(function(response) {
 			dfd.resolve(response.data);
 		});
-		return dfd.promise;
+			return dfd.promise;
 	};
 	this.postProfile = function(gender, age){
 		var dfd = $q.defer();
@@ -25,6 +25,6 @@ angular.module('wildernessQuiz')
 		}).catch(function(err){
             dfd.reject(err);
         });
-        return dfd.promise;
+        	return dfd.promise;
     };
 });

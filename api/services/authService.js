@@ -10,10 +10,9 @@ module.exports.save = function(authenticate){
 			dfd.reject(err);
 		}
 	});
-	return dfd.promise;
+		return dfd.promise;
 };
 module.exports.find = function(req, res){
-	var dfd = q.defer();
 	authModel.find({})
 	.then(function(response){
 		if(response.length){
@@ -21,7 +20,8 @@ module.exports.find = function(req, res){
 		}else {
 			res.status(404).send('Login email not found');
 		}
-	}), function(err){
+	}, 
+	function(err){
 		res.status(500).json(err);
-	}
+	})
 };

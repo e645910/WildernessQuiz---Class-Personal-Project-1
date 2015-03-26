@@ -1,9 +1,10 @@
-var QuestionModel = require('../models/questionModel');
+var AnswerModel = require('../models/answerModel');
 var q = require('q');
 
-module.exports.save = function(question){
+module.exports.save = function(answer){
 	var dfd = q.defer();
-	QuestionModel(question).save(function(err, res){
+	console.log(answer);
+	AnswerModel(answer).save(function(err, res){
 		if(!err){
 			dfd.resolve(res);
 		}else {
@@ -14,11 +15,11 @@ module.exports.save = function(question){
 };
 module.exports.find = function(query){
 	var dfd = q.defer();
-	QuestionModel.find(query, function(err, res){
+	AnswerModel.find(query, function(err, res){
 		if(!err){
-			dfd.resolve(res)
+			dfd.resolve(res);
 		}else {
-			dfd.reject(err)
+			dfd.reject(err);
 		}
 	});
 		return dfd.promise;

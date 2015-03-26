@@ -13,6 +13,7 @@ var AuthCtrl = require('./api/controllers/authCtrl');
 var ProfileCtrl = require('./api/controllers/profileCtrl');
 var QuestionCtrl = require('./api/controllers/questionCtrl');
 var QuizCtrl = require('./api/controllers/quizCtrl');
+var AnswerCtrl = require('./api/controllers/answerCtrl')
 
 // Middleware =========================
 passport.use(new localStrategy({
@@ -54,7 +55,9 @@ app.use(passport.session());
 
 // Authentication ========================
 app.post('/api/auth', passport.authenticate('local'), function(req, res){
-	return res.status(200).end();
+	//if auth was successful, this will happen
+	console.log(req.user._id);
+	return res.status(200).json(req.user._id);
 });
 app.post('/api/register', function(req, res) {
 	//create a user
@@ -77,4 +80,7 @@ app.post('/api/postQuestion', QuestionCtrl.post);
 app.get('/api/getQuestion', QuestionCtrl.get);
 
 app.get('/api/getQuiz', QuizCtrl.get);
-app.listen(8000);
+
+app.post('/api/postAnswer', AnswerCtrl.post);
+app.get('/api/getAnswer', AnswerCtrl.get);
+app.listen(8001);
