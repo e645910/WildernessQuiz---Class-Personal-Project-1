@@ -7,7 +7,6 @@ angular.module('wildernessQuiz')
 				url: '/api/getQuiz'
 		})
 		.then(function(response){
-			//console.log(1111111, response.data)
 			var quiz = createChoicesArrays(response.data);
 			dfd.resolve(quiz);
 		},
@@ -31,7 +30,6 @@ angular.module('wildernessQuiz')
 				question: questionObj.question,
 				selectedAnswer: questionObj.selectedAnswer,
 				supportData: questionObj.supportData
-			// 	selectedAnswer: selectedAnswer
 			}
 		})
 		.success(function(response){
@@ -39,7 +37,6 @@ angular.module('wildernessQuiz')
 			dfd.resolve(response);
 		})
 		.catch(function(err){
-			console.log(77777777, err)
 			dfd.reject(err);
 		});
 		return dfd.promise;

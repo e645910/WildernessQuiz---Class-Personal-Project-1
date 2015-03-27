@@ -332,7 +332,7 @@ body{
 }
 
 .q{
-	position: absolute;
+	position: fixed;
 	top: calc(38% - 75px);
 	left: calc(35% - 50px);
 	color: #835C3B;
@@ -347,7 +347,7 @@ body{
 }
 
 .quizQuestion{
-	position: absolute;
+	position: fixed;
 	top: calc(40% - 75px);
 	left: calc(40% - 50px);
 	width: 500px;
@@ -357,12 +357,12 @@ body{
 	font-size: 22px;
 	font-weight: 600;
 	padding: 10px;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 }
 
 .quiz{
-	position: absolute;
+	position: fixed;
 	top: calc(50% - 75px);
 	left: calc(40% - 50px);
 	height: 150px;
@@ -383,22 +383,10 @@ ul{
 	width: 500px;
 }
 
-.quiz input[type=radio]{
-	padding: 15px;
-	margin-top: 20px;
-}
-
-.quizAnswers {
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(40% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	font-weight: bold;
-	z-index: 2;
-
 .quiz-btn {
+	position: fixed;
+	top: calc(70% - 1em);
+	left: calc(70% - 1em);
 	width: 100px;
 	height: 35px;
 	background: #FFF;
@@ -413,3 +401,18 @@ ul{
 	margin-top: 10px;
 }
 
+.quiz input[type=radio]{
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.quizAnswers {
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(40% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	font-weight: bold;
+	z-index: 2;
+}

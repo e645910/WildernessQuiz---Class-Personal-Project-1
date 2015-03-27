@@ -1,5 +1,5 @@
 var app = angular.module('wildernessQuiz')
-.controller('quizCtrl', function($scope, $rootScope, quizService){
+.controller('quizCtrl', function($scope, quizService){
 	
 	var currentIndex = 0;
 	var quiz = [];
@@ -16,8 +16,6 @@ var app = angular.module('wildernessQuiz')
 	};
 	$scope.loadQuiz();
 
-
-
 // -------------- next question button on quiz-view.html -------------
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
@@ -28,6 +26,7 @@ var app = angular.module('wildernessQuiz')
 			if (currentIndex < quiz.length - 1){
 				currentIndex++;
 			}
+			console.log(111111111, $scope.currentQuestion, $scope.isCorrect)
 			$scope.currentQuestion = quiz[currentIndex];
 		})
 		
@@ -44,7 +43,7 @@ var app = angular.module('wildernessQuiz')
 	$scope.setAnswerValues = function(choiceString, isCorrect) {
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
-
+		console.log(22222222, choiceString, isCorrect)
 		return choiceString, isCorrect;
 	}
 
