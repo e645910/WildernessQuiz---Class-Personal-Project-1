@@ -1,9 +1,8 @@
 var mongoose = require('mongoose');
 
 var schema = mongoose.Schema({
-
 	userId: { type: mongoose.Schema.Types.ObjectId, ref: 'Authenticate' },
-	//quizInstance: {type: some unique id}
+	quizInstanceId: Number,
 	question: String,
 	answer: String,
 	isCorrect: Boolean,

@@ -1,9 +1,19 @@
 <div class="answerBody">
 	<div class="answerHeader">
 		
-		<div>Wilderness Quiz Site:<br><span>Test Your Backpacking Knowledge</span></div>
+		<div>Wilderness Quiz Site:<br><span>Test Your Backpacking Knowledge</span></div>{{Data}}
 
 		</div>
-
+		<h1>Answer Summary:</h1>
+		<div ng-repeat="select in selections">
+			
+				<ul>
+					<li style="list-style-type: decimal">{{select.isCorrect}}</li>
+						<strong>The question was:</strong><li>{{select.question}}</li>
+						<strong>Correct Answer:</strong><li>{{select.answer}}</li>
+						<strong>You Selected:</strong> <li>{{select.selectedAnswer}}</li>
+						<li>{{select.supportData}}</li>
+				</ul>	
+		</div>
 
 </div>

@@ -1,6 +1,11 @@
 var app = angular.module('wildernessQuiz')
-.controller('quizCtrl', function($scope, quizService){
-	
+.controller('quizCtrl', function($scope, $location, quizService, Data){
+
+// provide a random number for quizInstanceId =============
+	$scope.Data = Data.quizInstanceId;
+	var quizInstanceId = $scope.Data
+
+	console.log(22222222, quizInstanceId)
 	var currentIndex = 0;
 	var quiz = [];
 
@@ -16,35 +21,42 @@ var app = angular.module('wildernessQuiz')
 	};
 	$scope.loadQuiz();
 
-// -------------- next question button on quiz-view.html -------------
+
+// next question button on quiz-view.html ==================
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
 		$scope.currentQuestion.selectedAnswer = $scope.selectedAnswer;
-		quizService.saveAnswer($scope.currentQuestion).then(function(){
+		quizService.saveAnswer($scope.currentQuestion, quizInstanceId)
+		.then(function(){
+			$scope.showNextButton = false;
 			$scope.isCorrect = "";
 			$scope.selectedAnswer = "";
-			if (currentIndex < quiz.length - 1){
-				currentIndex++;
-			}
-			console.log(111111111, $scope.currentQuestion, $scope.isCorrect)
+			(currentIndex < quiz.length -1) ? currentIndex++ : $location.path('/userChoices');
 			$scope.currentQuestion = quiz[currentIndex];
-		})
-		
-	};
-// ------------- previous question button (not used in this app) ----------	
-	$scope.prevQuestion = function(){
-		if (currentIndex > 0) {
-			currentIndex--;
+		}),
+		function(err){
+			console.log(err);
 		}
-		$scope.currentQuestion = quiz[currentIndex];
 	};
 
-// ----------- used to show users selection on quiz view for testing purpose  --------------	
+// previous question button (not used in this app) ===========
+	// $scope.prevQuestion = function(){
+	// 	if (currentIndex > 0) {
+	// 		currentIndex--;
+	// 	}
+	// 	$scope.currentQuestion = quiz[currentIndex];
+	// };
+
+// used to show users selection on quiz view  =================
 	$scope.setAnswerValues = function(choiceString, isCorrect) {
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
-		console.log(22222222, choiceString, isCorrect)
+		$scope.showNextButton = true;
 		return choiceString, isCorrect;
 	}
 
+// display the answer-view.html view =========================
+	$scope.loadUserSelection = function() {
+		$scope.choicePath = $location.path('/userChoices');
+	};
 });

@@ -5,7 +5,9 @@ var questionSchema = mongoose.Schema({
 	answer: {type: String, required: true},
 	badAnswer1: {type: String, required: true},
 	badAnswer2: String,
-	badAnswer3: String
+	badAnswer3: String,
+	supportData: String
+	//img: { type: mongoose.Schema.Types.ObjectID, ref: 'Image' }
 });
 
 module.exports = mongoose.model('Question', questionSchema);

@@ -16,24 +16,25 @@ angular.module('wildernessQuiz')
 		return dfd.promise;
 	};
 	
-//  ---------- save users answer selection ----------	
+// save user's answer selection ===========================	
 	this.saveAnswer = function(questionObj, quizInstanceId){
+		console.log(3333333, quizInstanceId)
 		var dfd = $q.defer();
 		$http({
 			method: 'POST',
 			url: '/api/postAnswer',
 			data: {
-				//quizInstance: quizInstanceId,
 			 	userId: $rootScope.userId,
+			 	quizInstanceId: quizInstanceId,
+			 	question: questionObj.question,
 				answer: questionObj.answer,
-				isCorrect: questionObj.isCorrect,
-				question: questionObj.question,
 				selectedAnswer: questionObj.selectedAnswer,
+				isCorrect: questionObj.isCorrect,
 				supportData: questionObj.supportData
 			}
 		})
 		.success(function(response){
-			console.log(666666666, response)
+			console.log(4444444, response)
 			dfd.resolve(response);
 		})
 		.catch(function(err){
@@ -41,8 +42,9 @@ angular.module('wildernessQuiz')
 		});
 		return dfd.promise;
 	};
-//  ---------- show answers in a randonmized order ----------	
-	function createChoicesArrays (quizArr){
+
+// show answer selection in a randonmized order =============	
+	function createChoicesArrays(quizArr){
 		for(var i = 0; i < quizArr.length; i++){
 			var choices = 
 				[
@@ -50,7 +52,7 @@ angular.module('wildernessQuiz')
 					{choiceString: quizArr[i].badAnswer1, correct: false},
 					{choiceString: quizArr[i].badAnswer2, correct: false},
 					{choiceString: quizArr[i].badAnswer3, correct: false}
-				];				
+				];					
 			quizArr[i].choices = randomizeOrder(choices);
 
 			delete quizArr[i].badAnswer1;
@@ -60,7 +62,7 @@ angular.module('wildernessQuiz')
 		return quizArr;
 	};
 
-//  -------------------- randomize the order of the answers ---------------------	
+// randomize the order of the answers =====================	
 	function randomizeOrder(arr){
 		var newArr = [];
 		while(arr.length){

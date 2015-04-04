@@ -3,7 +3,6 @@ var q = require('q');
 
 module.exports.save = function(answer){
 	var dfd = q.defer();
-	console.log(answer);
 	AnswerModel(answer).save(function(err, res){
 		if(!err){
 			dfd.resolve(res);
@@ -15,6 +14,7 @@ module.exports.save = function(answer){
 };
 module.exports.find = function(query){
 	var dfd = q.defer();
+	console.log(444444444, query)
 	AnswerModel.find(query, function(err, res){
 		if(!err){
 			dfd.resolve(res);
@@ -22,5 +22,5 @@ module.exports.find = function(query){
 			dfd.reject(err);
 		}
 	});
-		return dfd.promise;
+	return dfd.promise;
 };

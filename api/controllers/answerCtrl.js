@@ -3,7 +3,6 @@ var AnswerService = require('../services/answerService')
 module.exports.post = function(req, res){
     AnswerService.save(req.body)
     .then(function(response){
-    	console.log(23232323, response)
         res.status(200).json(response);
     }, 
     function(err){
@@ -11,9 +10,11 @@ module.exports.post = function(req, res){
     })
 };
 module.exports.get = function(req, res){
-	AnswerService.find({})
+	AnswerService.find({quizInstanceId: req.query.quizInstanceId})
 	.then(function(response){
-		if(response.length){
+		console.log(333333333, req.query.quizInstanceId)
+		if(response){
+			console.log(22222222, response)
 			res.status(200).json(response);
 		}else {
 			res.status(404).send('nothing to get');

@@ -350,12 +350,12 @@ body{
 	position: fixed;
 	top: calc(40% - 75px);
 	left: calc(40% - 50px);
-	width: 500px;
-	height: 20px;
+	width: 600px;
+	height: 40px;
 	color: #3B6182;
 	font-family: 'Exo', sans-serif;
-	font-size: 22px;
-	font-weight: 600;
+	font-size: 20px;
+	font-weight: 500;
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 15px;
@@ -402,8 +402,9 @@ ul{
 }
 
 .quiz input[type=radio]{
-	padding: 15px;
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-right: 10px;
+	cursor: pointer;
 }
 
 .quizAnswers {
@@ -411,8 +412,110 @@ ul{
 	top: calc(50% - 75px);
 	left: calc(40% - 50px);
 	height: 150px;
-	width: 350px;
+	width: 500px;
 	padding: 10px;
 	font-weight: bold;
 	z-index: 2;
 }
+
+/* ---------- Show user choices -------------- */
+
+/*.choicesBody{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url("./img/quiz.jpg");
+	background-size: cover;
+	z-index: 0;
+	background-attachment: fixed; 
+}*/
+
+/*.choicesHeader{
+	position: absolute;
+	top: calc(15% - 40px);
+	left: calc(25% - 260px);
+	font-weight: bold;
+	z-index: 2;
+}
+
+.choicesHeader div{
+	float: left;
+	color: #835C3B;
+	font-family: 'Exo', sans-serif;
+	font-size: 40px;
+	font-weight: 250;
+}
+
+.choicesHeader div span{
+	color: #3B6182 !important;
+}
+h1{
+	position: fixed;
+	top: calc(40% - 75px);
+	left: calc(40% - 50px);
+	width: 600px;
+	height: 40px;
+	color: #3B6182;
+	font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.choices{
+	position: fixed;
+	top: calc(50% - 75px);
+	left: calc(40% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	font-weight: bold;
+	margin-top: 20px;
+	z-index: 2;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin-left: 1em;
+	color: #835C3B;
+	font-family: 'Exo', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	width: 500px;
+}
+
+.choicess-btn {
+	position: fixed;
+	top: calc(70% - 1em);
+	left: calc(70% - 1em);
+	width: 100px;
+	height: 35px;
+	background: #FFF;
+	border: 1px solid #3B6182;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #835C3B;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.choicessAnswers {
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(40% - 50px);
+	height: 150px;
+	width: 500px;
+	padding: 10px;
+	font-weight: bold;
+	z-index: 2;
+}*/

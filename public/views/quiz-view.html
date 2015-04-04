@@ -6,16 +6,17 @@
 
      <div class="q"><strong>Q:</strong></div>
      <div class="quizQuestion" type="text">{{currentQuestion.question}}</div>
-     
 	
     <div class="quiz"> 
     	<ul>
     		<li ng-repeat="choice in currentQuestion.choices">
     			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)"/>{{choice.choiceString}}
     		</li>
+            {{Data}}
     	</ul>
 
-		<button class="quiz-btn" ng-click="nextQuestion()" >Next</button>
+        <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton">Next</button>
+		<button ng-click="loadUserSelection()">Show Choices</button>
 
 	</div>
 

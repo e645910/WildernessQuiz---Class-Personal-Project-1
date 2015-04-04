@@ -6,13 +6,15 @@ angular.module('wildernessQuiz')
  			$scope.answer,
  			$scope.badAnswer1,
  			$scope.badAnswer2,
- 			$scope.badAnswer3
+ 			$scope.badAnswer3,
+ 			$scope.supportData
  		)
 	 		$scope.question = '';
 		    $scope.answer = '';
 		    $scope.badAnswer1 = '';
 		    $scope.badAnswer2 = '';
 		    $scope.badAnswer3 = '';
+		    $scope.supportData = '';
 	 	};
 	$scope.clickUpDate = function(){
  		questionService.getQuestion()
@@ -23,6 +25,7 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer1 = res.badAnswer1;
  			$scope.badAnswer2 = res.badAnswer2;
  			$scope.badAnswer3 = res.badAnswer3;
+ 			$scope.supportData = res.supportData;
  		})
  	};
 });	
