@@ -6,6 +6,9 @@ body{
 	padding: 0;
 	width: 0;
 	height: 0;
+	background-color: #EDC9AF;
+	font-family: 'Exo', sans-serif;
+
 }
 
 /* -------- login view -------- */
@@ -35,7 +38,6 @@ body{
 .header div{
 	float: left;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 40px;
 	font-weight: 250;
 }
@@ -62,7 +64,6 @@ body{
 	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 4px;
@@ -76,7 +77,6 @@ body{
 	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 4px;
@@ -91,7 +91,6 @@ body{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -106,7 +105,6 @@ body{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -115,7 +113,6 @@ body{
 
 #loginLabel{
   	color: #000;
-	font-family: 'Exo', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -123,7 +120,6 @@ body{
 .loginLabel1{
   	text-decoration: underline;
   	color: #0000FF;
-	font-family: 'Exo', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -176,7 +172,6 @@ body{
 .navHeader div{
 	float: left;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 40px;
 	font-weight: 250;
 }
@@ -198,7 +193,6 @@ body{
 
 .navBar h1{
 	color: #000080;
-	font-family: 'Exo', sans-serif;
 	font-size: 25px;
 	font-weight: 500;
 }
@@ -211,7 +205,6 @@ body{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -245,7 +238,6 @@ body{
 .questionHeader div{
 	float: left;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 40px;
 	font-weight: 250;
 }
@@ -273,7 +265,6 @@ body{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -288,7 +279,6 @@ body{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -312,7 +302,7 @@ body{
 }
 
 .quizHeader{
-	position: absolute;
+	position: relative;
 	top: calc(15% - 40px);
 	left: calc(25% - 260px);
 	font-weight: bold;
@@ -322,7 +312,6 @@ body{
 .quizHeader div{
 	float: left;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 40px;
 	font-weight: 250;
 }
@@ -336,7 +325,6 @@ body{
 	top: calc(38% - 75px);
 	left: calc(35% - 50px);
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 60px;
 	font-weight: 400;
 	padding: 6px;
@@ -353,7 +341,6 @@ body{
 	width: 600px;
 	height: 40px;
 	color: #3B6182;
-	font-family: 'Exo', sans-serif;
 	font-size: 20px;
 	font-weight: 500;
 	padding: 10px;
@@ -372,12 +359,11 @@ body{
 	z-index: 2;
 }
 
-ul{
+.quiz ul{
 	list-style-type: none;
 	padding: 0;
 	margin-left: 1em;
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
+	color: #000;
 	font-size: 18px;
 	font-weight: 400;
 	width: 500px;
@@ -394,7 +380,6 @@ ul{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
@@ -420,21 +405,7 @@ ul{
 
 /* ---------- Show user choices -------------- */
 
-/*.choicesBody{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background-image: url("./img/quiz.jpg");
-	background-size: cover;
-	z-index: 0;
-	background-attachment: fixed; 
-}*/
-
-/*.choicesHeader{
+.choicesHeader{
 	position: absolute;
 	top: calc(15% - 40px);
 	left: calc(25% - 260px);
@@ -445,7 +416,6 @@ ul{
 .choicesHeader div{
 	float: left;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 40px;
 	font-weight: 250;
 }
@@ -453,45 +423,44 @@ ul{
 .choicesHeader div span{
 	color: #3B6182 !important;
 }
-h1{
-	position: fixed;
-	top: calc(40% - 75px);
-	left: calc(40% - 50px);
-	width: 600px;
-	height: 40px;
-	color: #3B6182;
-	font-family: 'Exo', sans-serif;
-	font-size: 20px;
-	font-weight: 500;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 15px;
-}
 
-.choices{
-	position: fixed;
+.choices h1{
+	position: relative;
 	top: calc(50% - 75px);
-	left: calc(40% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	font-weight: bold;
-	margin-top: 20px;
+	left: calc(15% - 50px);
+	color: #3B6182;
+	font-size: 25px;
 	z-index: 2;
 }
 
-ul{
+.choices {
+	position: absolute;
+	top: calc(40% - 75px);
+	left: calc(30% - 50px);
+	z-index: 2;
+}
+
+.reviewChoices ul{
 	list-style-type: none;
-	padding: 0;
-	margin-left: 1em;
-	color: #835C3B;
-	font-family: 'Exo', sans-serif;
-	font-size: 18px;
-	font-weight: 400;
 	width: 500px;
 }
 
-.choicess-btn {
+#correct {
+	list-style-type: none;
+	color: #000080;
+	font-weight: bold;
+}
+
+
+#SupportData {
+	margin-top: 1em;
+	color: #835C3B;
+	background-color: #E5E4E2;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.choices-btn {
 	position: fixed;
 	top: calc(70% - 1em);
 	left: calc(70% - 1em);
@@ -502,20 +471,8 @@ ul{
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
-	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
 }
-
-.choicessAnswers {
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(40% - 50px);
-	height: 150px;
-	width: 500px;
-	padding: 10px;
-	font-weight: bold;
-	z-index: 2;
-}*/

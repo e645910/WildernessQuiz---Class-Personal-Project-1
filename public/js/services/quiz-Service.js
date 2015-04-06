@@ -18,6 +18,7 @@ angular.module('wildernessQuiz')
 	
 // save user's answer selection ===========================	
 	this.saveAnswer = function(questionObj, quizInstanceId){
+		console.log(1111111, $rootScope.userId)
 		console.log(3333333, quizInstanceId)
 		var dfd = $q.defer();
 		$http({
@@ -48,10 +49,10 @@ angular.module('wildernessQuiz')
 		for(var i = 0; i < quizArr.length; i++){
 			var choices = 
 				[
-					{choiceString: quizArr[i].answer, correct: true},
-					{choiceString: quizArr[i].badAnswer1, correct: false},
-					{choiceString: quizArr[i].badAnswer2, correct: false},
-					{choiceString: quizArr[i].badAnswer3, correct: false}
+					{choiceString: quizArr[i].answer, correct: "CORRECT"},
+					{choiceString: quizArr[i].badAnswer1, correct: "INCORRECT"},
+					{choiceString: quizArr[i].badAnswer2, correct:  "INCORRECT"},
+					{choiceString: quizArr[i].badAnswer3, correct: "INCORRECT"}
 				];					
 			quizArr[i].choices = randomizeOrder(choices);
 

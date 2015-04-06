@@ -4,8 +4,8 @@ var app = angular.module('wildernessQuiz')
 // provide a random number for quizInstanceId =============
 	$scope.Data = Data.quizInstanceId;
 	var quizInstanceId = $scope.Data
-
 	console.log(22222222, quizInstanceId)
+	
 	var currentIndex = 0;
 	var quiz = [];
 

@@ -5,7 +5,7 @@ var schema = mongoose.Schema({
 	quizInstanceId: Number,
 	question: String,
 	answer: String,
-	isCorrect: Boolean,
+	isCorrect: String,
 	selectedAnswer: String,
 	supportData: String,
 	gender: String,

@@ -12,7 +12,8 @@
     		<li ng-repeat="choice in currentQuestion.choices">
     			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)"/>{{choice.choiceString}}
     		</li>
-            {{Data}}
+            <br>Quiz ID: {{Data}}
+            <br>User ID:{{userId}}
     	</ul>
 
         <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton">Next</button>
