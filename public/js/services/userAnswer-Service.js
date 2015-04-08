@@ -6,7 +6,8 @@ angular.module('wildernessQuiz')
 	$http({
 		method: 'GET',
 		url: '/api/getAnswer'//+ "?quizInstanceId=" + Data + "&userId=" + userId
-	}).then(function(response){
+	})
+	.then(function(response){
 		console.log(66666666, response.data)
 		dfd.resolve(response);
 	},

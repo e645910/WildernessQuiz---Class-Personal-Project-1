@@ -10,8 +10,8 @@ angular.module('wildernessQuiz')
 			var quiz = createChoicesArrays(response.data);
 			dfd.resolve(quiz);
 		},
-		function(errors){
-			dfd.reject(errors);
+		function(err){
+			dfd.reject(err);
 		});
 		return dfd.promise;
 	};

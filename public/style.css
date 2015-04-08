@@ -302,8 +302,8 @@ body{
 }
 
 .quizHeader{
-	position: relative;
-	top: calc(15% - 40px);
+	position: absolute;
+	top: calc(10% - 40px);
 	left: calc(25% - 260px);
 	font-weight: bold;
 	z-index: 2;
@@ -407,7 +407,7 @@ body{
 
 .choicesHeader{
 	position: absolute;
-	top: calc(15% - 40px);
+	top: calc(10% - 40px);
 	left: calc(25% - 260px);
 	font-weight: bold;
 	z-index: 2;
@@ -440,20 +440,26 @@ body{
 	z-index: 2;
 }
 
-.reviewChoices ul{
+.reviewChoices li{
 	list-style-type: none;
-	width: 500px;
+	padding: 10px;
 }
 
 #correct {
 	list-style-type: none;
+	font-size: 20px;
 	color: #000080;
 	font-weight: bold;
 }
 
+li strong{
+	font-size: 19px;
+	padding-right: 10px;
+}
 
 #SupportData {
 	margin-top: 1em;
+	width: 600px;
 	color: #835C3B;
 	background-color: #E5E4E2;
 	font-size: 18px;

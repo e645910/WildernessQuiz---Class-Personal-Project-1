@@ -26,7 +26,7 @@ var app = angular.module('wildernessQuiz')
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
 		$scope.currentQuestion.selectedAnswer = $scope.selectedAnswer;
-		quizService.saveAnswer($scope.currentQuestion, quizInstanceId)
+	quizService.saveAnswer($scope.currentQuestion, quizInstanceId)
 		.then(function(){
 			$scope.showNextButton = false;
 			$scope.isCorrect = "";
