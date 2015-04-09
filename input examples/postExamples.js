@@ -47,10 +47,19 @@ age
     "userId": "55037e6f1af1c6c56fa12a3d",
     "quizInstanceId" : "0.28282828282828273736",
 	"answer": "Load the pack with some weight.",
-	"isCorrect": true,
+	"isCorrect": "CORRECT",
 	"question": "The first thing you should do when fitting a backpack is:",
 	"selectedAnswer": "Load the pack with some weight.",
 	"supportData": "Loading the pack with weight will help ensure proper fit.",
 	"age" : "100",
 	"gender" : "male"
 }
+
+
+
+
+
+
+
+
+

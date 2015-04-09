@@ -10,7 +10,7 @@ module.exports.post = function(req, res){
     })
 };
 module.exports.get = function(req, res){
-	AnswerService.find({})//({quizInstanceId: req.query.quizInstanceId, userId: req.query.userId})
+	AnswerService.find({quizInstanceId: req.query.quizInstanceId, userId: req.query.userId})
 	.then(function(response){
 		console.log(333333333, req.query.quizInstanceId)
 		if(response){

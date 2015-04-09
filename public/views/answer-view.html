@@ -12,7 +12,10 @@
 		<li id="correct">{{$index + 1}}.   {{select.isCorrect}}</li>
 			<ul>
 				<li><strong>The question was:</strong>{{select.question}}</li>
-				<li><strong>Correct Answer:</strong>{{select.answer}}</li>
+				<div ng-model="select.isCorrect" ng-hide="select.isCorrect == 'CORRECT'">
+					<li><strong>Correct Answer:</strong>{{select.answer}}</li>
+				</div>
+				
 				<li><strong>You Selected:</strong>{{select.selectedAnswer}}</li>
 				<li id="SupportData">{{select.supportData}}</li>
 			</ul>

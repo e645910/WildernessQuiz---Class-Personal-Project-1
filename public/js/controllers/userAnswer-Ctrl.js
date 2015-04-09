@@ -3,11 +3,14 @@ angular.module('wildernessQuiz')
 
 // provide a random number for quizInstanceId =============
 	$scope.Data = Data.quizInstanceId;
-
+	//var userSelections = []
 	$scope.loadUserSelection = function(){
 		userService.getUserInfo($scope.Data, $scope.selections, $rootScope.userId)
 			.then(function(res){
 				$scope.selections = res.data;
+				// userSelections = res.data
+				// $scope.selections = userSelections;
+				console.log(77777777, $scope.selections)
 			},
 			function(err){
 				console.log(err);
@@ -15,20 +18,3 @@ angular.module('wildernessQuiz')
 	};
 	$scope.loadUserSelection();
 });
-
-
-			
-				// var array = $scope.selections;
-				// console.log(7777777, array)
-				// function userArray(array){
-				// 	for(var i = 0; i < array.length; i++){
-				// 		if(array[i].isCorrect === 'CORRECT'){
-				// 			var isCorrectArray = [];
-				// 			isCorrectArray.push()
-				// 			console.log(99999999, array[i])
-				// 			return array[i].isCorrect = true;
-				// 		}
-				// 	}
-				// };
-				// userArray(array);
-			
