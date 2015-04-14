@@ -8,10 +8,22 @@
 	
 <div class="choices">
 	<h1>Answer Summary:</h1>
+		Your Score Is: 8 out of {{selections.length}} <br>
+		{{userSelection.isCorrect.length}}
+
+		<!-- {{(selections|filter:{"isCorrect":"CORRECT"}).length}} -->
+
+	<div ng-repeat="userSelection in selections | filter:isCorrect">
+		{{userSelection.isCorrect}}
+	</div>
+
+
+
 	<ul class="reviewChoices" ng-repeat="select in selections">
 		<li id="correct">{{$index + 1}}.   {{select.isCorrect}}</li>
 			<ul>
 				<li><strong>The question was:</strong>{{select.question}}</li>
+
 				<div ng-model="select.isCorrect" ng-hide="select.isCorrect == 'CORRECT'">
 					<li><strong>Correct Answer:</strong>{{select.answer}}</li>
 				</div>
@@ -21,3 +33,4 @@
 			</ul>
 	</ul>	
 </div>
+

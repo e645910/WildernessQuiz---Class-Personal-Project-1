@@ -5,10 +5,11 @@ angular.module('wildernessQuiz')
 		var dfd = $q.defer();
 	$http({
 		method: 'GET',
-		url: '/api/getAnswer' + "?quizInstanceId=" + Data + "&userId=" + userId
+		url: '/api/getAnswer'// + "?quizInstanceId=" + Data + "&userId=" + userId
 	})
 	.then(function(response){
-		console.log(66666666, response.data)
+		var selections = response.data;
+		console.log(66666666, selections)
 		dfd.resolve(response);
 	},
 	function(err){
@@ -16,4 +17,15 @@ angular.module('wildernessQuiz')
 	});
 	return dfd.promise;
 	};
+	// function correctUserChoices(selections){
+	// 	var correctChoices = []
+	// 	for(var i = 0; i < selections.length; i++){
+	// 		if(selections[i] === 'CORRECT'){
+	// 			correctUserChoices.push(selections[i])
+	// 			console.log(correctUserChoices)
+	// 		}
+	// 	}
+	// };
+	// correctCount(selections); 
+	// console.log(88888888, selections)
 });
