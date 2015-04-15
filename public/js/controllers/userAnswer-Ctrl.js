@@ -9,7 +9,8 @@ angular.module('wildernessQuiz')
 			.then(function(res){
 				$scope.selections = res.data;
 				console.log(77777777, $scope.selections)
-				$scope.isCorrect = function(selections){
+
+				$scope.isCorrectFilter = function(selections){
 					return selections.isCorrect === 'CORRECT';	
 				}
 			},

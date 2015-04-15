@@ -8,14 +8,23 @@
 	
 <div class="choices">
 	<h1>Answer Summary:</h1>
-		Your Score Is: 8 out of {{selections.length}} <br>
-		{{userSelection.isCorrect.length}}
+		Your Score Is: X out of {{selections.length}} <br>
 
-		<!-- {{(selections|filter:{"isCorrect":"CORRECT"}).length}} -->
+		<!-- total1:  {{(selections | filter:{isCorrect:'CORRECT'}).length}}<br> -->
+		<!-- total1:  {{(selections | filter:{isCorrect:'CORRECT'}).length}}<br> show all recorde-->
+		 <!-- total2:  {{(selections | filter:{isCorrect).length}} does not work -->
+		<!-- {{selections.isCorrect === 'CORRECT'.length;} doesn't work-->
 
-	<div ng-repeat="userSelection in selections | filter:isCorrect">
+<!-- 	<div ng-repeat="userSelection in selections | filter:isCorrectFilter">
 		{{userSelection.isCorrect}}
-	</div>
+	</div> -->
+
+
+<div>
+    <p  ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p>
+    <br />
+    Filtered length is: {{filtered.length}}
+</div>
 
 
 
