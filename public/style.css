@@ -2,13 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
 body{
-	margin: 0;
-	padding: 0;
-	width: 0;
-	height: 0;
+	width: auto;
+	height: auto;
+	padding: 10px:;
 	background-color: #EDC9AF;
 	font-family: 'Exo', sans-serif;
-
 }
 
 /* -------- login view -------- */
@@ -424,10 +422,19 @@ body{
 	color: #3B6182 !important;
 }
 
+.choicesScore{
+	position: absolute;
+	top: calc(25% - 1em);
+	left: calc(24% - 1em);
+	font-size: 30px;
+	font-weight: bold;
+	z-index: 2;
+}
+
 .choices h1{
 	position: relative;
-	top: calc(50% - 75px);
-	left: calc(15% - 50px);
+	top: calc(50% - 1em);
+	left: calc(6% - 1em);
 	color: #3B6182;
 	font-size: 25px;
 	z-index: 2;
@@ -435,8 +442,8 @@ body{
 
 .choices {
 	position: absolute;
-	top: calc(40% - 75px);
-	left: calc(30% - 50px);
+	top: calc(40% - 1em);
+	left: calc(20% - 1em);
 	z-index: 2;
 }
 
@@ -445,7 +452,7 @@ body{
 	padding: 10px;
 }
 
-#correct {
+.choicesCorrect {
 	list-style-type: none;
 	font-size: 20px;
 	color: #000080;
@@ -453,13 +460,13 @@ body{
 }
 
 li strong{
-	font-size: 19px;
+	font-size: 20px;
 	padding-right: 10px;
 }
 
-#SupportData {
+.choicesSupportData {
+	width: 800px;
 	margin-top: 1em;
-	width: 600px;
 	color: #835C3B;
 	background-color: #E5E4E2;
 	font-size: 18px;

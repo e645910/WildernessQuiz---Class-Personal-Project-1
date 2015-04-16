@@ -5,17 +5,16 @@
 	<br>Quiz ID: {{Data}}
 	<br>User ID: {{userId}}
 </div>
-	
+
+<div class="choicesScore">
+    <p ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p>
+    Your Score Is: {{filtered.length}} Out of {{selections.length}} 
+</div>	
+
 <div class="choices">
 	<h1>Answer Summary:</h1>
-<div id="score">
-    <p  ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p>
-    <br />
-    Your Score Is: {{filtered.length}} Out of {{selections.length}} 
-</div>
-
 	<ul class="reviewChoices" ng-repeat="select in selections">
-		<li id="correct">{{$index + 1}}.   {{select.isCorrect}}</li>
+		<li class="choicesCorrect">{{$index + 1}}.   {{select.isCorrect}}</li>
 			<ul>
 				<li><strong>The question was:</strong>{{select.question}}</li>
 
@@ -24,7 +23,7 @@
 				</div>
 				
 				<li><strong>You Selected:</strong>{{select.selectedAnswer}}</li>
-				<li id="SupportData">{{select.supportData}}</li>
+				<li class="choicesSupportData">{{select.supportData}}</li>
 			</ul>
 	</ul>	
 </div>
