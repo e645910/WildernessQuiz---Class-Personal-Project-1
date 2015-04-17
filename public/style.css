@@ -109,7 +109,12 @@ body{
 	margin-top: 10px;
 }
 
-#loginLabel{
+.login-container button:hover{ 
+	background:#FF0000;
+	color: #000;
+}
+
+.loginLabel{
   	color: #000;
 	font-size: 18px;
 	font-weight: 500;
@@ -118,29 +123,9 @@ body{
 .loginLabel1{
   	text-decoration: underline;
   	color: #0000FF;
-	font-size: 18px;
+  	cursor: pointer;
+	font-size: 20px;
 	font-weight: 500;
-}
-
-.login-container input[type=button]:active{
-	opacity: 0.6;
-}
-
-.login-container input[type=password]:focus{
-	outline: none;
-	border: 1px solid #3B6182;
-}
-
-.login-container input[type=button]:focus{
-	outline: none;
-}
-
-::-webkit-input-placeholder{
-   color: #835C3B;
-}
-
-::-moz-input-placeholder{
-   color: #835C3B;
 }
    
 /* -------- navBar view --------  */
@@ -208,6 +193,10 @@ body{
 	padding: 6px;
 	margin-top: 10px;
 }
+
+.navBar input[type=button]:hover{ 
+	background:#FF0000;
+	color: #000;
 
 /* -------- question/answer create view format -------- */
 
@@ -319,7 +308,7 @@ body{
 }
 
 .q{
-	position: fixed;
+	position: absolute;
 	top: calc(38% - 75px);
 	left: calc(35% - 50px);
 	color: #835C3B;
@@ -333,7 +322,7 @@ body{
 }
 
 .quizQuestion{
-	position: fixed;
+	position: absolute;
 	top: calc(40% - 75px);
 	left: calc(40% - 50px);
 	width: 600px;
@@ -347,7 +336,7 @@ body{
 }
 
 .quiz{
-	position: fixed;
+	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(40% - 50px);
 	height: 150px;
@@ -369,7 +358,7 @@ body{
 
 .quiz-btn {
 	position: fixed;
-	top: calc(70% - 1em);
+	top: calc(80% - 1em);
 	left: calc(70% - 1em);
 	width: 100px;
 	height: 35px;
@@ -382,6 +371,11 @@ body{
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
+}
+
+.quiz button:hover{ 
+	background:#FF0000;
+	color: #000;
 }
 
 .quiz input[type=radio]{
@@ -474,9 +468,8 @@ li strong{
 }
 
 .choices-btn {
-	position: relative;
-	top: calc(70% - 1em);
-	left: calc(70% - 1em);
+	position: absolute;
+	left: calc(80% - 1em);
 	width: 125px;
 	height: 35px;
 	background: #FFF;
@@ -488,4 +481,10 @@ li strong{
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.choices input[type=button]:hover{ 
+	background:#FF0000;
+	color: #000;
 }

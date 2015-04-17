@@ -5,7 +5,7 @@ angular.module('wildernessQuiz')
 		var dfd = $q.defer();
 	$http({
 		method: 'GET',
-		url: '/api/getAnswer' + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
+		url: '/api/getAnswer'// + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
 	})
 	.then(function(response){
 		var selections = response.data;
