@@ -2,8 +2,6 @@
 <div class="choicesHeader">
 	<div>Wilderness Quiz Site:<br><span>Test Your Backpacking Knowledge</span>
 	</div>
-	<br>Quiz ID: {{Data}}
-	<br>User ID: {{userId}}
 </div>
 
 <div class="choicesScore">
@@ -25,6 +23,7 @@
 				<li><strong>You Selected:</strong>{{select.selectedAnswer}}</li>
 				<li class="choicesSupportData">{{select.supportData}}</li>
 			</ul>
-	</ul>	
+	</ul>
+	<input class="choices-btn" type="button" value="Retake Quiz" ng-click="retakeTestClick()"/>	
 </div>
 

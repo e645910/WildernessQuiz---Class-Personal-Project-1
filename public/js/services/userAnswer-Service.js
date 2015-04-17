@@ -1,11 +1,11 @@
 angular.module('wildernessQuiz')
-.service('userService', function($q, $http){
-	this.getUserInfo = function(Data, selections, userId){
-		console.log(5555555, Data, userId)
+.service('userService', function($q, $http, $rootScope){
+	this.getUserInfo = function(quizInstanceId, userId, selections){
+		console.log(5555555, quizInstanceId, $rootScope.userId)
 		var dfd = $q.defer();
 	$http({
 		method: 'GET',
-		url: '/api/getAnswer'// + "?quizInstanceId=" + Data + "&userId=" + userId
+		url: '/api/getAnswer' + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
 	})
 	.then(function(response){
 		var selections = response.data;
@@ -17,15 +17,4 @@ angular.module('wildernessQuiz')
 	});
 	return dfd.promise;
 	};
-	// function correctUserChoices(selections){
-	// 	var correctChoices = []
-	// 	for(var i = 0; i < selections.length; i++){
-	// 		if(selections[i] === 'CORRECT'){
-	// 			correctUserChoices.push(selections[i])
-	// 			console.log(correctUserChoices)
-	// 		}
-	// 	}
-	// };
-	// correctCount(selections); 
-	// console.log(88888888, selections)
 });

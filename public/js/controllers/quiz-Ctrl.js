@@ -1,10 +1,10 @@
 var app = angular.module('wildernessQuiz')
-.controller('quizCtrl', function($scope, $location, quizService, Data){
+.controller('quizCtrl', function($scope, $location, quizService){
 
-// provide a random number for quizInstanceId =============
-	$scope.Data = Data.quizInstanceId;
-	var quizInstanceId = $scope.Data
-	console.log(22222222, quizInstanceId)
+// provide a random number for each individual test results =============
+	var randomId = Math.random()
+	quizInstanceId = randomId
+	console.log(11111111, quizInstanceId)
 	
 	var currentIndex = 0;
 	var quiz = [];
@@ -39,21 +39,13 @@ var app = angular.module('wildernessQuiz')
 		}
 	};
 
-// previous question button (not used in this app) ===========
-	// $scope.prevQuestion = function(){
-	// 	if (currentIndex > 0) {
-	// 		currentIndex--;
-	// 	}
-	// 	$scope.currentQuestion = quiz[currentIndex];
-	// };
-
 // used to show users selection on quiz view  =================
 	$scope.setAnswerValues = function(choiceString, isCorrect) {
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
 		$scope.showNextButton = true;
 		return choiceString, isCorrect;
-	}
+	};
 
 // display the answer-view.html view =========================
 	$scope.loadUserSelection = function() {

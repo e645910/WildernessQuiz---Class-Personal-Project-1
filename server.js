@@ -10,7 +10,6 @@ mongoose.connect('mongodb://localhost/wildernessQuiz');
 // Routing =======================
 var User = require('./api/models/authModel');
 var AuthCtrl = require('./api/controllers/authCtrl');
-var ProfileCtrl = require('./api/controllers/profileCtrl');
 var QuestionCtrl = require('./api/controllers/questionCtrl');
 var QuizCtrl = require('./api/controllers/quizCtrl');
 var AnswerCtrl = require('./api/controllers/answerCtrl')
@@ -41,7 +40,6 @@ passport.serializeUser(function(user, done){
 	done(null, user);
 });
 passport.deserializeUser(function(obj, done){
-	//user object (json)
 	done(null, obj);
 });
 
@@ -55,7 +53,6 @@ app.use(passport.session());
 
 // Authentication ========================
 app.post('/api/auth', passport.authenticate('local'), function(req, res){
-	//if auth was successful, this will happen
 	console.log(req.user._id);
 	return res.status(200).json(req.user._id);
 });
@@ -72,9 +69,6 @@ app.post('/api/register', function(req, res) {
 
 // Endpoints =============================== 
 app.get('/api/auth', AuthCtrl.authenticate);
-
-app.get('/api/getProfile', ProfileCtrl.get);
-app.post('/api/postProfile', ProfileCtrl.post);
 
 app.post('/api/postQuestion', QuestionCtrl.post);
 app.get('/api/getQuestion', QuestionCtrl.get);

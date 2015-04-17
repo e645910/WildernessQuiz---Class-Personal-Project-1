@@ -7,9 +7,7 @@ var schema = mongoose.Schema({
 	answer: String,
 	isCorrect: String,
 	selectedAnswer: String,
-	supportData: String,
-	gender: String,
-	age: String
+	supportData: String
 });
 
 module.exports = mongoose.model('Answers', schema);

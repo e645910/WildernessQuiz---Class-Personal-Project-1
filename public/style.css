@@ -474,10 +474,10 @@ li strong{
 }
 
 .choices-btn {
-	position: fixed;
+	position: relative;
 	top: calc(70% - 1em);
 	left: calc(70% - 1em);
-	width: 100px;
+	width: 125px;
 	height: 35px;
 	background: #FFF;
 	border: 1px solid #3B6182;

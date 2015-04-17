@@ -18,8 +18,7 @@ angular.module('wildernessQuiz')
 	
 // save user's answer selection ===========================	
 	this.saveAnswer = function(questionObj, quizInstanceId){
-		console.log(1111111, $rootScope.userId)
-		console.log(3333333, quizInstanceId)
+		console.log(2222222, $rootScope.userId)
 		var dfd = $q.defer();
 		$http({
 			method: 'POST',
@@ -35,7 +34,6 @@ angular.module('wildernessQuiz')
 			}
 		})
 		.success(function(response){
-			console.log(4444444, response)
 			dfd.resolve(response);
 		})
 		.catch(function(err){

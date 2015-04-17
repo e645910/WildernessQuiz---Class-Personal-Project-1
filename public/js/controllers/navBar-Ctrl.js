@@ -9,7 +9,4 @@ angular.module('wildernessQuiz')
 	$scope.selectUpdateQuestionForm = function(){
 		$scope.questionPath = $location.path('/');
 	};
-	$scope.selectUpdateProfileForm = function() {
-		$scope.profilePath = $location.path('/profile');
-	};
 });

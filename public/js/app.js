@@ -8,11 +8,6 @@ angular.module('wildernessQuiz', ['ngRoute'])
 		.when('/userChoices', {
 			templateUrl: 'views/answer-view.html',
 			controller: 'userCtrl'
-			// resolve: {
-			// 	userChoice: function(userService){
-			// 		return userService.getUserInfo();
-			// 	}
-			// }
 		})
 		.when('/nav',{
 			templateUrl: 'views/navBar-view.html',
@@ -30,11 +25,6 @@ angular.module('wildernessQuiz', ['ngRoute'])
 		.when('/quiz', {
 			templateUrl: 'views/quiz-view.html',
 			controller: 'quizCtrl'
-			// resolve: {
-			// 	quiz: function(quizService) {
-			// 	return quizService.getQuiz();
-			// 	}
-			// }
 		})
 		.otherwise({
 			redirectTo: '/'});
