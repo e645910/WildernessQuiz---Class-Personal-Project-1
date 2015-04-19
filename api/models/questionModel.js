@@ -1,13 +1,14 @@
 var mongoose = require('mongoose');
 
-var questionSchema = mongoose.Schema({
+var schema = mongoose.Schema({
+	_id: String,
 	question: {type: String, required: true},
 	answer: {type: String, required: true},
 	badAnswer1: {type: String, required: true},
 	badAnswer2: String,
 	badAnswer3: String,
-	supportData: String
-	//img: { type: mongoose.Schema.Types.ObjectID, ref: 'Image' }
+	supportData: String,
+	img: { data: Buffer, contentType: String }
 });
 
-module.exports = mongoose.model('Question', questionSchema);
+module.exports = mongoose.model('Question', schema);
