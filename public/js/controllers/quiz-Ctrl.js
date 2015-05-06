@@ -14,6 +14,7 @@ var app = angular.module('wildernessQuiz')
 			.then(function(res){
 				quiz = res;
 				$scope.currentQuestion = quiz[currentIndex];
+				console.log(3333333, quiz)
 			}, 
 			function(err){
 				console.log(err)

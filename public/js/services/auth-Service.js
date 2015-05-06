@@ -12,7 +12,7 @@ var app = angular.module('wildernessQuiz')
 		}).then(function(response) {
 			deferred.resolve(response.data);
 		});
-			return deferred.promise;
+		return deferred.promise;
 	};
 	this.login = function(email, password) {
 		var deferred = $q.defer();
@@ -26,9 +26,8 @@ var app = angular.module('wildernessQuiz')
 		}).then(function(response){
 			deferred.resolve(response);
 		}).catch(function(err) {
-			console.log("error logging in");
 			deferred.reject(err);
 		});
-			return deferred.promise;
+		return deferred.promise;
 	};
 });

@@ -13,22 +13,8 @@
 		<input type="text" ng-model="badAnswer2" placeholder="write an incorrect answer..."/>
 		<input type="text" ng-model="badAnswer3" placeholder="write an incorrect answer..."/>
 		<input type="text" ng-model="supportData" placeholder="write the supporting data..."/>
+		<input type="text" ng-model="image" placeholder="save image (i.e. = ./img/3-postureView.jpg"/>
 		<button class="question-btn"ng-click="clickSaveQuestion()" onClick="alert('enter your next question and answers')">Save</button>
 		<button class="question-btn" ng-click="clickUpDate()">Update</button>
 	</div>
 </div>
-
-<!-- 
-	       <h3>Update Questions and Answers</h3>
-
-          <li ng-repeat="item in questions" ng-repeat='item in answers'>
-          <input id="update" ng-model="item.question" ng-change="saveQuestion(item)"/>
-          <input id="update" ng-model="item.answer" ng-change="saveQuestion(item)"/>
-          <input id="update" ng-model="item.badAnswer1" ng-change="saveQuestion(item)"/>
-          <input id="update" ng-model="item.badAnswer2" ng-change="saveQuestion(item)"/>
-          <input id="update" ng-model="item.badAnswer3" ng-change="saveQuestion(item)"/>
-          <a href="#" ng-click="questions.$remove(item)">  Delete</a></li>
-      </ul> 
-
-  			<pre><code>{{ formDataTwo || json }}</code></pre> -->
- -->

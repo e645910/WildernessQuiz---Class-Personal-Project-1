@@ -4,7 +4,7 @@ var q = require('q');
 module.exports.save = function(answer){
 	var dfd = q.defer();
 	AnswerModel(answer).save(function(err, res){
-		!err ? dfd.resolve(res): dfd.reject(err);
+		(!err) ? dfd.resolve(res): dfd.reject(err);
 	});
 		return dfd.promise;
 };

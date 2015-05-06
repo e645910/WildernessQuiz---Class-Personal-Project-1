@@ -4,8 +4,9 @@
     	<div>Wilderness Quiz Site:  <br><span>Test Your Backpacking Knowledge</span></div>
 	</div>
 
-     <div class="q"><strong>Q:</strong></div>
-     <div class="quizQuestion" type="text">{{currentQuestion.question}}</div>
+    <div class="q"><strong>Q:</strong></div>
+    <div class="quizQuestion" type="text">{{currentQuestion.question}}
+    <br><img src="{{currentQuestion.image}}"> </div>
 	
     <div class="quiz"> 
     	<ul>
@@ -15,6 +16,6 @@
     	</ul>
 
         <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton">Next</button>
-		<button ng-click="loadUserSelection()">Show Choices</button>
-	</div>
+<!-- 		<button ng-click="loadUserSelection()">Show Choices</button>
+	</div> -->
 </div>

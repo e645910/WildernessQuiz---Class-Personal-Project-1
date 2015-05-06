@@ -1,6 +1,6 @@
 angular.module('wildernessQuiz')
 .service('questionService', function($q, $http) {
-	this.postQuestion = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData){
+	this.postQuestion = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
 	    var dfd = $q.defer();
       	$http({
         method: 'POST',
@@ -11,7 +11,8 @@ angular.module('wildernessQuiz')
           	badAnswer1: badAnswer1,
           	badAnswer2: badAnswer2,
           	badAnswer3: badAnswer3,
-          	supportData: supportData
+          	supportData: supportData,
+          	image: image
         }
 	    }).success(function(response){
 	        dfd.resolve(response);

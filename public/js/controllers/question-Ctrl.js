@@ -7,7 +7,8 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer1,
  			$scope.badAnswer2,
  			$scope.badAnswer3,
- 			$scope.supportData
+ 			$scope.supportData,
+ 			$scope.image
  		)
 	 		$scope.question = '';
 		    $scope.answer = '';
@@ -15,6 +16,7 @@ angular.module('wildernessQuiz')
 		    $scope.badAnswer2 = '';
 		    $scope.badAnswer3 = '';
 		    $scope.supportData = '';
+		    $scope.image = '';
 	 	};
 	$scope.clickUpDate = function(){
  		questionService.getQuestion()
@@ -26,6 +28,7 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer2 = res.badAnswer2;
  			$scope.badAnswer3 = res.badAnswer3;
  			$scope.supportData = res.supportData;
+ 			$scope.image = res.image;
  		})
  	};
 });	

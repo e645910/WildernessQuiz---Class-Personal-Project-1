@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
 body{
-	width: auto;
+	max-width: 100%;
 	height: auto;
 	padding: 10px:;
 	background-color: #EDC9AF;
@@ -26,9 +26,9 @@ body{
 }
 
 .header{
-	position: absolute;
-	top: calc(20% - 40px);
-	left: calc(35% - 260px);
+	position: fixed;
+	top: calc(15% - 1em);
+	left: calc(10% - 1em);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -45,9 +45,9 @@ body{
 }
 
 .login-container{
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
+	position: fixed;
+	top: calc(50% - 1em);
+	left: calc(45% - 1em);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
@@ -199,7 +199,7 @@ body{
 	color: #000;
 }
 
-/* -------- question/answer create view format -------- */
+/* -------- create question/answer view -------- */
 
 .questionBody{
 	position: absolute;
@@ -246,7 +246,7 @@ body{
 }
 
 .question input[type=text]{
-	width: 300px;
+	width: 500px;
 	height: 20px;
 	background: #FFF;
 	border: 1px solid #3B6182;
@@ -334,6 +334,14 @@ body{
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 15px;
+}
+ 
+.quizQuestion img{
+	position: fixed;
+	top: calc(30% - 1em);
+	left: calc(10% - 1em);
+	width:20%;
+	height: auto;
 }
 
 .quiz{
