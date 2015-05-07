@@ -17,9 +17,8 @@ angular.module('wildernessQuiz')
 		return dfd.promise;
 	};
 	
-// save user's answer selection ===========================	
+// save user's answer selection ============================	
 	this.saveAnswer = function(questionObj, quizInstanceId){
-		console.log(444444444, $rootScope.userId)
 		var dfd = $q.defer();
 		$http({
 			method: 'POST',
@@ -43,7 +42,7 @@ angular.module('wildernessQuiz')
 		return dfd.promise;
 	};
 
-// show answer selection in a randonmized order =============	
+// show answer selection in a randonmized order ============	
 	function createChoicesArrays(quizArr){
 		for(var i = 0; i < quizArr.length; i++){
 			var choices = 
@@ -62,7 +61,7 @@ angular.module('wildernessQuiz')
 		return quizArr;
 	};
 
-// randomize the order of the answers =====================	
+// randomize the order of the answers ======================	
 	function randomizeOrder(arr){
 		var newArr = [];
 		while(arr.length){

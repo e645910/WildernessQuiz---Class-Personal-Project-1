@@ -9,7 +9,7 @@ body{
 	font-family: 'Exo', sans-serif;
 }
 
-/* -------- login view -------- */
+/* -------------- login view ------------------ */
 
 .loginBody{
 	position: absolute;
@@ -43,7 +43,6 @@ body{
 .header div span{
 	color: #3B6182 !important;
 }
-
 .login-container{
 	position: fixed;
 	top: calc(50% - 1em);
@@ -127,8 +126,8 @@ body{
 	font-size: 20px;
 	font-weight: 500;
 }
-   
-/* -------- navBar view --------  */
+  
+/* -------------- navBar view ----------------  */
 
 .navBody{
 	position: absolute;
@@ -145,9 +144,9 @@ body{
 }
 
 .navHeader{
-	position: absolute;
-	top: calc(10% - 40px);
-	left: calc(50% - 260px);
+	position: fixed;
+	top: calc(10% - 1em);
+	left: calc(35% - 1em);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -164,9 +163,9 @@ body{
 }
 
 .navBar{
-	position: absolute;
-	top: calc(40% - 75px);
-	left: calc(60% - 50px);
+	position: fixed;
+	top: calc(30% - 1em);
+	left: calc(60% - 1em);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
@@ -199,7 +198,7 @@ body{
 	color: #000;
 }
 
-/* -------- create question/answer view -------- */
+/* ------- create question/answer view -------- */
 
 .questionBody{
 	position: absolute;
@@ -216,9 +215,9 @@ body{
 }
 
 .questionHeader{
-	position: absolute;
-	top: calc(10% - 40px);
-	left: calc(80% - 260px);
+	position: fixed;
+	top: calc(10% - 1em);
+	left: calc(55% - 1em);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -235,9 +234,9 @@ body{
 }
 
 .question{
-	position: absolute;
-	top: calc(40% - 75px);
-	left: calc(30% - 50px);
+	position: fixed;
+	top: calc(35% - 1em);
+	left: calc(20% - 1em);
 	height: 150px;
 	width: 350px;
 	padding: 10px;
@@ -273,7 +272,7 @@ body{
 	margin-top: 10px;
 }
 
- /* -------- Quiz view -------- */
+/* -------------- Quiz view ------------------- */
 
 .quizBody{
 	position: absolute;
@@ -290,9 +289,9 @@ body{
 }
 
 .quizHeader{
-	position: absolute;
-	top: calc(10% - 40px);
-	left: calc(25% - 260px);
+	position: fixed;
+	top: calc(10% - 1em);
+	left: calc(9% - 1em);
 	font-weight: bold;
 	z-index: 2;
 }
@@ -309,9 +308,9 @@ body{
 }
 
 .q{
-	position: absolute;
-	top: calc(38% - 75px);
-	left: calc(35% - 50px);
+	position: fixed;
+	top: calc(38% - 1em);
+	left: calc(35% - 1em);
 	color: #835C3B;
 	font-size: 60px;
 	font-weight: 400;
@@ -323,51 +322,48 @@ body{
 }
 
 .quizQuestion{
-	position: absolute;
-	top: calc(40% - 75px);
-	left: calc(40% - 50px);
-	width: 600px;
-	height: 40px;
+	position: fixed;
+	top: calc(38% - 1em);
+	left: calc(38% - 1em);
+	width: auto;
+	height: auto;
 	color: #3B6182;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 500;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 15px;
 }
  
 .quizQuestion img{
 	position: fixed;
-	top: calc(30% - 1em);
+	top: calc(39% - 1em);
 	left: calc(10% - 1em);
 	width:20%;
 	height: auto;
 }
 
 .quiz{
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(40% - 50px);
+	position: fixed;
+	top: calc(40% - 1em);
+	left: calc(35% - 1em);
 	height: 150px;
-	width: 350px;
-	padding: 10px;
 	font-weight: bold;
+	margin-top: 25px;
 	z-index: 2;
 }
 
-.quiz ul{
+.quiz li{
 	list-style-type: none;
-	padding: 0;
-	margin-left: 1em;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-right: 10px;
 	color: #000;
 	font-size: 18px;
 	font-weight: 400;
-	width: 500px;
+	width: auto;
 }
 
 .quiz-btn {
 	position: fixed;
-	top: calc(80% - 1em);
+	top: calc(70% - 1em);
 	left: calc(70% - 1em);
 	width: 100px;
 	height: 35px;
@@ -387,29 +383,12 @@ body{
 	color: #000;
 }
 
-.quiz input[type=radio]{
-	margin-top: 30px;
-	margin-right: 10px;
-	cursor: pointer;
-}
-
-.quizAnswers {
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(40% - 50px);
-	height: 150px;
-	width: 500px;
-	padding: 10px;
-	font-weight: bold;
-	z-index: 2;
-}
-
-/* ---------- Show user choices -------------- */
+/* ----------- Show user choices -------------- */
 
 .choicesHeader{
 	position: absolute;
-	top: calc(10% - 40px);
-	left: calc(25% - 260px);
+	top: calc(10% - 1em);
+	left: calc(15% - 1em);
 	font-weight: bold;
 	z-index: 2;
 }

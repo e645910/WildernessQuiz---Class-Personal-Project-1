@@ -8,7 +8,7 @@
 	<div class='login-container'>
 		<div class='login-auth'>
 			<div>
-				<input type="email" ng-model="email" placeholder="email log on"/>
+				<input type="email" ng-model="email" placeholder="email log on" autofocus/>
 				<input type="password" ng-model="password" placeholder="password"/>
 			</div>
 
@@ -18,7 +18,7 @@
 				</div>
 					<div ng-if="regError">
 						<br>
-						<p><font size="6" color="red">Registration Failed!</font></p>
+						<p><font size="6" color="Red">Registration Failed, please enter your email address and a password!</font></p>
 					</div>				
 			</div>
 
@@ -28,7 +28,7 @@
 				</div>
 					<div ng-if="loginError">
 						<br>
-						<p><font size="6" color="red">Login failed, please register first or check your login info!</font></p>
+						<p><font size="6" color="Red">Login failed, please register first or check your login info!</font></p>
 					</div>	
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-angular.module('wildernessQuiz', ['ngRoute'])
+var app = angular.module('wildernessQuiz', ['ngRoute'])
 .config(function($routeProvider){
 	$routeProvider
 		.when('/', {

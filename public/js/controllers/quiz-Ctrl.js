@@ -1,29 +1,26 @@
-var app = angular.module('wildernessQuiz')
+angular.module('wildernessQuiz')
 .controller('quizCtrl', function($scope, $location, quizService){
 
 // provide a random number for each individual test results =============
 	var randomId = Math.random()
 	quizInstanceId = randomId
-	console.log(11111111, quizInstanceId)
-	
+
+//create array for question and answers =================================
 	var currentIndex = 0;
 	var quiz = [];
-
+	console.log(11111111111, $scope.currentQuestion);
 	$scope.loadQuiz = function(){
 		quizService.getQuiz()
 			.then(function(res){
 				quiz = res;
 				$scope.currentQuestion = quiz[currentIndex];
-				console.log(3333333, quiz)
 			}, 
 			function(err){
-				console.log(err)
 			});
 	};
 	$scope.loadQuiz();
 
-
-// next question button on quiz-view.html ==================
+// next question button on quiz-view.html ===============================
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
 		$scope.currentQuestion.selectedAnswer = $scope.selectedAnswer;
@@ -40,7 +37,7 @@ var app = angular.module('wildernessQuiz')
 		}
 	};
 
-// used to show users selection on quiz view  =================
+// used to show users selection on quiz view  ===========================
 	$scope.setAnswerValues = function(choiceString, isCorrect) {
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
@@ -48,8 +45,8 @@ var app = angular.module('wildernessQuiz')
 		return choiceString, isCorrect;
 	};
 
-// display the answer-view.html view =========================
-	$scope.loadUserSelection = function() {
-		$scope.choicePath = $location.path('/userChoices');
-	};
+// display the answer-view.html view (used for testing) ==================
+	// $scope.loadUserSelection = function() {
+	// 	$scope.choicePath = $location.path('/userChoices');
+	// };
 });

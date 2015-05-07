@@ -18,6 +18,7 @@ angular.module('wildernessQuiz')
 		    $scope.supportData = '';
 		    $scope.image = '';
 	 	};
+	 	
 	$scope.clickUpDate = function(){
  		questionService.getQuestion()
  		.then(function(res){
@@ -31,5 +32,4 @@ angular.module('wildernessQuiz')
  			$scope.image = res.image;
  		})
  	};
-});	
- 
+});

@@ -30,6 +30,6 @@ angular.module('wildernessQuiz')
 	    }).then(function(response) {
 	        dfd.resolve(response.data[0]);
 	    });
-	      	return dfd.promise;
+	    return dfd.promise;
 	};
 });

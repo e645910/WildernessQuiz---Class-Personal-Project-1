@@ -10,6 +10,7 @@ angular.module('wildernessQuiz')
 			$scope.loginError = true;
 		});
 	};
+
 	$scope.clickRegister = function(){
 		AuthService.register($scope.email, $scope.password)
 		.then(function(){
@@ -19,10 +20,10 @@ angular.module('wildernessQuiz')
 			$scope.regError = true;
 		});
 	};
+	
 	$scope.changeState = function(newState){
 		$scope.loginError = false;
 		$scope.regError = false;
 		$scope.state = newState;
 	};
 });
-

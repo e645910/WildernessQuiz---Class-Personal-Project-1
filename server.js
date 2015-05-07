@@ -8,12 +8,12 @@ var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/wildernessQuiz');
 
-// Routing =======================
+// Routing ============================
 var User = require('./api/models/authModel');
 var AuthCtrl = require('./api/controllers/authCtrl');
 var QuestionCtrl = require('./api/controllers/questionCtrl');
 var QuizCtrl = require('./api/controllers/quizCtrl');
-var AnswerCtrl = require('./api/controllers/answerCtrl')
+var AnswerCtrl = require('./api/controllers/answerCtrl');
 
 // Middleware =========================
 passport.use(new localStrategy({
@@ -52,7 +52,7 @@ app.use(session({secret: 'GROUPSEEKRIT',
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Authentication ========================
+// Authentication =====================
 app.post('/api/auth', passport.authenticate('local'), function(req, res){
 	return res.status(200).json(req.user._id);
 });
@@ -67,7 +67,7 @@ app.post('/api/register', function(req, res) {
 	});
 });
 
-// Endpoints =============================== 
+// Endpoints ==========================
 app.get('/api/auth', AuthCtrl.authenticate);
 
 app.post('/api/postQuestion', QuestionCtrl.post);
