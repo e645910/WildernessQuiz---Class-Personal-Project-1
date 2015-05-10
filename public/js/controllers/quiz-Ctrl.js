@@ -41,15 +41,10 @@ angular.module('wildernessQuiz')
 	};
 
 // used to set answer values (also to show users selection on quiz view.html for testing) 
-	$scope.setAnswerValues = function(choiceString, isCorrect) {
+	$scope.setAnswerValues = function(choiceString, isCorrect){
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
 		$scope.showNextButton = true;
 		return choiceString, isCorrect;
 	};
-
-// display the answer-view.html view for testing ==================
-	// $scope.loadUserSelection = function() {
-	// 	$scope.choicePath = $location.path('/userChoices');
-	// };
 });

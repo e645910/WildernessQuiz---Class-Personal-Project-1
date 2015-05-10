@@ -323,7 +323,7 @@ body{
 
 .quizCounter{
 	position: absolute;
-	top: calc(30% - 1em);
+	top: calc(31% - 1em);
 	left: calc(34% - 1em);
 	color: Red;
 }
@@ -341,7 +341,7 @@ body{
  
 .quizQuestion img{
 	position: fixed;
-	top: calc(39% - 1em);
+	top: calc(31% - 1em);
 	left: calc(10% - 1em);
 	width:20%;
 	height: auto;

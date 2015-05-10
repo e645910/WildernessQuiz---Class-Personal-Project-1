@@ -24,6 +24,7 @@ schema.pre('save', function(next){
 		});
 	}); 
 });
+
 schema.methods.comparePassword = function(pass){
 	var dfd = q.defer();
 	bcrypt.compare(pass, this.password, function(err, isMatch){

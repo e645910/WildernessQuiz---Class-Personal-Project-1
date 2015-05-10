@@ -31,9 +31,11 @@ angular.module('wildernessQuiz')
 				isCorrect: questionObj.isCorrect,
 				supportData: questionObj.supportData
 			}
-		}).success(function(response){
+		})
+		.success(function(response){
 			dfd.resolve(response);
-		}).catch(function(err){
+		})
+		.catch(function(err){
 			dfd.reject(err);
 		});
 		return dfd.promise;

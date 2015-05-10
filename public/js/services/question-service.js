@@ -1,5 +1,5 @@
 angular.module('wildernessQuiz')
-.service('questionService', function($q, $http) {
+.service('questionService', function($q, $http){
 	this.postQuestion = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
 	    var dfd = $q.defer();
       	$http({
@@ -14,20 +14,23 @@ angular.module('wildernessQuiz')
 	          	supportData: supportData,
 	          	image: image
 	        }
-	    }).success(function(response){
+	    })
+	    .success(function(response){
 	        dfd.resolve(response);
-	    }).catch(function(err){
+	    })
+	    .catch(function(err){
 	        dfd.reject(err);
 	    });
 	   return dfd.promise;
 	};
 
-	this.getQuestion = function() {
+	this.getQuestion = function(){
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
 		    url: '/api/getQuestion'
-	    }).then(function(response) {
+	    })
+	    .then(function(response){
 	        dfd.resolve(response.data[0]);
 	    });
 	    return dfd.promise;

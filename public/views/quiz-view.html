@@ -5,23 +5,23 @@
 	</div>
    
     <div class="quizCounter">
-        Question {{currentQuestionCount}} of {{totalQuestions.length}} 
+        QUESTION {{currentQuestionCount}} OF {{totalQuestions.length}} 
     </div>  
 
-    <div class="q"><strong>Q:</strong></div>
-    <div class="quizQuestion" type="text">{{currentQuestion.question}}
-        <img src="{{currentQuestion.image}}">
-    </div>
-	
-    <div class="quiz"> 
-    	<ul><br>
-    		<li ng-repeat="choice in currentQuestion.choices">
-    			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)"/>
-                {{choice.choiceString}}
-    		</li>
-    	</ul>
+        <div class="q"><strong>Q:</strong></div>
+        
+        <div class="quizQuestion" type="text">{{currentQuestion.question}}
+            <img src="{{currentQuestion.image}}">
+        </div>
+    	
+            <div class="quiz"> 
+            	<ul><br>
+            		<li ng-repeat="choice in currentQuestion.choices">
+            			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)"/>
+                        {{choice.choiceString}}
+            		</li>
+            	</ul>
 
-        <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton" >Next</button>
-<!-- 		<button ng-click="loadUserSelection()">Show Choices</button>
-	</div> -->
+                <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton" >Next</button>
+        	</div>
 </div>

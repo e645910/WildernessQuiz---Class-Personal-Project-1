@@ -1,6 +1,6 @@
 angular.module('wildernessQuiz')
-.service('AuthService', function($q, $http) {
-	this.register = function(email, password) {
+.service('AuthService', function($q, $http){
+	this.register = function(email, password){
 		var deferred = $q.defer();
 		$http({
 			method: 'POST',
@@ -9,15 +9,17 @@ angular.module('wildernessQuiz')
 				email: email,
 				password: password
 			}
-		}).then(function(response){
+		})
+		.then(function(response){
 			deferred.resolve(response);
-		}).catch(function(err) {
+		})
+		.catch(function(err) {
 			deferred.reject(err);
 		});
 		return deferred.promise;
 	};
 	
-	this.login = function(email, password) {
+	this.login = function(email, password){
 		var deferred = $q.defer();
 		$http({
 			method: 'POST',
@@ -26,9 +28,11 @@ angular.module('wildernessQuiz')
 				email: email,
 				password: password
 			}
-		}).then(function(response){
+		})
+		.then(function(response){
 			deferred.resolve(response);
-		}).catch(function(err) {
+		})
+		.catch(function(err) {
 			deferred.reject(err);
 		});
 		return deferred.promise;

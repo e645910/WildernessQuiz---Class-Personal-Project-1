@@ -22,7 +22,6 @@ angular.module('wildernessQuiz')
 	$scope.clickUpDate = function(){
  		questionService.getQuestion()
  		.then(function(res){
- 			console.log(111111111, res)
 	 		$scope.question = res.question;
  			$scope.answer = res.answer;
  			$scope.badAnswer1 = res.badAnswer1;
