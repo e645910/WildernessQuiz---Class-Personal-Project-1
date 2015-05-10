@@ -4,10 +4,9 @@ angular.module('wildernessQuiz')
 		var dfd = $q.defer();
 		$http({
 			method: 'GET',
-				url: '/api/getQuiz'
+			url: '/api/getQuiz'
 		})
 		.then(function(response){
-			console.log(222222222, response.data)
 			var quiz = createChoicesArrays(response.data);
 			dfd.resolve(quiz);
 		},
@@ -32,11 +31,9 @@ angular.module('wildernessQuiz')
 				isCorrect: questionObj.isCorrect,
 				supportData: questionObj.supportData
 			}
-		})
-		.success(function(response){
+		}).success(function(response){
 			dfd.resolve(response);
-		})
-		.catch(function(err){
+		}).catch(function(err){
 			dfd.reject(err);
 		});
 		return dfd.promise;

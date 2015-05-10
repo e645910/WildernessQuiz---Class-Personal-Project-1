@@ -6,7 +6,7 @@ var app = angular.module('wildernessQuiz', ['ngRoute'])
 			controller: 'authCtrl'
 		 })
 		.when('/userChoices', {
-			templateUrl: 'views/answer-view.html',
+			templateUrl: 'views/userAnswer-view.html',
 			controller: 'userCtrl'
 		})
 		.when('/nav',{

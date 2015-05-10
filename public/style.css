@@ -310,7 +310,7 @@ body{
 .q{
 	position: fixed;
 	top: calc(38% - 1em);
-	left: calc(35% - 1em);
+	left: calc(36% - 1em);
 	color: #835C3B;
 	font-size: 60px;
 	font-weight: 400;
@@ -319,6 +319,13 @@ body{
 	padding: 10px;
 	font-weight: bold;
 	z-index: 2;
+}
+
+.quizCounter{
+	position: absolute;
+	top: calc(30% - 1em);
+	left: calc(34% - 1em);
+	color: Red;
 }
 
 .quizQuestion{

@@ -8,12 +8,14 @@ angular.module('wildernessQuiz')
 //create array for question and answers =================================
 	var currentIndex = 0;
 	var quiz = [];
-	console.log(11111111111, $scope.currentQuestion);
+	
 	$scope.loadQuiz = function(){
 		quizService.getQuiz()
 			.then(function(res){
 				quiz = res;
 				$scope.currentQuestion = quiz[currentIndex];
+				$scope.totalQuestions = res;
+				$scope.currentQuestionCount = currentIndex + 1;
 			}, 
 			function(err){
 			});
@@ -31,13 +33,14 @@ angular.module('wildernessQuiz')
 			$scope.selectedAnswer = "";
 			(currentIndex < quiz.length -1) ? currentIndex++ : $location.path('/userChoices');
 			$scope.currentQuestion = quiz[currentIndex];
+			$scope.currentQuestionCount = currentIndex + 1;
 		}),
 		function(err){
 			console.log(err);
 		}
 	};
 
-// used to show users selection on quiz view  ===========================
+// used to set answer values (also to show users selection on quiz view.html for testing) 
 	$scope.setAnswerValues = function(choiceString, isCorrect) {
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;
@@ -45,7 +48,7 @@ angular.module('wildernessQuiz')
 		return choiceString, isCorrect;
 	};
 
-// display the answer-view.html view (used for testing) ==================
+// display the answer-view.html view for testing ==================
 	// $scope.loadUserSelection = function() {
 	// 	$scope.choicePath = $location.path('/userChoices');
 	// };
