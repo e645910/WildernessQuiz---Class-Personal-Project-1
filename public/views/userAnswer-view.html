@@ -11,7 +11,7 @@
 <div class="choices">
 	<h1>Answer Summary:</h1>
 	<ul class="reviewChoices" ng-repeat="select in selections">
-		<li class="choicesCorrect">{{$index + 1}}.   {{select.isCorrect}}</li>
+		<li class="choicesCorrect">{{$index + 1}}.  {{select.isCorrect | uppercase}}</li>
 			<ul>
 				<li><strong>The question was:</strong>{{select.question}}</li>
 

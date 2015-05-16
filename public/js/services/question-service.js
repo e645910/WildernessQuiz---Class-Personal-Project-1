@@ -24,15 +24,41 @@ angular.module('wildernessQuiz')
 	   return dfd.promise;
 	};
 
-	this.getQuestion = function(){
+	var updateIndex = 0;
+	var updateArray = []
+	var arrayLength;
+
+this.getQuestion = function(){
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
 		    url: '/api/getQuestion'
 	    })
 	    .then(function(response){
-	        dfd.resolve(response.data[0]);
+	    	updateArray = response.data[updateIndex];
+	    	arrayLength = response.data.length;
+			console.log(11111111, updateIndex)
+	        dfd.resolve(updateArray);
 	    });
-	    return dfd.promise;
+	    return dfd.promise;  
+	};
+
+this.nextUpdate = function(){
+		var dfd = $q.defer();
+	    $http({
+		    method: 'GET',
+		    url: '/api/getQuestion'
+	    })
+	    .then(function(response){
+	    	//updateIndex++
+	  //   	if(updateIndex < arrayLength - 1){
+	  // 			updateIndex++};
+			// }
+	    	updateArray = response.data[updateIndex];
+	    	arrayLength = response.data.length;
+			console.log(333333333, updateIndex)
+	        dfd.resolve(updateArray);
+	    });
+	    return dfd.promise;  
 	};
 });

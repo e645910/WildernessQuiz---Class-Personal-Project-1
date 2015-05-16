@@ -15,7 +15,7 @@ angular.module('wildernessQuiz')
 				quiz = res;
 				$scope.currentQuestion = quiz[currentIndex];
 				$scope.totalQuestions = res;
-				$scope.currentQuestionCount = currentIndex + 1;
+				$scope.currentQuestionNumber = currentIndex + 1;
 			}, 
 			function(err){
 			});
@@ -40,7 +40,7 @@ angular.module('wildernessQuiz')
 		}
 	};
 
-// used to set answer values (also to show users selection on quiz view.html for testing) 
+// used to set answer values when selected then save them when next question selected 
 	$scope.setAnswerValues = function(choiceString, isCorrect){
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;

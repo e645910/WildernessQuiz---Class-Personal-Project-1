@@ -5,7 +5,7 @@ angular.module('wildernessQuiz')
 			.then(function(res){
 				$scope.selections = res.data;
 				$scope.isCorrectFilter = function(selections){
-					return selections.isCorrect === 'CORRECT';	
+					return selections.isCorrect === 'CORRECT';
 				}
 			},
 			function(err){

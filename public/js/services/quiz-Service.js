@@ -46,10 +46,10 @@ angular.module('wildernessQuiz')
 		for(var i = 0; i < quizArr.length; i++){
 			var choices = 
 				[
-					{choiceString: quizArr[i].answer, correct: "CORRECT"},
-					{choiceString: quizArr[i].badAnswer1, correct: "INCORRECT"},
-					{choiceString: quizArr[i].badAnswer2, correct:  "INCORRECT"},
-					{choiceString: quizArr[i].badAnswer3, correct: "INCORRECT"}
+					{choiceString: quizArr[i].answer, correct: "correct"},
+					{choiceString: quizArr[i].badAnswer1, correct: "incorrect"},
+					{choiceString: quizArr[i].badAnswer2, correct:  "incorrect"},
+					{choiceString: quizArr[i].badAnswer3, correct: "incorrect"}
 				];					
 			quizArr[i].choices = randomizeOrder(choices);
 

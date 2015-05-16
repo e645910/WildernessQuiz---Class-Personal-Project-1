@@ -11,7 +11,7 @@ module.exports.post = function(req, res){
 };
 
 module.exports.get = function(req, res){
-	AnswerService.find({quizInstanceId: req.query.quizInstanceId, userId: req.query.userId})
+	AnswerService.find({})//({quizInstanceId: req.query.quizInstanceId, userId: req.query.userId})
 	.then(function(response){
 		(response) ? res.status(200).json(response): res.status(404).send('nothing to get');
 	},
