@@ -1,10 +1,10 @@
 angular.module('wildernessQuiz')
 .service('questionService', function($q, $http){
-	this.postQuestion = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
+	this.saveQuestion = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
 	    var dfd = $q.defer();
       	$http({
 	        method: 'POST',
-	        url: '/api/postQuestion',
+	        url: '/api/saveQuestion',
 	        data: {
 	          	question: question,
 	          	answer: answer,
@@ -24,9 +24,8 @@ angular.module('wildernessQuiz')
 	   return dfd.promise;
 	};
 
-	// var updateIndex = 0;
-	// var updateArray = []
-	// var arrayLength;
+	var updateIndex = 0;
+	var updateArray = []
 
 this.getQA = function(){
 		var dfd = $q.defer();
@@ -35,23 +34,49 @@ this.getQA = function(){
 		    url: '/api/getQuestion'
 	    })
 	    .then(function(response){
-			console.log(11111111, response)
-	        dfd.resolve(response);
+	    	updateArray = response.data[updateIndex];
+	    	arrayLength = response.data.length;
+			console.log(11111111, response.data[updateIndex])
+	        dfd.resolve(updateArray);
 	    });
 	    return dfd.promise;  
 	};
 
-this.nextUpdate = function(){
+this.updateQA = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
+	    var dfd = $q.defer();
+      	$http({
+	        method: 'PUT',
+	        url: '/api/updateQuestion',
+	        data: {
+	          	question: question,
+	          	answer: answer,
+	          	badAnswer1: badAnswer1,
+	          	badAnswer2: badAnswer2,
+	          	badAnswer3: badAnswer3,
+	          	supportData: supportData,
+	          	image: image
+	        }
+	    })
+	    .success(function(response){
+	        dfd.resolve(response);
+	    })
+	    .catch(function(err){
+	        dfd.reject(err);
+	    });
+	   return dfd.promise;
+	};
+
+this.getNextQA = function(){
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
 		    url: '/api/getQuestion'
 	    })
 	    .then(function(response){
-	  	//updateArray = response.data[updateIndex];
-	  	//arrayLength = response.data.length;
-			// console.log(333333333, updateIndex)
-	        dfd.resolve(response);
+	    	(updateIndex < arrayLength - 1) ? updateIndex++: alert('No more records to update!');
+	  		updateArray = response.data[updateIndex];
+	    	console.log(444444444, response.data[updateIndex])
+	        dfd.resolve(updateArray);
 	    });
 	    return dfd.promise;  
 	};

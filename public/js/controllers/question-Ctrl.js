@@ -1,7 +1,7 @@
 angular.module('wildernessQuiz')
 .controller('questionCtrl', function($scope, questionService){
  	$scope.clickSaveQuestion = function(){
- 		questionService.postQuestion(
+ 		questionService.saveQuestion(
  			$scope.question,
  			$scope.answer,
  			$scope.badAnswer1,
@@ -19,42 +19,41 @@ angular.module('wildernessQuiz')
 		    $scope.image = '';
 	 	};
 
-	var updateIndex = 0;
-	var updateArray = []
-
-	$scope.clickUpDate = function(){
+//this function will show the first question on the create questions and answers view	
+	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
- 			updateArray = res.data[updateIndex];
-	    	arrayLength = res.data.length;
-	    	console.log(22222222, updateIndex)
-	    	console.log(33333333, arrayLength)
- 			console.log(44444444, updateArray)
-	 		$scope.question = updateArray.question;
- 			$scope.answer = updateArray.answer;
- 			$scope.badAnswer1 = updateArray.badAnswer1;
- 			$scope.badAnswer2 = updateArray.badAnswer2;
- 			$scope.badAnswer3 = updateArray.badAnswer3;
- 			$scope.supportData = updateArray.supportData;
- 			$scope.image = updateArray.image;
+ 			console.log(222222222, res)
+	 		$scope.question = res.question;
+ 			$scope.answer = res.answer;
+ 			$scope.badAnswer1 = res.badAnswer1;
+ 			$scope.badAnswer2 = res.badAnswer2;
+ 			$scope.badAnswer3 = res.badAnswer3;
+ 			$scope.supportData = res.supportData;
+ 			$scope.image = res.image;
  		})
  	};
 
- 	$scope.clickUpdateNext = function(){
- 		questionService.nextUpdate()
+//this function will show each of the proceeding questions and answers
+ 	$scope.clickNextRecord = function(){
+ 		questionService.getNextQA()
  		.then(function(res){
- 			(updateIndex < arrayLength - 1) ? updateIndex++: alert('No more records to update!');
-	  		updateArray = res.data[updateIndex];
- 			console.log(555555555, updateIndex)
- 			console.log(666666666, res.data[updateIndex])
- 			console.log(777777777, updateArray)
- 			$scope.question = updateArray.question;
- 			$scope.answer = updateArray.answer;
- 			$scope.badAnswer1 = updateArray.badAnswer1;
- 			$scope.badAnswer2 = updateArray.badAnswer2;
- 			$scope.badAnswer3 = updateArray.badAnswer3;
- 			$scope.supportData = updateArray.supportData;
- 			$scope.image = updateArray.image;
+ 			console.log(333333333, res)
+ 			$scope.question = res.question;
+ 			$scope.answer = res.answer;
+ 			$scope.badAnswer1 = res.badAnswer1;
+ 			$scope.badAnswer2 = res.badAnswer2;
+ 			$scope.badAnswer3 = res.badAnswer3;
+ 			$scope.supportData = res.supportData;
+ 			$scope.image = res.image;
  		})
  	};
+
+//this function updates the record shown
+	$scope.clickUpdateRecord = function(){
+		questionService.updateQA()
+		then(function(){
+
+		})
+	};
 });

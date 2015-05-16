@@ -13,8 +13,11 @@
 		<input type="text" ng-model="badAnswer3" placeholder="write an incorrect answer..."/>
 		<input type="text" ng-model="supportData" placeholder="write the supporting data..."/>
 		<input type="text" ng-model="image" placeholder="save image (i.e. = ./img/3-postureView.jpg"/>
-		<button class="question-btn"ng-click="clickSaveQuestion()" onClick="alert('enter your next question and answers')">Save</button>
-		<button class="question-btn" ng-click="clickUpDate()">Update</button>
-		<button class="question-btn" ng-click="clickUpdateNext()">Next</button>
+		<button class="question-btn" ng-click="clickSaveQuestion()" onClick="alert('Enter Your Next Question and Answers')">Save</button>
+		<br>
+		<h2>Make Changes to Questions and Answer Records</h2>
+		<button class="question-btn" ng-click="clickGetQA()">Find</button>
+		<button class="question-btn" ng-click="clickNextRecord()">Next</button>
+		<button class="question-btn" ng-click="clickUpdateRecord()">Update</button>
 	</div>
 </div>

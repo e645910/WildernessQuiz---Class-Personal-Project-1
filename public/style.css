@@ -244,6 +244,14 @@ body{
 	z-index: 2;
 }
 
+.question h2{
+	text-decoration: underline;
+	color: #0000A0;
+	font-size: 20px;
+	width: 600px;
+	font-weight: bold;
+}
+
 .question input[type=text]{
 	width: 500px;
 	height: auto;
@@ -270,6 +278,11 @@ body{
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
+}
+
+.question button:hover{
+	background: #FF0000;
+	color: #000;
 }
 
 /* -------------- Quiz view ------------------- */

@@ -21,7 +21,7 @@ angular.module('wildernessQuiz')
 		var dfd = $q.defer();
 		$http({
 			method: 'POST',
-			url: '/api/postAnswer',
+			url: '/api/saveAnswer',
 			data: {
 			 	userId: $rootScope.userId,
 			 	quizInstanceId: quizInstanceId,

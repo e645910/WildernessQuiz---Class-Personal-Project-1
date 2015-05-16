@@ -70,13 +70,14 @@ app.post('/api/register', function(req, res) {
 // Endpoints ==========================
 app.get('/api/auth', AuthCtrl.authenticate);
 
-app.post('/api/postQuestion', QuestionCtrl.post);
 app.get('/api/getQuestion', QuestionCtrl.get);
+app.post('/api/saveQuestion', QuestionCtrl.post);
+app.put('/api/updateQuestion', QuestionCtrl.put);
 
 app.get('/api/getQuiz', QuizCtrl.get);
 
-app.post('/api/postAnswer', AnswerCtrl.post);
 app.get('/api/getAnswer', AnswerCtrl.get);
+app.post('/api/saveAnswer', AnswerCtrl.post);
 
 app.listen(8001, function(err){
 });
