@@ -246,7 +246,7 @@ body{
 
 .question input[type=text]{
 	width: 500px;
-	height: 20px;
+	height: auto;
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;

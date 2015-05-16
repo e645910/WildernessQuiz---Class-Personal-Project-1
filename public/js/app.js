@@ -20,11 +20,11 @@ var app = angular.module('wildernessQuiz', ['ngRoute'])
 			{
 				templateUrl: 'views/question-view.html',
 				controller: 'questionCtrl',
-				resolve: {
-					question: function(questionService){
-						return questionService.getQuestion();
-					}
-				}
+				// resolve: {
+				// 	question: function(questionService){
+				// 		return questionService.getQuestion();
+				// 	}
+				// }
 			})
 		.when('/quiz', 
 			{
