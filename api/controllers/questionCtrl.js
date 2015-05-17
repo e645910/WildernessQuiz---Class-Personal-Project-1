@@ -23,7 +23,6 @@ module.exports.get = function(req, res){
 module.exports.put = function(req, res){
 	QuestionService.update(req.body)
 	.then(function(response){
-		console.log(111111111, response);
 		res.status(200).json(response);
 	}, function(err){
 		res.status(400).json(err)

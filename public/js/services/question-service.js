@@ -27,7 +27,7 @@ angular.module('wildernessQuiz')
 	var updateIndex = 0;
 	var updateArray = []
 
-this.getQA = function(){
+	this.getQA = function(){
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
@@ -36,18 +36,19 @@ this.getQA = function(){
 	    .then(function(response){
 	    	updateArray = response.data[updateIndex];
 	    	arrayLength = response.data.length;
-			console.log(11111111, response.data[updateIndex])
 	        dfd.resolve(updateArray);
 	    });
 	    return dfd.promise;  
 	};
 
-this.updateQA = function(question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
+	this.updateQA = function(_id, question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
+		console.log(3333333333, _id, question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image)
 	    var dfd = $q.defer();
       	$http({
 	        method: 'PUT',
 	        url: '/api/updateQuestion',
 	        data: {
+	        	_id: _id,
 	          	question: question,
 	          	answer: answer,
 	          	badAnswer1: badAnswer1,
@@ -58,6 +59,7 @@ this.updateQA = function(question, answer, badAnswer1, badAnswer2, badAnswer3, s
 	        }
 	    })
 	    .success(function(response){
+	    	console.log(1111111111, response)
 	        dfd.resolve(response);
 	    })
 	    .catch(function(err){
@@ -66,7 +68,7 @@ this.updateQA = function(question, answer, badAnswer1, badAnswer2, badAnswer3, s
 	   return dfd.promise;
 	};
 
-this.getNextQA = function(){
+	this.getNextQA = function(){
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
@@ -75,7 +77,6 @@ this.getNextQA = function(){
 	    .then(function(response){
 	    	(updateIndex < arrayLength - 1) ? updateIndex++: alert('No more records to update!');
 	  		updateArray = response.data[updateIndex];
-	    	console.log(444444444, response.data[updateIndex])
 	        dfd.resolve(updateArray);
 	    });
 	    return dfd.promise;  

@@ -23,7 +23,7 @@ angular.module('wildernessQuiz')
 	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
- 			console.log(222222222, res)
+ 			$scope._id = res._id,
 	 		$scope.question = res.question;
  			$scope.answer = res.answer;
  			$scope.badAnswer1 = res.badAnswer1;
@@ -38,7 +38,7 @@ angular.module('wildernessQuiz')
  	$scope.clickNextRecord = function(){
  		questionService.getNextQA()
  		.then(function(res){
- 			console.log(333333333, res)
+ 			$scope._id = res._id;
  			$scope.question = res.question;
  			$scope.answer = res.answer;
  			$scope.badAnswer1 = res.badAnswer1;
@@ -49,11 +49,17 @@ angular.module('wildernessQuiz')
  		})
  	};
 
-//this function updates the record shown
+//this function updates the record shown ============================
 	$scope.clickUpdateRecord = function(){
-		questionService.updateQA()
-		then(function(){
-
-		})
-	};
+		questionService.updateQA(
+			$scope._id,
+ 			$scope.question,
+ 			$scope.answer,
+ 			$scope.badAnswer1,
+ 			$scope.badAnswer2,
+ 			$scope.badAnswer3,
+ 			$scope.supportData,
+ 			$scope.image
+		)
+	}
 });

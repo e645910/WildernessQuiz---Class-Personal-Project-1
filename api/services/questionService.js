@@ -18,7 +18,6 @@ module.exports.find = function(query){
 };
 
 module.exports.update = function(update){
-	console.log(222222222, "test")
 	var dfd = q.defer();
 	var query = {_id: update._id};
 	var update = {
@@ -31,7 +30,7 @@ module.exports.update = function(update){
 		image: update.image
 	};
 	QuestionModel.findOneAndUpdate(query, update, function(err, res){
-    	(!err) ? dfd.resolve(res): dfd.reject(err);
+		(!err) ? dfd.resolve(res): dfd.reject(err);
 	});
 	return dfd.promise;
 };
