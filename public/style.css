@@ -235,7 +235,7 @@ body{
 
 .question{
 	position: fixed;
-	top: calc(35% - 1em);
+	top: calc(30% - 1em);
 	left: calc(20% - 1em);
 	height: 150px;
 	width: 350px;
@@ -246,7 +246,7 @@ body{
 
 .question h2{
 	text-decoration: underline;
-	color: #0000A0;
+	color: #FF0000;
 	font-size: 20px;
 	width: 600px;
 	font-weight: bold;

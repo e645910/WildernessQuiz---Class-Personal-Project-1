@@ -28,6 +28,7 @@ angular.module('wildernessQuiz')
 	var updateArray = []
 
 	this.getQA = function(){
+		updateIndex = 0;
 		var dfd = $q.defer();
 	    $http({
 		    method: 'GET',
