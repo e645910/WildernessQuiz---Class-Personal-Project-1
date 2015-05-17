@@ -42,7 +42,6 @@ angular.module('wildernessQuiz')
 	};
 
 	this.updateQA = function(_id, question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image){
-		console.log(3333333333, _id, question, answer, badAnswer1, badAnswer2, badAnswer3, supportData, image)
 	    var dfd = $q.defer();
       	$http({
 	        method: 'PUT',
@@ -59,7 +58,6 @@ angular.module('wildernessQuiz')
 	        }
 	    })
 	    .success(function(response){
-	    	console.log(1111111111, response)
 	        dfd.resolve(response);
 	    })
 	    .catch(function(err){
