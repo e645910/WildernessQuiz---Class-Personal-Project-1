@@ -5,7 +5,7 @@ angular.module('wildernessQuiz')
 	var randomId = Math.random()
 	quizInstanceId = randomId
 
-//create array for question and answers =================================
+// create array for question and answers =================================
 	var currentIndex = 0;
 	var quiz = [];
 	
@@ -22,7 +22,7 @@ angular.module('wildernessQuiz')
 	};
 	$scope.loadQuiz();
 
-// next question button on quiz-view.html ===============================
+// move to the next question and answers ================================
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
 		$scope.currentQuestion.selectedAnswer = $scope.selectedAnswer;
@@ -40,7 +40,7 @@ angular.module('wildernessQuiz')
 		}
 	};
 
-// used to set answer values when selected then save them when next question selected 
+// set answer values when selected then save them when next question selected 
 	$scope.setAnswerValues = function(choiceString, isCorrect){
 		$scope.selectedAnswer = choiceString;
 		$scope.isCorrect = isCorrect;

@@ -19,7 +19,9 @@ angular.module('wildernessQuiz')
 		    $scope.image = '';
 	 	};
 
-//this function will show the first question on the create questions and answers view	
+//==================== * update records * ============================
+
+// this function will show the first question & answer to update	
 	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
@@ -34,7 +36,7 @@ angular.module('wildernessQuiz')
  		})
  	};
 
-//this function will show each of the proceeding questions and answers
+// this function will show the next question & answer to update 
  	$scope.clickNextRecord = function(){
  		questionService.getNextQA()
  		.then(function(res){
@@ -49,7 +51,7 @@ angular.module('wildernessQuiz')
  		})
  	};
 
-//this function updates the record shown ============================
+// this function updates the question & answer in the database
 	$scope.clickUpdateRecord = function(){
 		questionService.updateQA(
 			$scope._id,

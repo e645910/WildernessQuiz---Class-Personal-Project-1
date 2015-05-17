@@ -19,12 +19,7 @@ var app = angular.module('wildernessQuiz', ['ngRoute'])
 		.when('/question', 
 			{
 				templateUrl: 'views/question-view.html',
-				controller: 'questionCtrl',
-				// resolve: {
-				// 	question: function(questionService){
-				// 		return questionService.getQuestion();
-				// 	}
-				// }
+				controller: 'questionCtrl'
 			})
 		.when('/quiz', 
 			{

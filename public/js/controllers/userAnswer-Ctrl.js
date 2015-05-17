@@ -13,7 +13,7 @@ angular.module('wildernessQuiz')
 	};
 	$scope.loadUserSelection();
 	
-// allow the user to retake the test ======================
+// give user the option to retake the quiz ========================
 	$scope.retakeTestClick = function(){
 		$scope.reTakeQuizPath = $location.path('/quiz');
 	};

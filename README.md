@@ -1,1 +1,1 @@
-Wilderness Quiz is my first personal web project.
+Wilderness Quiz is my first personal class web project.
