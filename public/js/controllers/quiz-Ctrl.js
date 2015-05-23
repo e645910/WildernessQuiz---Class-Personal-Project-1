@@ -26,6 +26,7 @@ angular.module('wildernessQuiz')
 	$scope.nextQuestion = function(){
 		$scope.currentQuestion.isCorrect = $scope.isCorrect;
 		$scope.currentQuestion.selectedAnswer = $scope.selectedAnswer;
+		//console.log(111111111, )
 	quizService.saveAnswer($scope.currentQuestion, quizInstanceId)
 		.then(function(){
 			$scope.showNextButton = false;
@@ -33,7 +34,7 @@ angular.module('wildernessQuiz')
 			$scope.selectedAnswer = "";
 			(currentIndex < quiz.length -1) ? currentIndex++ : $location.path('/userChoices');
 			$scope.currentQuestion = quiz[currentIndex];
-			$scope.currentQuestionCount = currentIndex + 1;
+			$scope.currentQuestionNumber = currentIndex + 1;
 		}),
 		function(err){
 			console.log(err);
