@@ -7,8 +7,7 @@ angular.module('wildernessQuiz')
 		url: '/api/getAnswer'// + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
 	})
 	.then(function(response){
-		var correctAnswers = createIsCorrrectCount(response.data);
-
+		var correctAnswers = createAnswerCount(response.data);
 		dfd.resolve(response.data);//shows data for userAnswer-Ctrl.js
 	},
 	function(err){
@@ -16,22 +15,26 @@ angular.module('wildernessQuiz')
 	});
 	return dfd.promise;
 	};
-	function createIsCorrrectCount(correctAnswers){
-		var numbCorrectAnwers = []
-		for(var i = 0; i < correctAnswers.length; i++){
-			if(correctAnswers[i].isCorrect === 'correct'){
-				//console.log(111111111, correctAnswers[i].isCorrect)// shows the word correct
-				//console.log(222222222, correctAnswers[i].isCorrect.length)//shows the length of the word correct
-				//console.log(333333333, correctAnswers[i])//shows only the first answer in the array
-				//console.log(444444444, correctAnswers[i].length)//is undefined
-				numbCorrectAnwers.push(correctAnswers[i]);
+	var numbCorrectAnwers = []
+	function createAnswerCount(totalAnswers){
+		for(var i = 0; i < totalAnswers.length; i++){
+			if(totalAnswers[i].isCorrect === 'correct'){
+				numbCorrectAnwers.push(totalAnswers[i]);
 			}
-			//console.log(555555555, correctAnswers.length)//shows the total count of user answers
-			//console.log(666666666, numbCorrectAnwers)//shows the total count of user answers
-			//console.log(666666666, numbCorrectAnwers.length)//shows the length of the word correct 
-			//return correctAnswers.length
 		}
-		console.log(666666666, numbCorrectAnwers.length)
-		console.log(555555555, correctAnswers.length)
+		if(numbCorrectAnwers.length === 5){
+			var feedback = 'Okay. You scored a solid C. As long as you don’t run into any emergencies in the backcountry, you should be just fine. But you might want to retake this quiz to see if you’ve learned anything, and maybe invest in some tech to help you navigate through the woods on your own.'
+			
+		}
+		console.log(11111111, feedback)
+		console.log(22222222, numbCorrectAnwers.length)
+		// return {
+		// 	answersCorrect: function(){
+		// 		return answerCorrect;
+		// 	},
+		// 	numbCorrectAnwers: function(){
+		// 		return numbCorrectAnwers.length;
+		// 	}
+		// }
 	}
 });
