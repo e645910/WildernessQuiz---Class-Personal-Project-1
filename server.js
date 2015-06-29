@@ -1,5 +1,5 @@
+//node modules ========================
 var express = require('express');
-var app = express();
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var passport = require('passport');
@@ -43,6 +43,8 @@ passport.serializeUser(function(user, done){
 passport.deserializeUser(function(obj, done){
 	done(null, obj);
 });
+
+var app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));

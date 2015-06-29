@@ -4,11 +4,12 @@
 </div>
 
 <div class="choicesScore">
-   <!--  <p ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p> -->
-    Your Score Is: {{numbCorrectAnwers}} Out of {{selections.length}}
+    <p ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p>
+    Your Score Is: {{filtered.length}} Out of {{selections.length}}
+    <br>
+	feedback:{{totalCorrectAnwers}}
 </div>
-<br>
-feedback:{{feedback}}
+
 <div class="choices">
 	<h1>Answer Summary:</h1>
 	<ul class="reviewChoices" ng-repeat="select in selections">
@@ -16,7 +17,7 @@ feedback:{{feedback}}
 			<ul>
 				<li><strong>The question was:</strong>{{select.question}}</li>
 
-				<div ng-model="select.isCorrect" ng-hide="select.isCorrect == 'CORRECT'">
+				<div ng-model="select.isCorrect" ng-hide="select.isCorrect == 'correct'">
 					<li><strong>Correct Answer:</strong>{{select.answer}}</li>
 				</div>
 				
