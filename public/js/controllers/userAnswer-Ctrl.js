@@ -6,9 +6,6 @@ angular.module('wildernessQuiz')
 				$scope.selections = res.answers;
 				$scope.feedback = res.feedback;
 				$scope.totalAnwers = res.totalAnswers;
-				// $scope.isCorrectFilter = function(selections){
-				// 	return selections.isCorrect === 'correct';
-				// }
 			},
 			function(err){
 			});
