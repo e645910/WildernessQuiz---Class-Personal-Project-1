@@ -3,12 +3,12 @@ angular.module('wildernessQuiz')
 	$scope.loadUserSelection = function(){
 		userService.getUserInfo(quizInstanceId, $rootScope.userId)
 			.then(function(res){
-				$scope.selections = res;
-				//$scope.totalCorrectAnwers = userService.createCount;
-				//console.log(111111111, $scope.totalCorrectAnwers)
-				$scope.isCorrectFilter = function(selections){
-					return selections.isCorrect === 'correct';
-				}
+				$scope.selections = res.answers;
+				$scope.feedback = res.feedback;
+				$scope.totalAnwers = res.totalAnswers;
+				// $scope.isCorrectFilter = function(selections){
+				// 	return selections.isCorrect === 'correct';
+				// }
 			},
 			function(err){
 			});

@@ -4,10 +4,9 @@
 </div>
 
 <div class="choicesScore">
-    <p ng-repeat="userSelection in filtered = (selections | filter:isCorrectFilter)"></p>
-    Your Score Is: {{filtered.length}} Out of {{selections.length}}
-    <br>
-	feedback:{{totalCorrectAnwers}}
+	Your Score Is: {{totalAnwers}} Out of {{selections.length}}
+	<br>
+	{{feedback}}
 </div>
 
 <div class="choices">
