@@ -411,7 +411,6 @@ body{
 	top: calc(10% - 1em);
 	left: calc(15% - 1em);
 	font-weight: bold;
-	z-index: 2;
 }
 
 .choicesHeader div{
@@ -431,7 +430,17 @@ body{
 	left: calc(24% - 1em);
 	font-size: 30px;
 	font-weight: bold;
-	z-index: 2;
+}
+
+.choiceFeedback{
+	position: absolute;
+	top: calc(30% - 1em);
+	left: calc(24% - 1em);
+	font-size: 20px;
+	width: 800px;
+	margin-bottom: 20px;
+	color: #FF0000;
+	background-color: #E5E4E2;
 }
 
 .choices h1{
@@ -445,9 +454,8 @@ body{
 
 .choices {
 	position: absolute;
-	top: calc(40% - 1em);
+	top: calc(45% - 1em);
 	left: calc(20% - 1em);
-	z-index: 2;
 }
 
 .reviewChoices li{

@@ -33,6 +33,9 @@ angular.module('wildernessQuiz')
 		if(totalCorrectAnwers === 5){
 			feedback = 'Okay. You scored a solid C. As long as you don’t run into any emergencies in the backcountry, you should be just fine. But you might want to retake this quiz to see if you’ve learned anything, and maybe invest in some tech to help you navigate through the woods on your own.'
 		 } 
+		if(totalCorrectAnwers === 5){
+			feedback = 'Okay. You scored a solid C. As long as you don’t run into any emergencies in the backcountry, you should be just fine. But you might want to retake this quiz to see if you’ve learned anything, and maybe invest in some tech to help you navigate through the woods on your own.'
+		 } 
 		return feedback;
 		return totalAnswers.length
 	};	
