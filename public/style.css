@@ -4,7 +4,7 @@
 body{
 	max-width: 100%;
 	height: auto;
-	padding: 10px:;
+	/*padding: 10px:;*/
 	background-color: #EDC9AF;
 	font-family: 'Exo', sans-serif;
 }
@@ -408,8 +408,9 @@ body{
 
 .choicesHeader{
 	position: absolute;
-	top: calc(10% - 1em);
+	top: calc(5% - 1em);
 	left: calc(15% - 1em);
+	padding: 10px;
 	font-weight: bold;
 }
 
@@ -418,6 +419,7 @@ body{
 	color: #835C3B;
 	font-size: 40px;
 	font-weight: 250;
+	padding: 10px;
 }
 
 .choicesHeader div span{
@@ -428,6 +430,7 @@ body{
 	position: absolute;
 	top: calc(25% - 1em);
 	left: calc(24% - 1em);
+	padding: 10px;
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -438,23 +441,24 @@ body{
 	left: calc(24% - 1em);
 	font-size: 20px;
 	width: 800px;
-	margin-bottom: 20px;
+	padding: 5px;
 	color: #FF0000;
 	background-color: #E5E4E2;
 }
 
 .choices h1{
 	position: relative;
-	top: calc(50% - 1em);
-	left: calc(6% - 1em);
+	top: calc(30% - 1em);
+	left: calc(4% - 1em);
 	color: #3B6182;
+	padding: 10px;
 	font-size: 25px;
-	z-index: 2;
 }
 
 .choices {
 	position: absolute;
-	top: calc(45% - 1em);
+	padding: 20px;
+	top: calc(40% - 1em);
 	left: calc(20% - 1em);
 }
 

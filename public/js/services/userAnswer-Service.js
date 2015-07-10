@@ -5,7 +5,7 @@ angular.module('wildernessQuiz')
 		
 		$http({
 			method: 'GET',
-			url: '/api/getAnswer'// + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
+			url: '/api/getAnswer' + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
 	 	})
 		.then(function(response){
 			var correctAnswers = createCount(response.data);
