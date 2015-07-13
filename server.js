@@ -76,8 +76,6 @@ passport.deserializeUser(function(obj, done){
 	done(null, obj);
 });
 
-
-
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
 app.use(session({secret: 'GROUPSEEKRIT', 

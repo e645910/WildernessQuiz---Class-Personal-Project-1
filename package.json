@@ -4,8 +4,14 @@
   "description": "README.md",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.11.2",
-    "express-session": "^1.11.3"
+    "bcrypt": "^0.8.3",
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "mongoose": "^4.0.7",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {
