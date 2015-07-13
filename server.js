@@ -23,11 +23,11 @@ var mongoose = require ("mongoose"); // The reason for this demo.
 var uristring = 
   process.env.MONGOLAB_URI || 
   process.env.MONGOHQ_URL || 
-  'mongodb://localhost/HelloMongoose';
+  'mongodb://localhost/wildernessQuiz';
 
 // The http server will listen to an appropriate port, or default to
 // port 5000.
-var theport = process.env.PORT || 5000;
+var theport = process.env.PORT || 8001;
 
 // Makes connection asynchronously.  Mongoose will queue up database
 // operations and release them when the connection is complete.
@@ -38,7 +38,7 @@ mongoose.connect(uristring, function (err, res) {
     console.log ('Succeeded connected to: ' + uristring);
   }
 });
-//mongoose.connect('mongodb://localhost/wildernessQuiz');
+
 
 // Routing ============================
 var User = require('./api/models/authModel');
