@@ -2,10 +2,9 @@ angular.module('wildernessQuiz')
 .service('userService', function($q, $http, $rootScope){
 	this.getUserInfo = function(quizInstanceId, userId){
 		var dfd = $q.defer();
-		
 		$http({
 			method: 'GET',
-			url: '/api/getAnswer' + "?quizInstanceId=" + quizInstanceId + "&userId=" + userId
+			url: '/api/getAnswer' + '?quizInstanceId=' + quizInstanceId + '&userId=' + userId
 	 	})
 		.then(function(response){
 			var correctAnswers = createCount(response.data);
