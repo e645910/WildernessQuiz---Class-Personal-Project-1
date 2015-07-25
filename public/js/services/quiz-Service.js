@@ -7,6 +7,7 @@ angular.module('wildernessQuiz')
 			url: '/api/getQuiz'
 		})
 		.then(function(response){
+			console.log(22222222, response.data[0].image)
 			var quiz = createChoicesArrays(response.data);
 			dfd.resolve(quiz);
 		},
@@ -44,6 +45,7 @@ angular.module('wildernessQuiz')
 // show answer selection in a randonmized order ============	
 	function createChoicesArrays(quizArr){
 		for(var i = 0; i < quizArr.length; i++){
+			console.log(3333333, quizArr[i].image)
 			var choices = 
 				[
 					{choiceString: quizArr[i].answer, correct: "correct"},

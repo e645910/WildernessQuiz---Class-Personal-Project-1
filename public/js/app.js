@@ -22,7 +22,12 @@ var app = angular.module('wildernessQuiz', ['ngRoute'])
 		.when('/quiz', 
 			{
 				templateUrl: 'views/quiz-view.html',
-				controller: 'quizCtrl'
+				controller: 'quizCtrl',
+				resolve:{
+					orderImages: function(quizService){
+						return quizService.getQuiz();
+					}
+				}
 			})
 
 		.when('/userChoices', 

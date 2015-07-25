@@ -1,5 +1,5 @@
 angular.module('wildernessQuiz')
-.controller('quizCtrl', function($scope, $location, quizService){
+.controller('quizCtrl', function($scope, $location, quizService, orderImages){
 
 // provide a random number for each individual test results =============
 	var randomId = Math.random()
@@ -10,15 +10,11 @@ angular.module('wildernessQuiz')
 	var quiz = [];
 	
 	$scope.loadQuiz = function(){
-		quizService.getQuiz()
-			.then(function(res){
-				quiz = res;
-				$scope.currentQuestion = quiz[currentIndex];
-				$scope.totalQuestions = res;
-				$scope.currentQuestionNumber = currentIndex + 1;
-			}, 
-			function(err){
-			});
+		quiz = orderImages;
+		$scope.currentQuestion = quiz[currentIndex];
+		$scope.totalQuestions = orderImages;
+		$scope.currentQuestionNumber = currentIndex + 1;
+		console.log(11111111, orderImages);
 	};
 	$scope.loadQuiz();
 
