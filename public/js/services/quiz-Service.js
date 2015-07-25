@@ -7,7 +7,6 @@ angular.module('wildernessQuiz')
 			url: '/api/getQuiz'
 		})
 		.then(function(response){
-			console.log(22222222, response.data[0].image)
 			var quiz = createChoicesArrays(response.data);
 			dfd.resolve(quiz);
 		},

@@ -14,7 +14,6 @@ angular.module('wildernessQuiz')
 		$scope.currentQuestion = quiz[currentIndex];
 		$scope.totalQuestions = orderImages;
 		$scope.currentQuestionNumber = currentIndex + 1;
-		console.log(11111111, orderImages);
 	};
 	$scope.loadQuiz();
 
