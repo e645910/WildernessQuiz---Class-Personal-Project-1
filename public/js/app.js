@@ -6,26 +6,31 @@ var app = angular.module('wildernessQuiz', ['ngRoute'])
 				templateUrl: 'views/login-view.html',
 				controller: 'authCtrl'
 			 })
-		.when('/userChoices', 
-			{
-				templateUrl: 'views/userAnswer-view.html',
-				controller: 'userCtrl'
-			})
+
 		.when('/nav',
-			{
-				templateUrl: 'views/navBar-view.html',
-				controller: 'navBarCtrl'
-			})
+					{
+						templateUrl: 'views/navBar-view.html',
+						controller: 'navBarCtrl'
+					})
+
 		.when('/question', 
 			{
 				templateUrl: 'views/question-view.html',
 				controller: 'questionCtrl'
 			})
+
 		.when('/quiz', 
 			{
 				templateUrl: 'views/quiz-view.html',
 				controller: 'quizCtrl'
 			})
+
+		.when('/userChoices', 
+			{
+				templateUrl: 'views/userAnswer-view.html',
+				controller: 'userCtrl'
+			})
+
 		.otherwise({
 			redirectTo: '/'});
 });
