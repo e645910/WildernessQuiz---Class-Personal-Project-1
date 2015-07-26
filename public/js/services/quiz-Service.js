@@ -44,7 +44,6 @@ angular.module('wildernessQuiz')
 // show answer selection in a randonmized order ============	
 	function createChoicesArrays(quizArr){
 		for(var i = 0; i < quizArr.length; i++){
-			console.log(3333333, quizArr[i].image)
 			var choices = 
 				[
 					{choiceString: quizArr[i].answer, correct: "correct"},
