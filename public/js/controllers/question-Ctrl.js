@@ -1,23 +1,23 @@
 angular.module('wildernessQuiz')
 .controller('questionCtrl', function($scope, questionService){
- 	$scope.clickSaveQuestion = function(){
- 		questionService.saveQuestion(
- 			$scope.question,
- 			$scope.answer,
- 			$scope.badAnswer1,
- 			$scope.badAnswer2,
- 			$scope.badAnswer3,
- 			$scope.supportData,
- 			$scope.image
- 		)
-	 		$scope.question = '';
-		    $scope.answer = '';
-		    $scope.badAnswer1 = '';
-		    $scope.badAnswer2 = '';
-		    $scope.badAnswer3 = '';
-		    $scope.supportData = '';
-		    $scope.image = '';
-	 	};
+ 	//$scope.clickSaveQuestion = function(){
+ 	//	questionService.saveQuestion(
+ 	//		$scope.question,
+ 	//		$scope.answer,
+ 	//		$scope.badAnswer1,
+ 	//		$scope.badAnswer2,
+ 	//		$scope.badAnswer3,
+ 	//		$scope.supportData,
+ 	//		$scope.image
+ 	//	)
+	 //		$scope.question = '';
+		//    $scope.answer = '';
+		//    $scope.badAnswer1 = '';
+		//    $scope.badAnswer2 = '';
+		//    $scope.badAnswer3 = '';
+		//    $scope.supportData = '';
+		//    $scope.image = '';
+	 //	};
 
 //==================== * update records * ============================
 

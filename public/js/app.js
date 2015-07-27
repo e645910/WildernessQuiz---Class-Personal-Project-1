@@ -17,7 +17,10 @@ app = angular.module('wildernessQuiz', ['ngRoute'])
             .when('/question',
             {
                 templateUrl: 'views/question-view.html',
-                controller: 'questionCtrl'
+                controller: 'questionCtrl',
+                resolve: {
+
+                }
             })
 
             .when('/quiz',
