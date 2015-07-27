@@ -14,13 +14,13 @@ app = angular.module('wildernessQuiz', ['ngRoute'])
                 controller: 'navBarCtrl'
             })
 
-            .when('/question',
-            {
-                templateUrl: 'views/question-view.html',
-                controller: 'questionCtrl',
-                resolve: {
-
-                }
+            //.when('/question',
+            //{
+            //    templateUrl: 'views/question-view.html',
+            //    controller: 'questionCtrl',
+            //    resolve: {
+            //
+            //    }
             })
 
             .when('/quiz',
