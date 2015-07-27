@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5610236">
-              <caret line="19" column="14" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+              <caret line="19" column="14" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -444,7 +444,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5610236">
-          <caret line="19" column="14" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
+          <caret line="19" column="14" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
