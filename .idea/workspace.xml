@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="382ab126-e771-4ef9-9f1a-c26c72a43953" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="WildernessQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41338584">
+            <state vertical-scroll-proportion="0.5610236">
               <caret line="19" column="14" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
@@ -444,7 +443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41338584">
+        <state vertical-scroll-proportion="0.5610236">
           <caret line="19" column="14" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
