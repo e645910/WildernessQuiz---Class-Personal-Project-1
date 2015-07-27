@@ -21,7 +21,7 @@ app = angular.module('wildernessQuiz', ['ngRoute'])
             //    resolve: {
             //
             //    }
-            })
+            //})
 
             .when('/quiz',
             {
