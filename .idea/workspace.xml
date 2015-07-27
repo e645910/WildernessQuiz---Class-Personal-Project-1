@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="382ab126-e771-4ef9-9f1a-c26c72a43953" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers/question-Ctrl.js" afterPath="$PROJECT_DIR$/public/js/controllers/question-Ctrl.js" />
     </list>
     <ignored path="WildernessQuiz.iws" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="question-Ctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/controllers/question-Ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44117647">
-              <caret line="19" column="10" selection-start-line="2" selection-start-column="6" selection-end-line="19" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7941176">
+              <caret line="36" column="6" selection-start-line="24" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -444,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controllers/question-Ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44117647">
-          <caret line="19" column="10" selection-start-line="2" selection-start-column="6" selection-end-line="19" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.7941176">
+          <caret line="36" column="6" selection-start-line="24" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
           <folding />
         </state>
       </provider>

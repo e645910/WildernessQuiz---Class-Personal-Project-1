@@ -22,19 +22,19 @@ angular.module('wildernessQuiz')
 //==================== * update records * ============================
 
 // this function will show the first question & answer to update	
-	$scope.clickGetQA = function(){
- 		questionService.getQA()
- 		.then(function(res){
- 			$scope._id = res._id,
-	 		$scope.question = res.question;
- 			$scope.answer = res.answer;
- 			$scope.badAnswer1 = res.badAnswer1;
- 			$scope.badAnswer2 = res.badAnswer2;
- 			$scope.badAnswer3 = res.badAnswer3;
- 			$scope.supportData = res.supportData;
- 			$scope.image = res.image;
- 		})
- 	};
+//	$scope.clickGetQA = function(){
+// 		questionService.getQA()
+// 		.then(function(res){
+// 			$scope._id = res._id,
+//	 		$scope.question = res.question;
+// 			$scope.answer = res.answer;
+// 			$scope.badAnswer1 = res.badAnswer1;
+// 			$scope.badAnswer2 = res.badAnswer2;
+// 			$scope.badAnswer3 = res.badAnswer3;
+// 			$scope.supportData = res.supportData;
+// 			$scope.image = res.image;
+// 		})
+// 	};
 
 // this function will show the next question & answer to update 
  	$scope.clickNextRecord = function(){
