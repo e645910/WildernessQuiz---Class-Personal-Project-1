@@ -33,7 +33,3 @@
   },
   "homepage": "https://github.com/e645910/WildernessQuiz"
 }
-
-"scripts": {
-    "postinstall": "bower install"
-  }
