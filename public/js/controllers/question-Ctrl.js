@@ -52,16 +52,16 @@ angular.module('wildernessQuiz')
 // 	};
 
 // this function updates the question & answer in the database
-	$scope.clickUpdateRecord = function(){
-		questionService.updateQA(
-			$scope._id,
- 			$scope.question,
- 			$scope.answer,
- 			$scope.badAnswer1,
- 			$scope.badAnswer2,
- 			$scope.badAnswer3,
- 			$scope.supportData,
- 			$scope.image
-		)
-	}
+//	$scope.clickUpdateRecord = function(){
+//		questionService.updateQA(
+//			$scope._id,
+// 			$scope.question,
+// 			$scope.answer,
+// 			$scope.badAnswer1,
+// 			$scope.badAnswer2,
+// 			$scope.badAnswer3,
+// 			$scope.supportData,
+// 			$scope.image
+//		)
+//	}
 });
