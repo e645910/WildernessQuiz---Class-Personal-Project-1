@@ -111,7 +111,7 @@ app.get('/api/auth', AuthCtrl.authenticate);
 app.get('/api/getQuestion', QuestionCtrl.get);
 app.put('/api/updateQuestion', QuestionCtrl.put);
 app.post('/api/saveQuestion', QuestionCtrl.post);
-app.delete('/api/removeRecord', QuestionCtrl.delete);
+//app.delete('/api/removeRecord', QuestionCtrl.delete);
 
 app.get('/api/getQuiz', QuizCtrl.get);
 

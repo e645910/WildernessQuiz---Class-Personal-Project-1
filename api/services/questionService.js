@@ -34,4 +34,3 @@ module.exports.update = function(update){
 	});
 	return dfd.promise;
 };
-

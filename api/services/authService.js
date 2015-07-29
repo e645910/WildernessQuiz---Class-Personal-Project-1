@@ -10,10 +10,10 @@ module.exports.save = function(authenticate){
 };
 module.exports.find = function(req, res){
 	authModel.find({})
-	.then(function(response){
-		(response.length) ? res.status(200).json(response): res.status(404).send('Login email not found');
-	}, 
-	function(err){
-		res.status(500).json(err);
-	})
+		.then(function(response){
+			(response.length) ? res.status(200).json(response): res.status(404).send('Login email not found');
+		},
+		function(err){
+			res.status(500).json(err);
+		})
 };
