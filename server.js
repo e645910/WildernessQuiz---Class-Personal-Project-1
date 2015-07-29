@@ -40,6 +40,7 @@ var QuestionCtrl = require('./api/controllers/questionCtrl');
 var QuizCtrl = require('./api/controllers/quizCtrl');
 var AnswerCtrl = require('./api/controllers/answerCtrl');
 
+
 // Middleware =========================
 passport.use(new localStrategy({
 	usernameField: 'email',
@@ -108,12 +109,14 @@ app.get('/cool', function(request, response) {
 app.get('/api/auth', AuthCtrl.authenticate);
 
 app.get('/api/getQuestion', QuestionCtrl.get);
-app.post('/api/saveQuestion', QuestionCtrl.post);
 app.put('/api/updateQuestion', QuestionCtrl.put);
+app.post('/api/saveQuestion', QuestionCtrl.post);
+app.delete('/api/removeRecord', QuestionCtrl.delete);
 
 app.get('/api/getQuiz', QuizCtrl.get);
 
 app.get('/api/getAnswer', AnswerCtrl.get);
 app.post('/api/saveAnswer', AnswerCtrl.post);
+
 
 app.listen(process.env.PORT || 5000)

@@ -80,4 +80,15 @@ angular.module('wildernessQuiz')
 	    });
 	    return dfd.promise;  
 	};
+
+	this.removeRecord = function(id){
+		var dfd = $q.defer;
+		$http({
+			method: 'DELETE',
+			url: '/api/getQuestion'
+		})
+			.then(function(response){
+
+			})
+	};
 });
