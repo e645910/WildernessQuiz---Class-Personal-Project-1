@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
-//var http = require ('http');
+var http = require ('http');
 var compress = require('compression')();
 
 var app = express();
