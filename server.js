@@ -6,17 +6,12 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
-var http = require ('http');
+//var http = require ('http');
 var compress = require('compression')();
-var mongoose = require ("mongoose");
 
 var app = express();
 
 //heroku mongodb connection via mongoose ===========
-var uristring = 
-  process.env.MONGOLAB_URI || 
-  process.env.MONGOHQ_URL || 
-  'mongodb://localhost/wildernessQuiz';
 
 var uristring = 
   process.env.MONGOLAB_URI || 
