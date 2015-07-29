@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
-var http = require ('http');  
+var http = require ('http');
+var compress = require('compression')();
 var mongoose = require ("mongoose");
 
 var app = express();
@@ -70,6 +71,7 @@ passport.deserializeUser(function(obj, done){
 	done(null, obj);
 });
 
+app.use(compress);
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
 app.use(session({secret: 'GROUPSEEKRIT', 
