@@ -1,5 +1,6 @@
 angular.module('wildernessQuiz')
 .controller('questionCtrl', function($scope, questionService){
+	$scope.showNextBtn = false;
  	$scope.clickSaveQuestion = function(){
  		questionService.saveQuestion(
  			$scope.question,
@@ -34,6 +35,7 @@ angular.module('wildernessQuiz')
  			$scope.supportData = res.supportData;
  			$scope.image = res.image;
  		})
+ 		$scope.showNextBtn = true;
  	};
 
 // this function will show the next question & answer to update 
@@ -63,11 +65,11 @@ angular.module('wildernessQuiz')
  			$scope.supportData,
  			$scope.image
 		)
+		$scope.showNextBtn = false;
 	}
 
 //this function will remove the specifically shown question and answer
 	$scope.clickRemoveRecord =function(){
-		console.log(111111, $scope._id)
 		questionService.removeRecord($scope._id);
 		questionService.getNextQA();
 	 	};

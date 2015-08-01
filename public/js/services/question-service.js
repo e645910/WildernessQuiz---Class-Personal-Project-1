@@ -82,18 +82,16 @@ angular.module('wildernessQuiz')
 	};
 
 	this.removeRecord = function(_id){
-		var dfd = $q.defer;
 		$http({
 			method: 'DELETE',
 			url: '/api/removeRecord' + '?recordId=' + _id
 		})
 		.success(function(){
-	        dfd.resolve({ message: 'Record deleted!' });
+			alert('Record deleted!')
 	    })
 	    .error(function(err){
-	        dfd.reject({ message: 'Record not deleted!' });
+	        alert('Record not deleted!');
 	    });
-	   return dfd.promise;
 	};
 });
 
