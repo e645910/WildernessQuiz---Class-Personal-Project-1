@@ -24,17 +24,19 @@ module.exports.put = function(req, res){
 	QuestionService.update(req.body)
 		.then(function(response){
 			res.status(200).json(response);
-		}, function(err){
+		}, 
+		function(err){
 			res.status(400).json(err)
 		})
 };
 
-//module.exports.delete = function(req, res) {
-//	QuestionService.findByIdAndRemove({_id, function})
-//		.then(function (response) {
-//			(response.length) ? res.status(200).json(response) : res.status(404).send('nothing to delete');
-//		},
-//		function (err) {
-//			res.status(500).json(err);
-//		});
-//};
+module.exports.delete = function(req, res){
+	var _id = req.query.recordId;
+	QuestionService.removeRecord(_id)
+	.then(function(response){
+			res.status(200).json(response);
+		}, 
+		function(err){
+			res.status(400).json(err)
+		})
+};

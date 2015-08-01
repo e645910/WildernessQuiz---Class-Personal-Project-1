@@ -66,9 +66,9 @@ angular.module('wildernessQuiz')
 	}
 
 //this function will remove the specifically shown question and answer
-//	$scope.clickRemoveRecord =function(){
-//		questionService.removeRecord(
-//			$scope._id
-//		)
-//	};
+	$scope.clickRemoveRecord =function(){
+		console.log(111111, $scope._id)
+		questionService.removeRecord($scope._id);
+		questionService.getNextQA();
+	 	};
 });

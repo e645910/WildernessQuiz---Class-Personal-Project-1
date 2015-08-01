@@ -34,3 +34,16 @@ module.exports.update = function(update){
 	});
 	return dfd.promise;
 };
+
+module.exports.removeRecord = function(query){
+	var dfd = q.defer();
+	QuestionModel.findByIdAndRemove(query, function(err, res){
+		(!err) ? dfd.resolve(res): dfd.reject(err);
+	});
+	return dfd.promise;
+};
+
+
+
+
+

@@ -81,14 +81,19 @@ angular.module('wildernessQuiz')
 	    return dfd.promise;  
 	};
 
-	//this.removeRecord = function(id){
-	//	var dfd = $q.defer;
-	//	$http({
-	//		method: 'DELETE',
-	//		url: '/api/getQuestion'
-	//	})
-	//		.then(function(response){
-    //
-	//		})
-	//};
+	this.removeRecord = function(_id){
+		var dfd = $q.defer;
+		$http({
+			method: 'DELETE',
+			url: '/api/removeRecord' + '?recordId=' + _id
+		})
+		.success(function(){
+	        dfd.resolve({ message: 'Record deleted!' });
+	    })
+	    .error(function(err){
+	        dfd.reject({ message: 'Record not deleted!' });
+	    });
+	   return dfd.promise;
+	};
 });
+
