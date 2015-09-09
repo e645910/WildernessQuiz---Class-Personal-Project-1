@@ -4,11 +4,20 @@
 body{
 	max-width: 100%;
 	height: auto;
-	/*padding: 10px:;*/
 	background-color: #EDC9AF;
 	font-family: 'Exo', sans-serif;
 }
 
+@media screen and (max-width: 500px) {
+/* applies only if the screen is narrower than 500px */
+	.header {
+	    position: static
+	  }
+
+	.login-container{
+		position: static
+	}
+}
 /* -------------- login view ------------------ */
 
 .loginBody{
@@ -43,6 +52,19 @@ body{
 .header div span{
 	color: #3B6182 !important;
 }
+
+.header p{
+	margin-top: 10%;
+	max-width: 50%;
+	font-size: 1.5em;
+	color: #008000;
+	background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    padding-left: 10px;
+}
+
 .login-container{
 	position: fixed;
 	top: calc(50% - 1em);
