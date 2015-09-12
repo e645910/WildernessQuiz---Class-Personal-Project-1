@@ -210,8 +210,8 @@ body{
 }
 
 .navBar input[type=button]{
-	width: 25%;
-	height: auto;
+/*	width: 90%;
+	height: auto;*/
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
