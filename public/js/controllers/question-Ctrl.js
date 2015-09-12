@@ -1,6 +1,23 @@
 angular.module('wildernessQuiz')
 .controller('questionCtrl', function($scope, questionService){
 	$scope.showNextBtn = false;
+	$scope.showSaveBtn = false;
+
+//==================== * create new record * ============================	
+
+// this function clears the text boxes if there is any info in it
+	$scope.clickClearQuestion = function(){
+		$scope.question = '';
+	    $scope.answer = '';
+	    $scope.badAnswer1 = '';
+	    $scope.badAnswer2 = '';
+	    $scope.badAnswer3 = '';
+	    $scope.supportData = '';
+	    $scope.image = '';
+	    $scope.showSaveBtn = true;
+		};
+
+// this function then saves the new question
  	$scope.clickSaveQuestion = function(){
  		questionService.saveQuestion(
  			$scope.question,
@@ -11,14 +28,14 @@ angular.module('wildernessQuiz')
  			$scope.supportData,
  			$scope.image
  		);
-	 		$scope.question = '';
+			$scope.question = '';
 		    $scope.answer = '';
 		    $scope.badAnswer1 = '';
 		    $scope.badAnswer2 = '';
 		    $scope.badAnswer3 = '';
 		    $scope.supportData = '';
 		    $scope.image = '';
-	 	};
+	 };
 
 //==================== * update records * ============================
 
