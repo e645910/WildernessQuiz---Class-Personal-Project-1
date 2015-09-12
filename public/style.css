@@ -2,8 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
 body{
-	max-width: 100%;
-	height: auto;
+	width: 0px;
+	height: 0px;
 	background-color: #EDC9AF;
 	font-family: 'Exo', sans-serif;
 }
@@ -21,22 +21,19 @@ body{
 /* -------------- login view ------------------ */
 
 .loginBody{
-	position: absolute;
+	position: fixed;
 	top: -20px;
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	width: auto;
-	height: auto;
 	background-image: url("./img/login.jpg");
 	background-size: cover;
 	z-index: 0;
-	background-attachment: fixed; 
 }
 
 .header{
 	position: fixed;
-	top: calc(15% - 1em);
+	top: calc(10% - 1em);
 	left: calc(10% - 1em);
 	font-weight: bold;
 	z-index: 2;
@@ -46,6 +43,7 @@ body{
 	float: left;
 	color: #835C3B;
 	font-size: 40px;
+	font-size: 2.5vw;
 	font-weight: 250;
 }
 
@@ -56,7 +54,8 @@ body{
 .header p{
 	margin-top: 10%;
 	max-width: 50%;
-	font-size: 1.5em;
+	font-size: 20px;
+	font-size: 1.5vw;
 	color: #008000;
 	background-color: #ffffff;
     border: 1px solid black;
@@ -69,48 +68,52 @@ body{
 	position: fixed;
 	top: calc(50% - 1em);
 	left: calc(45% - 1em);
-	height: 150px;
-	width: 350px;
 	padding: 10px;
 	font-weight: bold;
 	z-index: 2;
 }
 
-.login-container input[type=password]{
+.login-container input[type=email]{
 	width: 250px;
-	height: 30px;
+	width: 18vw;
+	height: auto;
 	background: #F7F7F0;
 	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
 	font-size: 16px;
+	font-size: 1.1vw;
 	font-weight: 400;
 	padding: 4px;
 	margin-top: 10px;
 }
 
-.login-container input[type=email]{
+.login-container input[type=password]{
 	width: 250px;
-	height: 30px;
+	width: 18vw;
+	height: auto;
 	background: #F7F7F0;
 	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
 	font-size: 16px;
+	font-size: 1.1vw;
 	font-weight: 400;
 	padding: 4px;
 	margin-top: 10px;
 }
 
 .login-container input[type=button]{
-	width: 260px;
-	height: 35px;
+	width: 250px;
+	width: 18vw;
+	height: auto;
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
 	font-size: 16px;
+	font-size: 1.1vw;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
@@ -118,13 +121,15 @@ body{
 
 .login-btn {
 	width: 100px;
-	height: 35px;
+	width: 7vw;
+	height: auto;
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
 	font-size: 16px;
+	font-size: 1.1vw;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
@@ -138,6 +143,7 @@ body{
 .loginLabel{
   	color: #000;
 	font-size: 18px;
+	font-size: 1.2vw;
 	font-weight: 500;
 }
 
@@ -146,7 +152,14 @@ body{
   	color: #0000FF;
   	cursor: pointer;
 	font-size: 20px;
+	font-size: 1.2vw;
 	font-weight: 500;
+}
+
+.error{
+	font-size: 30px;
+	font-size: 2vw;
+	color: #FF0000;
 }
   
 /* -------------- navBar view ----------------  */
