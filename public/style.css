@@ -165,17 +165,14 @@ body{
 /* -------------- navBar view ----------------  */
 
 .navBody{
-	position: absolute;
+	position: fixed;
 	top: -20px;
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	width: auto;
-	height: auto;
 	background-image: url("./img/navBar.jpg");
 	background-size: cover;
 	z-index: 0;
-	background-attachment: fixed; 
 }
 
 .navHeader{
@@ -190,6 +187,7 @@ body{
 	float: left;
 	color: #835C3B;
 	font-size: 40px;
+	font-size: 2.5vw;
 	font-weight: 250;
 }
 
@@ -201,8 +199,9 @@ body{
 	position: fixed;
 	top: calc(30% - 1em);
 	left: calc(60% - 1em);
-	height: 150px;
 	width: 350px;
+	width: 25vw;
+	height: auto;
 	padding: 10px;
 	font-weight: bold;
 	z-index: 2;
@@ -211,18 +210,21 @@ body{
 .navBar h1{
 	color: #000080;
 	font-size: 25px;
+	font-size: 1.8vw;
 	font-weight: 500;
 }
 
 .navBar input[type=button]{
-	width: 260px;
-	height: 35px;
+	width: 250px;
+	width: 18vw;
+	height: auto;
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
 	font-size: 16px;
+	font-size: 1vw;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
@@ -236,17 +238,14 @@ body{
 /* ------- create question/answer view -------- */
 
 .questionBody{
-	position: absolute;
+	position: fixed;
 	top: -20px;
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	width: auto;
-	height: auto;
 	background-image: url("./img/question.jpg");
 	background-size: cover;
 	z-index: 0;
-	background-attachment: fixed; 
 }
 
 .questionHeader{
@@ -323,17 +322,15 @@ body{
 /* -------------- Quiz view ------------------- */
 
 .quizBody{
-	position: absolute;
+	position: fixed;
 	top: -20px;
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	width: auto;
-	height: auto;
 	background-image: url("./img/quiz.jpg");
 	background-size: cover;
 	z-index: 0;
-	background-attachment: fixed; 
+
 }
 
 .quizHeader{
