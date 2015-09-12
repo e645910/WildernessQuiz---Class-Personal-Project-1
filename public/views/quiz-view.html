@@ -8,14 +8,14 @@
         QUESTION {{currentQuestionNumber}} OF {{totalQuestions.length}} 
     </div>  
 
-        <div class="q"><strong>Q:</strong></div>
+        <div class="q">Q:</div>
         
         <div class="quizQuestion" type="text">{{currentQuestion.question}}
             <img src="{{currentQuestion.image}}">
         </div>
-    	
+
             <div class="quiz"> 
-            	<ul><br>
+            	<ul>
             		<li ng-repeat="choice in currentQuestion.choices">
             			<input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)"/>
                         {{choice.choiceString}}

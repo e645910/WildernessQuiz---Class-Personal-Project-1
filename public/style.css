@@ -8,16 +8,15 @@ body{
 	font-family: 'Exo', sans-serif;
 }
 
-@media screen and (max-width: 500px) {
-/* applies only if the screen is narrower than 500px */
-	.header {
-	    position: static
-	  }
-
-	.login-container{
-		position: static
-	}
+/*--- imgage settings to resize as screen gets smaller---*/
+img {
+  max-width: 100%;
 }
+
+input, textarea {
+  max-width:100%;
+}
+
 /* -------------- login view ------------------ */
 
 .loginBody{
@@ -210,8 +209,6 @@ body{
 }
 
 .navBar input[type=button]{
-/*	width: 90%;
-	height: auto;*/
 	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
@@ -322,18 +319,16 @@ body{
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
+	padding: 3%;
 	background-image: url("./img/quiz.jpg");
 	background-size: cover;
 	z-index: 0;
-
 }
 
 .quizHeader{
 	position: fixed;
 	top: calc(10% - 1em);
 	left: calc(9% - 1em);
-	width: 50em;
-	height: 50em;
 	font-weight: bold;
 	z-index: 2;
 }
@@ -342,9 +337,8 @@ body{
 	float: left;
 	color: #835C3B;
 	font-size: 40px;
+	font-size: 2.5vw;
 	font-weight: 250;
-	width: 50em;
-	height: 50em;
 }
 
 .quizHeader div span{
@@ -357,7 +351,8 @@ body{
 	left: calc(36% - 1em);
 	color: #835C3B;
 	font-size: 60px;
-	font-weight: 300;
+	font-size: 4vw;
+	font-weight: bold;
 	z-index: 2;
 }
 
@@ -365,18 +360,18 @@ body{
 	position: fixed;
 	top: calc(30% - 1em);
 	left: calc(33% - 1em);
-	color: Red;
+	color: #FF0000;
+	font-size: 20px;
+	font-size: 1.5vw;
 }
 
 .quizQuestion{
 	position: fixed;
 	top: calc(36% - 1em);
 	left: calc(39% - 1em);
-	width: 90%;
-	max-width: 800px;
-	height: auto;
 	color: #3B6182;
 	font-size: 25px;
+	font-size: 1.5vw;
 	font-weight: 500;
 }
  
@@ -384,29 +379,28 @@ body{
 	position: fixed;
 	top: calc(31% - 1em);
 	left: calc(10% - 1em);
-	width:20%;
+	width: 20%;
 	height: auto;
 }
 
 .quiz{
 	position: fixed;
-	top: calc(40% - 1em);
+	top: calc(40% - 2em);
 	left: calc(35% - 1em);
+	width: 60%;
 	height: auto;
+	margin-top: 3%;
 	font-weight: bold;
-	margin-top: 25px;
 	z-index: 2;
 }
 
 .quiz li{
 	list-style-type: none;
-	margin-left: 10px;
-	margin-top: 20px;
-	margin-right: 10px;
-	color: #000;
-	font-size: 18px;
-	font-weight: 400;
-	width: auto;
+	color: #000000;
+	font-size: 15px;
+	font-size: 1.2vw;
+	font-weight: bold;
+	padding: 1%;
 }
 
 .quiz-btn {
@@ -421,14 +415,14 @@ body{
 	border-radius: 2px;
 	color: #835C3B;
 	font-size: 16px;
+	font-size: 1.1vw;
 	font-weight: 400;
-	padding: 6px;
 	margin-top: 10px;
 }
 
 .quiz button:hover{ 
 	background:#FF0000;
-	color: #000;
+	color: #000000;
 }
 
 /* ----------- Show user choices -------------- */
@@ -445,6 +439,7 @@ body{
 	float: left;
 	color: #835C3B;
 	font-size: 40px;
+	font-size: 2.5vw;
 	font-weight: 250;
 	padding: 10px;
 }
@@ -459,6 +454,7 @@ body{
 	left: calc(24% - 1em);
 	padding: 10px;
 	font-size: 30px;
+	font-size: 2vw;
 	font-weight: bold;
 }
 
@@ -467,6 +463,7 @@ body{
 	top: calc(30% - 1em);
 	left: calc(24% - 1em);
 	font-size: 20px;
+	font-size: 1.5vw;
 	width: 800px;
 	padding: 5px;
 	color: #FF0000;
@@ -497,12 +494,14 @@ body{
 .choicesCorrect {
 	list-style-type: none;
 	font-size: 20px;
+	font-size: 1.5vw;
 	color: #000080;
 	font-weight: bold;
 }
 
 li strong{
 	font-size: 20px;
+	font-size: 1.5VW;
 	padding-right: 10px;
 }
 
@@ -512,6 +511,7 @@ li strong{
 	color: #835C3B;
 	background-color: #E5E4E2;
 	font-size: 18px;
+	font-size: 1.2vw;
 	font-weight: bold;
 }
 
@@ -526,6 +526,7 @@ li strong{
 	border-radius: 2px;
 	color: #835C3B;
 	font-size: 16px;
+	font-size: 1.2vw;
 	font-weight: 400;
 	padding: 6px;
 	margin-top: 10px;
