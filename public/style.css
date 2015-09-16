@@ -463,9 +463,9 @@ input, textarea {
 	left: calc(24% - 1em);
 	font-size: 20px;
 	font-size: 1.5vw;
-	width: auto;
+	width: 60%;
 	height: auto;
-	padding: 2%;
+	padding: 1%;
 	color: #FF0000;
 	background-color: #E5E4E2;
 }
@@ -475,8 +475,8 @@ input, textarea {
 	top: calc(30% - 1em);
 	left: calc(4% - 1em);
 	color: #3B6182;
-	/*padding: 10px;*/
-	font-size: 25px
+	padding-top: 8%;
+	font-size: 25px;
 	font-size: 1.6vw;
 }
 
@@ -489,6 +489,7 @@ input, textarea {
 
 .reviewChoices li{
 	list-style-type: none;
+	width: 80%;
 	padding: 1%;
 }
 
@@ -503,6 +504,7 @@ input, textarea {
 li strong{
 	font-size: 20px;
 	font-size: 1.5VW;
+	wid
 	padding-right: 1%;
 }
 
