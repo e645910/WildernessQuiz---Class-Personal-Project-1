@@ -31,7 +31,7 @@ input, textarea {
 }
 
 .header{
-	position: fixed;
+	position: absolute;
 	top: calc(10% - 1em);
 	left: calc(10% - 1em);
 	font-weight: bold;
@@ -51,7 +51,7 @@ input, textarea {
 }
 
 .header p{
-	margin-top: 10%;
+	margin-top: 7%;
 	width: 50%;
 	font-size: 20px;
 	font-size: 1.5vw;
@@ -60,14 +60,14 @@ input, textarea {
     border: 1px solid black;
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
-    padding-left: 10px;
+    padding: 1%;
 }
 
 .login-container{
 	position: fixed;
 	top: calc(50% - 1em);
 	left: calc(45% - 1em);
-	padding: 10px;
+	padding: 1%;
 	font-weight: bold;
 	z-index: 2;
 }
@@ -82,8 +82,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: 400;
-	padding: 4px;
-	margin-top: 10px;
+	padding: 2%;
+	margin-top: 1%;
 }
 
 .login-container input[type=password]{
@@ -96,8 +96,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: 400;
-	padding: 4px;
-	margin-top: 10px;
+	padding: 2%;
+	margin-top: 3%;
 }
 
 .login-container input[type=button]{
@@ -111,8 +111,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	padding: 2%;
+	margin-top: 3%;
 }
 
 .login-btn {
@@ -126,8 +126,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	padding: 2%;
+	margin-top: 3%;
 }
 
 .login-container button:hover{ 
@@ -147,7 +147,7 @@ input, textarea {
   	color: #0000FF;
   	cursor: pointer;
 	font-size: 20px;
-	font-size: 1.2vw;
+	font-size: 1.5vw;
 	font-weight: 500;
 }
 
@@ -196,7 +196,7 @@ input, textarea {
 	left: calc(60% - 1em);
 	width: 75%;
 	height: auto;
-	padding: 10px;
+	padding: 1%;
 	font-weight: bold;
 	z-index: 2;
 }
@@ -217,8 +217,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1vw;
 	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
+	padding: 1%;
+	margin-top: 3%;
 }
 
 .navBar input[type=button]:hover{ 
@@ -229,18 +229,18 @@ input, textarea {
 /* ------- create question/answer view -------- */
 
 .questionBody{
-	position: fixed;
+	position: absolute;
 	top: -20px;
 	left: -20px;
 	right: -40px;
 	bottom: -40px;
-	background-image: url("./img/question.jpg");
+	background: url("./img/question.jpg");
 	background-size: cover;
 	z-index: 0;
 }
 
 .questionHeader{
-	position: fixed;
+	position: absolute;
 	top: calc(10% - 1em);
 	left: calc(55% - 1em);
 	font-weight: bold;
@@ -260,10 +260,10 @@ input, textarea {
 }
 
 .question{
-	position: fixed;
-	top: calc(30% - 1em);
+	position: absolute;
+	top: calc(25% - 1em);
 	left: calc(20% - 1em);
-	padding: 10px;
+	padding: 1%;
 	font-weight: bold;
 	z-index: 2;
 }
@@ -287,8 +287,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: bold;
-	padding: 6px;
-	margin-top: 10px;
+	padding: 1%;
+	margin-top: 1%;
 }
 
 .question-btn {
@@ -302,8 +302,8 @@ input, textarea {
 	font-size: 16px;
 	font-size: 1.1vw;
 	font-weight: bold;
-	padding: 6px;
-	margin-top: 10px;
+	padding: 1%;
+	margin-top: 1%;
 }
 
 .question button:hover{
@@ -425,14 +425,14 @@ input, textarea {
 	color: #000000;
 }
 
-/* ----------- Show user choices -------------- */
+/* ----------- Show user score & choices -------------- */
 
 .choicesHeader{
 	position: absolute;
-	top: calc(5% - 1em);
-	left: calc(15% - 1em);
-	padding: 10px;
+	top: calc(10% - 1em);
+	left: calc(10% - 1em);
 	font-weight: bold;
+	z-index: 2;
 }
 
 .choicesHeader div{
@@ -441,7 +441,6 @@ input, textarea {
 	font-size: 40px;
 	font-size: 2.5vw;
 	font-weight: 250;
-	padding: 10px;
 }
 
 .choicesHeader div span{
@@ -450,9 +449,9 @@ input, textarea {
 
 .choicesScore{
 	position: absolute;
-	top: calc(25% - 1em);
+	top: calc(22% - 1em);
 	left: calc(24% - 1em);
-	padding: 10px;
+	padding-top: 3%;
 	font-size: 30px;
 	font-size: 2vw;
 	font-weight: bold;
@@ -460,12 +459,13 @@ input, textarea {
 
 .choiceFeedback{
 	position: absolute;
-	top: calc(30% - 1em);
+	top: calc(35% - 1em);
 	left: calc(24% - 1em);
 	font-size: 20px;
 	font-size: 1.5vw;
-	width: 800px;
-	padding: 5px;
+	width: auto;
+	height: auto;
+	padding: 2%;
 	color: #FF0000;
 	background-color: #E5E4E2;
 }
@@ -475,20 +475,21 @@ input, textarea {
 	top: calc(30% - 1em);
 	left: calc(4% - 1em);
 	color: #3B6182;
-	padding: 10px;
-	font-size: 25px;
+	/*padding: 10px;*/
+	font-size: 25px
+	font-size: 1.6vw;
 }
 
 .choices {
 	position: absolute;
-	padding: 20px;
 	top: calc(40% - 1em);
 	left: calc(20% - 1em);
+	padding: 1%;
 }
 
 .reviewChoices li{
 	list-style-type: none;
-	padding: 10px;
+	padding: 1%;
 }
 
 .choicesCorrect {
@@ -502,12 +503,12 @@ input, textarea {
 li strong{
 	font-size: 20px;
 	font-size: 1.5VW;
-	padding-right: 10px;
+	padding-right: 1%;
 }
 
 .choicesSupportData {
 	width: 800px;
-	margin-top: 1em;
+	margin-top: 1%;
 	color: #835C3B;
 	background-color: #E5E4E2;
 	font-size: 18px;
@@ -520,7 +521,7 @@ li strong{
 	left: calc(80% - 1em);
 	width: 125px;
 	height: 35px;
-	background: #FFF;
+	background: #FFFF00;
 	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
@@ -528,9 +529,9 @@ li strong{
 	font-size: 16px;
 	font-size: 1.2vw;
 	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	padding: 3%;
+	/*margin-top: 1%;
+	margin-bottom: 2%;*/
 }
 
 .choices input[type=button]:hover{ 
