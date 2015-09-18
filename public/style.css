@@ -59,7 +59,6 @@ input, textarea {
 	background-color: #ffffff;
     border: 1px solid black;
     opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
     padding: 1%;
 }
 
@@ -427,6 +426,10 @@ input, textarea {
 
 /* ----------- Show user score & choices -------------- */
 
+.container{
+	margin: 3%;
+}
+
 .choicesHeader{
 	position: absolute;
 	top: calc(10% - 1em);
@@ -451,7 +454,7 @@ input, textarea {
 	position: absolute;
 	top: calc(22% - 1em);
 	left: calc(24% - 1em);
-	padding-top: 3%;
+	margin-top: 3%;
 	font-size: 30px;
 	font-size: 2vw;
 	font-weight: bold;
@@ -465,7 +468,7 @@ input, textarea {
 	font-size: 1.5vw;
 	width: 60%;
 	height: auto;
-	padding: .5%;
+	margin-bottom: 1%;
 	color: #FF0000;
 	background-color: #E5E4E2;
 }
@@ -475,22 +478,21 @@ input, textarea {
 	top: calc(30% - 1em);
 	left: calc(4% - 1em);
 	color: #3B6182;
-	padding-top: 8%;
+	padding-top: 3%;
 	font-size: 25px;
 	font-size: 1.6vw;
 }
 
 .choices {
 	position: absolute;
+	padding: 20px;
 	top: calc(40% - 1em);
 	left: calc(20% - 1em);
-	padding: 1%;
 }
 
 .reviewChoices li{
 	list-style-type: none;
-	width: 80%;
-	padding: 1%;
+	padding: 10px;
 }
 
 .choicesCorrect {
@@ -504,13 +506,12 @@ input, textarea {
 li strong{
 	font-size: 20px;
 	font-size: 1.5VW;
-	wid
-	padding-right: 1%;
+	padding-right: 10px;
 }
 
 .choicesSupportData {
 	width: 800px;
-	margin-top: 1%;
+	margin-top: 1em;
 	color: #835C3B;
 	background-color: #E5E4E2;
 	font-size: 18px;
@@ -523,7 +524,7 @@ li strong{
 	left: calc(80% - 1em);
 	width: 125px;
 	height: 35px;
-	background: #FFFF00;
+	background: #FFF;
 	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
@@ -531,8 +532,9 @@ li strong{
 	font-size: 16px;
 	font-size: 1.2vw;
 	font-weight: 400;
-	padding: 1%;
-	margin: 2%;
+	padding: 6px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 .choices input[type=button]:hover{ 

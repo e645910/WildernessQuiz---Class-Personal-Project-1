@@ -5,7 +5,6 @@ angular.module('wildernessQuiz')
 
 //==================== * create new record * ============================	
 
-// this function clears the text boxes if there is any info in it
 	$scope.clickClearQuestion = function(){
 		$scope.question = '';
 	    $scope.answer = '';
@@ -17,7 +16,6 @@ angular.module('wildernessQuiz')
 	    $scope.showSaveBtn = true;
 		};
 
-// this function then saves the new question
  	$scope.clickSaveQuestion = function(){
  		questionService.saveQuestion(
  			$scope.question,
@@ -39,7 +37,6 @@ angular.module('wildernessQuiz')
 
 //==================== * update records * ============================
 
-// this function will show the first question & answer to update	
 	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
@@ -55,7 +52,6 @@ angular.module('wildernessQuiz')
  		$scope.showNextBtn = true;
  	};
 
-// this function will show the next question & answer to update 
  	$scope.clickNextRecord = function(){
  		questionService.getNextQA()
  		.then(function(res){
@@ -70,7 +66,6 @@ angular.module('wildernessQuiz')
  		})
  	};
 
-// this function updates the question & answer in the database
 	$scope.clickUpdateRecord = function(){
 		questionService.updateQA(
 			$scope._id,
@@ -85,7 +80,6 @@ angular.module('wildernessQuiz')
 		$scope.showNextBtn = false;
 	}
 
-//this function will remove the specifically shown question and answer
 	$scope.clickRemoveRecord =function(){
 		questionService.removeRecord($scope._id);
 		questionService.getNextQA();

@@ -17,11 +17,6 @@ var uristring =
     process.env.MONGOHQ_URL ||
     'mongodb://localhost/wildernessQuiz';
 
-var uristring =
-    process.env.MONGOLAB_URI ||
-    process.env.MONGOHQ_URL ||
-    'mongodb://localhost/wildernessQuiz';
-
 var theport = process.env.PORT || 5000;
 
 mongoose.connect(uristring, function (err, res) {
