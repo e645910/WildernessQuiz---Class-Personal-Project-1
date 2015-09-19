@@ -10,9 +10,10 @@ module.exports.post = function(req, res){
     })
 };
 
+
 module.exports.get = function(req, res){
-	AnswerService.find({})
-		({
+	console.log(req)
+	AnswerService.find({
 		quizInstanceId: req.query.quizInstanceId, 
 		userId: req.query.userId
 		})

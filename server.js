@@ -16,7 +16,7 @@ var uristring =
     process.env.MONGOLAB_URI ||
     process.env.MONGOHQ_URL ||
     'mongodb://localhost/wildernessQuiz';
-
+    
 var theport = process.env.PORT || 5000;
 
 mongoose.connect(uristring, function (err, res) {
@@ -40,7 +40,7 @@ var AnswerCtrl = require('./api/controllers/answerCtrl');
 passport.use(new localStrategy({
     usernameField: 'email',
     passwordField: 'password'
-}, 	function(username, password, done){
+},  function(username, password, done){
     User.findOne({ email: username }).exec().then(function(user){
         if(!user){
             return done(null, false, { message: 'Incorrect username.' });

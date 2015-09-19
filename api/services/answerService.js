@@ -8,6 +8,7 @@ module.exports.save = function(answer){
 	});
 	return dfd.promise;
 };
+
 module.exports.find = function(query){
 	var dfd = q.defer();
 	AnswerModel.find(query, function(err, res){
