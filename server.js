@@ -1,5 +1,4 @@
 //node modules ========================
-var cool = require('cool-ascii-faces');//heroku added module
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
@@ -89,17 +88,13 @@ app.post('/api/register', function(req, res) {
     });
 });
 
-// heroku add -- views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// // heroku add -- views is directory for all template files
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-    response.render('pages/index')
-});
-
-app.get('/cool', function(request, response) {
-    response.send(cool());
-});
+// app.get('/', function(request, response) {
+//     response.render('pages/index')
+// });
 
 // Endpoints ==========================
 app.get('/api/auth', AuthCtrl.authenticate);
