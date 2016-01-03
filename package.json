@@ -1,6 +1,6 @@
 {
-  "name": "wildernessQuiz",
-  "version": "1.0.0",
+  "name": "wilderness-quiz",
+  "version": "1.0.2",
   "description": "README.md",
   "main": "server.js",
   "dependencies": {
@@ -27,10 +27,16 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/e645910/WildernessQuiz.git"
+    "url": "git+https://github.com/e645910/WildernessQuiz.git"
   },
   "bugs": {
     "url": "https://github.com/e645910/WildernessQuiz/issues"
   },
-  "homepage": "https://github.com/e645910/WildernessQuiz"
+  "homepage": "https://github.com/e645910/WildernessQuiz",
+  "keywords": [
+    "mongo",
+    "express",
+    "angular",
+    "node"
+  ]
 }
