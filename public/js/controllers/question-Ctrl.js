@@ -40,7 +40,7 @@ angular.module('wildernessQuiz')
 	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
- 			$scope._id = res._id,
+ 			$scope._id = res._id;
 	 		$scope.question = res.question;
  			$scope.answer = res.answer;
  			$scope.badAnswer1 = res.badAnswer1;
@@ -48,7 +48,7 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer3 = res.badAnswer3;
  			$scope.supportData = res.supportData;
  			$scope.image = res.image;
- 		})
+ 		});
  		$scope.showNextBtn = true;
  	};
 
@@ -63,7 +63,7 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer3 = res.badAnswer3;
  			$scope.supportData = res.supportData;
  			$scope.image = res.image;
- 		})
+ 		});
  	};
 
 	$scope.clickUpdateRecord = function(){
@@ -76,9 +76,9 @@ angular.module('wildernessQuiz')
  			$scope.badAnswer3,
  			$scope.supportData,
  			$scope.image
-		)
+		);
 		$scope.showNextBtn = false;
-	}
+	};
 
 	$scope.clickRemoveRecord =function(){
 		questionService.removeRecord($scope._id);

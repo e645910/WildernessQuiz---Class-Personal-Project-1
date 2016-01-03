@@ -4,7 +4,11 @@ var q = require('q');
 module.exports.save = function(question){
 	var dfd = q.defer();
 	QuestionModel(question).save(function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}  
 	});
 	return dfd.promise;
 };
@@ -12,7 +16,11 @@ module.exports.save = function(question){
 module.exports.find = function(query){
 	var dfd = q.defer();
 	QuestionModel.find(query, function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}
 	});
 	return dfd.promise;
 };
@@ -20,7 +28,7 @@ module.exports.find = function(query){
 module.exports.update = function(update){
 	var dfd = q.defer();
 	var query = {_id: update._id};
-	var update = {
+	update = {
 		question: update.question,
 		answer: update.answer,
 		badAnswer1: update.badAnswer1,
@@ -30,7 +38,11 @@ module.exports.update = function(update){
 		image: update.image
 	};
 	QuestionModel.findOneAndUpdate(query, update, function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}
 	});
 	return dfd.promise;
 };
@@ -38,7 +50,11 @@ module.exports.update = function(update){
 module.exports.removeRecord = function(query){
 	var dfd = q.defer();
 	QuestionModel.findByIdAndRemove(query, function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}
 	});
 	return dfd.promise;
 };

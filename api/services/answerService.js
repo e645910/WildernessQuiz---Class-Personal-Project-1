@@ -4,7 +4,11 @@ var q = require('q');
 module.exports.save = function(answer){
 	var dfd = q.defer();
 	AnswerModel(answer).save(function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}
 	});
 	return dfd.promise;
 };
@@ -12,7 +16,11 @@ module.exports.save = function(answer){
 module.exports.find = function(query){
 	var dfd = q.defer();
 	AnswerModel.find(query, function(err, res){
-		(!err) ? dfd.resolve(res): dfd.reject(err);
+		if(!err){
+			dfd.resolve(res);
+		}else{
+			dfd.reject(err);
+		}
 	});
 	return dfd.promise;
 };

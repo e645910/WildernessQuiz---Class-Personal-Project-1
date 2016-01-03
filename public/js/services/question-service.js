@@ -25,7 +25,7 @@ angular.module('wildernessQuiz')
 	};
 
 	var updateIndex = 0;
-	var updateArray = []
+	var updateArray = [];
 
 	this.getQA = function(){
 		updateIndex = 0;
@@ -74,7 +74,11 @@ angular.module('wildernessQuiz')
 		    url: '/api/getQuestion'
 	    })
 	    .then(function(response){
-	    	(updateIndex < arrayLength - 1) ? updateIndex++: alert('No more records to update!');
+	    	if (updateIndex < arrayLength - 1) {
+	    		updateIndex++;
+	    	}else {
+	    		alert('No more records to update!');
+	    	}
 	  		updateArray = response.data[updateIndex];
 	        dfd.resolve(updateArray);
 	    });
@@ -87,7 +91,7 @@ angular.module('wildernessQuiz')
 			url: '/api/removeRecord' + '?recordId=' + _id
 		})
 		.success(function(){
-			alert('Record deleted!')
+			alert('Record deleted!');
 	    })
 	    .error(function(err){
 	        alert('Record not deleted!');

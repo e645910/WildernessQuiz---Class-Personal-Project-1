@@ -50,7 +50,7 @@ passport.use(new localStrategy({
             }
             return done(null, user);
         }, function(err){
-            console.log(err)
+            console.log(err);
         });
     }, function(err){
         return done(err);
@@ -88,14 +88,6 @@ app.post('/api/register', function(req, res) {
     });
 });
 
-// // heroku add -- views is directory for all template files
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'ejs');
-
-// app.get('/', function(request, response) {
-//     response.render('pages/index')
-// });
-
 // Endpoints ==========================
 app.get('/api/auth', AuthCtrl.authenticate);
 
@@ -110,4 +102,4 @@ app.get('/api/getAnswer', AnswerCtrl.get);
 app.post('/api/saveAnswer', AnswerCtrl.post);
 
 
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000);

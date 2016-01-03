@@ -58,16 +58,16 @@ angular.module('wildernessQuiz')
 			delete quizArr[i].badAnswer3;
 		}
 		return quizArr;
-	};
+	}
 
 // randomize the order of the answers ======================	
 	function randomizeOrder(arr){
 		var newArr = [];
 		while(arr.length){
-			var randomIndex = Math.floor(Math.random() * arr.length)
+			var randomIndex = Math.floor(Math.random() * arr.length);
 			newArr.push(arr[randomIndex]);
 			arr.splice(randomIndex, 1);
 		}
 		return newArr;
-	};
+	}
 });

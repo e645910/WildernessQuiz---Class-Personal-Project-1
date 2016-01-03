@@ -2,8 +2,8 @@ angular.module('wildernessQuiz')
 .controller('quizCtrl', function($scope, $location, quizService, orderImages, $rootScope){
 
 // provide a random number for each individual test results =============
-	var randomId = Math.random()
-	quizInstanceId = randomId
+	var randomId = Math.random();
+	quizInstanceId = randomId;
 
 // create array for question and answers =================================
 	var currentIndex = 0;
@@ -26,13 +26,14 @@ angular.module('wildernessQuiz')
 			$scope.showNextButton = false;
 			$scope.isCorrect = "";
 			$scope.selectedAnswer = "";
-			(currentIndex < quiz.length -1) ? currentIndex++ : $location.path('/userChoices');
+			if (currentIndex < quiz.length -1) {
+				currentIndex++;
+			}else {
+				$location.path('/userChoices');
+			}
 			$scope.currentQuestion = quiz[currentIndex];
 			$scope.currentQuestionNumber = currentIndex + 1;
-		}),
-		function(err){
-			console.log(err);
-		}
+		});
 	};
 
 // set answer values when selected then save them when next question selected 
