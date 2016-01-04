@@ -3,7 +3,9 @@ angular.module('wildernessQuiz')
 	$scope.showNextBtn = false;
 	$scope.showSaveBtn = false;
 
-	function clearQuestions(){
+//==================== * create new record * ============================	
+
+	$scope.clickClearQuestion = function(){
 		$scope.question = '';
 	    $scope.answer = '';
 	    $scope.badAnswer1 = '';
@@ -11,23 +13,6 @@ angular.module('wildernessQuiz')
 	    $scope.badAnswer3 = '';
 	    $scope.supportData = '';
 	    $scope.image = '';
-	}
-
-	function getQuestions(){
-		$scope._id = res._id;
-		$scope.question = res.question;
-		$scope.answer = res.answer;
-		$scope.badAnswer1 = res.badAnswer1;
-		$scope.badAnswer2 = res.badAnswer2;
-		$scope.badAnswer3 = res.badAnswer3;
-		$scope.supportData = res.supportData;
-		$scope.image = res.image;
-	}
-
-//==================== * create new record * ============================	
-
-	$scope.clickClearQuestion = function(){
-		clearQuestions();
 	    $scope.showSaveBtn = true;
 		};
 
@@ -41,7 +26,13 @@ angular.module('wildernessQuiz')
  			$scope.supportData,
  			$scope.image
  		);
-			clearQuestions();
+			$scope.question = '';
+		    $scope.answer = '';
+		    $scope.badAnswer1 = '';
+		    $scope.badAnswer2 = '';
+		    $scope.badAnswer3 = '';
+		    $scope.supportData = '';
+		    $scope.image = '';
 	 };
 
 //==================== * update records * ============================
@@ -49,7 +40,14 @@ angular.module('wildernessQuiz')
 	$scope.clickGetQA = function(){
  		questionService.getQA()
  		.then(function(res){
- 			getQuestions();
+ 			$scope._id = res._id;
+	 		$scope.question = res.question;
+ 			$scope.answer = res.answer;
+ 			$scope.badAnswer1 = res.badAnswer1;
+ 			$scope.badAnswer2 = res.badAnswer2;
+ 			$scope.badAnswer3 = res.badAnswer3;
+ 			$scope.supportData = res.supportData;
+ 			$scope.image = res.image;
  		});
  		$scope.showNextBtn = true;
  	};
@@ -57,7 +55,14 @@ angular.module('wildernessQuiz')
  	$scope.clickNextRecord = function(){
  		questionService.getNextQA()
  		.then(function(res){
- 			getQuestions();
+ 			$scope._id = res._id;
+ 			$scope.question = res.question;
+ 			$scope.answer = res.answer;
+ 			$scope.badAnswer1 = res.badAnswer1;
+ 			$scope.badAnswer2 = res.badAnswer2;
+ 			$scope.badAnswer3 = res.badAnswer3;
+ 			$scope.supportData = res.supportData;
+ 			$scope.image = res.image;
  		});
  	};
 
