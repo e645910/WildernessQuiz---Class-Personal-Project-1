@@ -27,8 +27,8 @@ angular.module('wildernessQuiz')
 			if(correctAnswers[i].isCorrect === 'correct'){
 				totalAnswers.push(correctAnswers[i]);
 			}
-			return totalCorrectAnwers = totalAnswers.length;
 		}
+		totalCorrectAnwers = totalAnswers.length;
 
 		if(totalCorrectAnwers <= 2){
 			feedback = 'You might want to think twice before heading out on the trail this summer.';
