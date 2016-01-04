@@ -45,6 +45,7 @@ angular.module('wildernessQuiz')
 		if(totalCorrectAnwers >= 10){
 			feedback = 'Have you ever considered a career as a backcountry guide? Seriously, think about it. You\'re probably even ready to tackle some of the world\'s most dangerous hikes.';
 		 }
-	return feedback;
-	}	
+		return feedback;
+		return totalCorrectAnwers;
+	}		
 });
