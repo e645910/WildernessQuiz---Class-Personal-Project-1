@@ -27,8 +27,8 @@ angular.module('wildernessQuiz')
 			if(correctAnswers[i].isCorrect === 'correct'){
 				totalAnswers.push(correctAnswers[i]);
 			}
+			return totalCorrectAnwers = totalAnswers.length;
 		}
-		totalCorrectAnwers = totalAnswers.length;
 
 		if(totalCorrectAnwers <= 2){
 			feedback = 'You might want to think twice before heading out on the trail this summer.';
@@ -45,8 +45,6 @@ angular.module('wildernessQuiz')
 		if(totalCorrectAnwers >= 10){
 			feedback = 'Have you ever considered a career as a backcountry guide? Seriously, think about it. You\'re probably even ready to tackle some of the world\'s most dangerous hikes.';
 		 }
-		return feedback;
+	return feedback;
 	}	
-		return totalCorrectAnwers;
-	
 });

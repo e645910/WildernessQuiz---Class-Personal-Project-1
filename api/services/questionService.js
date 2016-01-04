@@ -58,8 +58,3 @@ module.exports.removeRecord = function(query){
 	});
 	return dfd.promise;
 };
-
-
-
-
-
