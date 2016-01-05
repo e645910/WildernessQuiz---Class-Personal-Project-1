@@ -1,19 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
 body{
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	background-color: #EDC9AF;
 	font-family: 'Exo', sans-serif;
 }
 
 /*--- imgage settings to resize as screen gets smaller---*/
-img {
+img{
   max-width: 100%;
 }
 
-input, textarea {
+input, textarea{
   max-width:100%;
 }
 
@@ -43,7 +40,7 @@ input, textarea {
 	color: #835C3B;
 	font-size: 40px;
 	font-size: 2.5vw;
-	font-weight: 250;
+	font-weight: 300;
 }
 
 .header div span{
@@ -57,9 +54,9 @@ input, textarea {
 	font-size: 1.5vw;
 	color: #008000;
 	background-color: #ffffff;
-    border: 1px solid black;
     opacity: 0.6;
     padding: 1%;
+    border: 1px solid black;
 }
 
 .login-container{
@@ -75,7 +72,6 @@ input, textarea {
 	width: 75%;
 	height: auto;
 	background: #F7F7F0;
-	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
 	font-size: 16px;
@@ -83,13 +79,13 @@ input, textarea {
 	font-weight: 400;
 	padding: 2%;
 	margin-top: 1%;
+	border: 1px solid #835C3B;
 }
 
 .login-container input[type=password]{
 	width: 75%;
 	height: auto;
 	background: #F7F7F0;
-	border: 1px solid #835C3B;
 	border-radius: 2px;
 	color: #3B6182;
 	font-size: 16px;
@@ -97,13 +93,13 @@ input, textarea {
 	font-weight: 400;
 	padding: 2%;
 	margin-top: 3%;
+	border: 1px solid #835C3B;
 }
 
 .login-container input[type=button]{
 	width: 75%;
 	height: auto;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -112,13 +108,13 @@ input, textarea {
 	font-weight: 400;
 	padding: 2%;
 	margin-top: 3%;
+	border: 1px solid #3B6182;
 }
 
 .login-btn {
 	width: 30%;
 	height: auto;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -127,6 +123,7 @@ input, textarea {
 	font-weight: 400;
 	padding: 2%;
 	margin-top: 3%;
+	border: 1px solid #3B6182;
 }
 
 .login-container button:hover{ 
@@ -182,7 +179,7 @@ input, textarea {
 	color: #835C3B;
 	font-size: 40px;
 	font-size: 2.5vw;
-	font-weight: 250;
+	font-weight: 300;
 }
 
 .navHeader div span{
@@ -279,7 +276,6 @@ input, textarea {
 	width: 50%;
 	height: auto;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -288,13 +284,13 @@ input, textarea {
 	font-weight: bold;
 	padding: 1%;
 	margin-top: 1%;
+	border: 1px solid #3B6182;
 }
 
 .question-btn {
 	width: 10%;
 	height: auto;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -303,6 +299,7 @@ input, textarea {
 	font-weight: bold;
 	padding: 1%;
 	margin-top: 1%;
+	border: 1px solid #3B6182;
 }
 
 .question button:hover{
@@ -337,7 +334,7 @@ input, textarea {
 	color: #835C3B;
 	font-size: 40px;
 	font-size: 2.5vw;
-	font-weight: 250;
+	font-weight: 300;
 }
 
 .quizHeader div span{
@@ -409,7 +406,6 @@ input, textarea {
 	width: 100px;
 	height: 35px;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -417,6 +413,7 @@ input, textarea {
 	font-size: 1.1vw;
 	font-weight: 400;
 	margin-top: 10px;
+	border: 1px solid #3B6182;
 }
 
 .quiz button:hover{ 
@@ -443,7 +440,7 @@ input, textarea {
 	color: #835C3B;
 	font-size: 40px;
 	font-size: 2.5vw;
-	font-weight: 250;
+	font-weight: 300;
 }
 
 .choicesHeader div span{
@@ -525,7 +522,6 @@ li strong{
 	width: 125px;
 	height: 35px;
 	background: #FFF;
-	border: 1px solid #3B6182;
 	cursor: pointer;
 	border-radius: 2px;
 	color: #835C3B;
@@ -535,6 +531,7 @@ li strong{
 	padding: 6px;
 	margin-top: 10px;
 	margin-bottom: 20px;
+	border: 1px solid #3B6182;
 }
 
 .choices input[type=button]:hover{ 
