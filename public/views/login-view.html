@@ -1,39 +1,41 @@
 <div class="loginBody">
-	<div class="header">
+    <div class="header">
 
-		<div>Wilderness Quiz Site:  <br><span>Test Your Wilderness Knowledge</span></div>
-		<br>
-		<p>To show authentication a user ID and password is required. The purpose of the email as a user ID is to have a common login format so feel free to create a fictitious login using an email format (i.e. d.q@gmail.com) and enjoy the quiz.</p>
-		<br>
-	</div>
+        <div>Wilderness Quiz Site:
+            <br><span>Test Your Wilderness Knowledge</span>
+        </div>
+        <br>
+        <p>To show authentication a user ID and password is required. The purpose of the email as a user ID is to have a common login format so feel free to create a fictitious login using an email format (i.e. d.q@gmail.com) and enjoy the quiz.</p>
+        <br>
+    </div>
 
-	<div class='login-container'>
-		<div class='login-auth'>
-			<div>
-				<input type="email" ng-model="email" placeholder="Use Email format for user ID" autofocus/>
-				<br>
-				<input type="password" ng-model="password" placeholder="Insert Password"/>
-			</div>
-			
-			<div ng-if="state == 'register'">
-				<button class="login-btn" ng-click="clickRegister()">Register</button>
-				<div id="loginLabel">Click here to: <a ng-click=changeState('login') class='loginLabel1'>login!</a>
-				</div>
-					<div class="error" ng-if="regError">
-						<br>
-						<p>Registration Failed, please enter your email address and a password!</p>
-					</div>				
-			</div>
+    <div class='login-container'>
+        <div class='login-auth'>
+            <div>
+                <input type="email" ng-model="email" placeholder="Use Email format for user ID" autofocus/>
+                <br>
+                <input type="password" ng-model="password" placeholder="Insert Password" />
+            </div>
 
-			<div ng-if="state == 'login'">
-				<button class="login-btn" ng-click="clickLogin()">Login</button>
-				<div class="loginLabel">First time users: <a ng-click="changeState('register')" class="loginLabel1">Click here to register.</a>
-				</div>
-					<div class="error" ng-if="loginError">
-						<br>
-						<p>Login failed, please register first or check your login info!</p>
-					</div>	
-			</div>
-		</div>
-	</div>
+            <div ng-if="state == 'register'">
+                <button class="login-btn" ng-click="clickRegister()">Register</button>
+                <div id="loginLabel">Click here to: <a ng-click=changeState( 'login') class='loginLabel1'>login!</a>
+                </div>
+                <div class="error" ng-if="regError">
+                    <br>
+                    <p>Registration Failed, please enter your email address and a password!</p>
+                </div>
+            </div>
+
+            <div ng-if="state == 'login'">
+                <button class="login-btn" ng-click="clickLogin()">Login</button>
+                <div class="loginLabel">First time users: <a ng-click="changeState('register')" class="loginLabel1">Click here to register.</a>
+                </div>
+                <div class="error" ng-if="loginError">
+                    <br>
+                    <p>Login failed, please register first or check your login info!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

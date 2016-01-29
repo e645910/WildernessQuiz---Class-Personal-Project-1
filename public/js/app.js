@@ -1,42 +1,38 @@
 angular.module('wildernessQuiz', ['ngRoute'])
-.config(function($routeProvider){
-    $routeProvider
-        .when('/',
-        {
-            templateUrl: 'views/login-view.html',
-            controller: 'authCtrl'
-        })
+    .config(function($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/login-view.html',
+                controller: 'authCtrl'
+            })
 
-        .when('/nav',
-        {
+        .when('/nav', {
             templateUrl: 'views/navBar-view.html',
             controller: 'navBarCtrl'
         })
 
-        .when('/question',
-        {
+        .when('/question', {
             templateUrl: 'views/question-view.html',
             controller: 'questionCtrl'
         })
 
-        .when('/quiz',
-        {
+        .when('/quiz', {
             templateUrl: 'views/quiz-view.html',
             controller: 'quizCtrl',
-            resolve:{
-                orderImages: function(quizService){
+            resolve: {
+                orderImages: function(quizService) {
                     return quizService.getQuiz();
                 }
             }
         })
 
-        .when('/userChoices',
-        {
+        .when('/userChoices', {
             templateUrl: 'views/userAnswer-view.html',
             controller: 'userCtrl'
         })
 
         .otherwise({
-            redirectTo: '/'});
+            redirectTo: '/'
+        });
 
     });
