@@ -4,15 +4,20 @@ body {
     background-color: #EDC9AF;
     font-family: 'Exo', sans-serif;
 }
+
+
 /*--- imgage settings to resize as screen gets smaller---*/
 
 img {
     max-width: 100%;
 }
+
 input,
 textarea {
     max-width: 100%;
 }
+
+
 /* -------------- login view ------------------ */
 
 .loginBody {
@@ -25,6 +30,7 @@ textarea {
     background-size: cover;
     z-index: 0;
 }
+
 .header {
     position: absolute;
     top: calc(10% - 1em);
@@ -32,6 +38,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .header div {
     float: left;
     color: #835C3B;
@@ -39,9 +46,11 @@ textarea {
     font-size: 2.5vw;
     font-weight: 300;
 }
+
 .header div span {
     color: #3B6182 !important;
 }
+
 .header p {
     margin-top: 7%;
     width: 50%;
@@ -53,6 +62,7 @@ textarea {
     padding: 1%;
     border: 1px solid black;
 }
+
 .login-container {
     position: fixed;
     top: calc(50% - 1em);
@@ -61,6 +71,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .login-container input[type=email] {
     width: 75%;
     height: auto;
@@ -74,6 +85,7 @@ textarea {
     margin-top: 1%;
     border: 1px solid #835C3B;
 }
+
 .login-container input[type=password] {
     width: 75%;
     height: auto;
@@ -87,6 +99,7 @@ textarea {
     margin-top: 3%;
     border: 1px solid #835C3B;
 }
+
 .login-container input[type=button] {
     width: 75%;
     height: auto;
@@ -101,6 +114,7 @@ textarea {
     margin-top: 3%;
     border: 1px solid #3B6182;
 }
+
 .login-btn {
     width: 30%;
     height: auto;
@@ -115,16 +129,19 @@ textarea {
     margin-top: 3%;
     border: 1px solid #3B6182;
 }
+
 .login-container button:hover {
     background: #FF0000;
     color: #000;
 }
+
 .loginLabel {
     color: #000;
     font-size: 18px;
     font-size: 1.2vw;
     font-weight: 500;
 }
+
 .loginLabel1 {
     text-decoration: underline;
     color: #0000FF;
@@ -133,11 +150,14 @@ textarea {
     font-size: 1.5vw;
     font-weight: 500;
 }
+
 .error {
     font-size: 30px;
     font-size: 2vw;
     color: #FF0000;
 }
+
+
 /* -------------- navBar view ----------------  */
 
 .navBody {
@@ -150,6 +170,7 @@ textarea {
     background-size: cover;
     z-index: 0;
 }
+
 .navHeader {
     position: fixed;
     top: calc(10% - 1em);
@@ -157,6 +178,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .navHeader div {
     float: left;
     color: #835C3B;
@@ -164,9 +186,11 @@ textarea {
     font-size: 2.5vw;
     font-weight: 300;
 }
+
 .navHeader div span {
     color: #3B6182 !important;
 }
+
 .navBar {
     position: fixed;
     top: calc(30% - 1em);
@@ -177,12 +201,14 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .navBar h1 {
     color: #000080;
     font-size: 25px;
     font-size: 1.8vw;
     font-weight: 500;
 }
+
 .navBar input[type=button] {
     background: #FFF;
     border: 1px solid #3B6182;
@@ -195,10 +221,13 @@ textarea {
     padding: 1%;
     margin-top: 3%;
 }
+
 .navBar input[type=button]:hover {
     background: #FF0000;
     color: #000;
 }
+
+
 /* ------- create question/answer view -------- */
 
 .questionBody {
@@ -211,6 +240,7 @@ textarea {
     background-size: cover;
     z-index: 0;
 }
+
 .questionHeader {
     position: absolute;
     top: calc(10% - 1em);
@@ -218,6 +248,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .questionHeader div {
     float: left;
     color: #835C3B;
@@ -225,9 +256,11 @@ textarea {
     font-size: 2.5vw;
     font-weight: 250;
 }
+
 .questionHeader div span {
     color: #3B6182 !important;
 }
+
 .question {
     position: absolute;
     top: calc(25% - 1em);
@@ -236,6 +269,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .question h2 {
     text-decoration: underline;
     color: #FF0000;
@@ -243,6 +277,7 @@ textarea {
     font-size: 1.5vw;
     font-weight: bold;
 }
+
 .question input[type=text] {
     width: 50%;
     height: auto;
@@ -257,6 +292,7 @@ textarea {
     margin-top: 1%;
     border: 1px solid #3B6182;
 }
+
 .question-btn {
     width: 10%;
     height: auto;
@@ -271,10 +307,13 @@ textarea {
     margin-top: 1%;
     border: 1px solid #3B6182;
 }
+
 .question button:hover {
     background: #FF0000;
     color: #000;
 }
+
+
 /* -------------- Quiz view ------------------- */
 
 .quizBody {
@@ -288,6 +327,7 @@ textarea {
     background-size: cover;
     z-index: 0;
 }
+
 .quizHeader {
     position: fixed;
     top: calc(10% - 1em);
@@ -295,6 +335,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .quizHeader div {
     float: left;
     color: #835C3B;
@@ -302,9 +343,11 @@ textarea {
     font-size: 2.5vw;
     font-weight: 300;
 }
+
 .quizHeader div span {
     color: #3B6182 !important;
 }
+
 .q {
     position: fixed;
     top: calc(38% - 1em);
@@ -315,6 +358,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .quizCounter {
     position: fixed;
     top: calc(30% - 1em);
@@ -323,6 +367,7 @@ textarea {
     font-size: 20px;
     font-size: 1.5vw;
 }
+
 .quizQuestion {
     position: fixed;
     top: calc(36% - 1em);
@@ -332,6 +377,7 @@ textarea {
     font-size: 1.5vw;
     font-weight: 500;
 }
+
 .quizQuestion img {
     position: fixed;
     top: calc(31% - 1em);
@@ -339,6 +385,7 @@ textarea {
     width: 20%;
     height: auto;
 }
+
 .quiz {
     position: fixed;
     top: calc(40% - 2em);
@@ -349,6 +396,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .quiz li {
     list-style-type: none;
     color: #000000;
@@ -357,6 +405,7 @@ textarea {
     font-weight: bold;
     padding: 1%;
 }
+
 .quiz-btn {
     position: fixed;
     top: calc(70% - 1em);
@@ -373,15 +422,19 @@ textarea {
     margin-top: 10px;
     border: 1px solid #3B6182;
 }
+
 .quiz button:hover {
     background: #FF0000;
     color: #000000;
 }
+
+
 /* ----------- Show user score & choices -------------- */
 
 .container {
     margin: 3%;
 }
+
 .choicesHeader {
     position: absolute;
     top: calc(10% - 1em);
@@ -389,6 +442,7 @@ textarea {
     font-weight: bold;
     z-index: 2;
 }
+
 .choicesHeader div {
     float: left;
     color: #835C3B;
@@ -396,9 +450,11 @@ textarea {
     font-size: 2.5vw;
     font-weight: 300;
 }
+
 .choicesHeader div span {
     color: #3B6182 !important;
 }
+
 .choicesScore {
     position: absolute;
     top: calc(22% - 1em);
@@ -408,6 +464,7 @@ textarea {
     font-size: 2vw;
     font-weight: bold;
 }
+
 .choiceFeedback {
     position: absolute;
     top: calc(35% - 1em);
@@ -420,6 +477,7 @@ textarea {
     color: #FF0000;
     background-color: #E5E4E2;
 }
+
 .choices h1 {
     position: relative;
     top: calc(30% - 1em);
@@ -429,16 +487,19 @@ textarea {
     font-size: 25px;
     font-size: 1.6vw;
 }
+
 .choices {
     position: absolute;
     padding: 20px;
     top: calc(40% - 1em);
     left: calc(20% - 1em);
 }
+
 .reviewChoices li {
     list-style-type: none;
     padding: 10px;
 }
+
 .choicesCorrect {
     list-style-type: none;
     font-size: 20px;
@@ -446,11 +507,13 @@ textarea {
     color: #000080;
     font-weight: bold;
 }
+
 li strong {
     font-size: 20px;
     font-size: 1.5VW;
     padding-right: 10px;
 }
+
 .choicesSupportData {
     width: 800px;
     margin-top: 1em;
@@ -460,6 +523,7 @@ li strong {
     font-size: 1.2vw;
     font-weight: bold;
 }
+
 .choices-btn {
     position: absolute;
     left: calc(80% - 1em);
@@ -477,6 +541,7 @@ li strong {
     margin-bottom: 20px;
     border: 1px solid #3B6182;
 }
+
 .choices input[type=button]:hover {
     background: #FF0000;
     color: #000;
