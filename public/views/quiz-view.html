@@ -1,28 +1,24 @@
 <div class="quizBody">
     <div class="quizHeader">
-
-        <div>Wilderness Quiz Site:
-            <br><span>Test Your Backpacking Knowledge</span>
+        <div>
+            Wilderness Quiz Site:
+            <br>
+            <span>Test Your Backpacking Knowledge</span>
         </div>
     </div>
-
     <div class="quizCounter">
         QUESTION {{currentQuestionNumber}} OF {{totalQuestions.length}}
     </div>
-
     <div class="q">Q:</div>
-
-    <div class="quizQuestion" type="text">{{currentQuestion.question}}
-        <img src="{{currentQuestion.image}}">
-    </div>
-
+    <div class="quizQuestion" type="text">
+        {{currentQuestion.question}}
+        <img src="{{currentQuestion.image}}"></div>
     <div class="quiz">
         <ul>
             <li ng-repeat="choice in currentQuestion.choices">
                 <input type="radio" name="choiceString" ng-click="setAnswerValues(choice.choiceString, choice.correct)" /> {{choice.choiceString}}
             </li>
         </ul>
-
         <button class="quiz-btn" ng-click="nextQuestion()" ng-show="showNextButton">Next</button>
     </div>
 </div>

@@ -1,33 +1,29 @@
 <div class="choicesHeader">
-    <div>Wilderness Quiz Site:
-        <br><span>Test Your Backpacking Knowledge</span>
+    <div>
+        Wilderness Quiz Site:
+        <br>
+        <span>Test Your Backpacking Knowledge</span>
     </div>
 </div>
-
-<div class="choicesScore">
-    Your Score Is: {{totalAnwers}} Out of {{selections.length}}
-</div>
-
-<div class="choiceFeedback">
-    {{feedback}}
-</div>
-
+<div class="choicesScore">Your Score Is: {{totalAnwers}} Out of {{selections.length}}</div>
+<div class="choiceFeedback">{{feedback}}</div>
 <div class="choices">
     <br>
     <h1>Answer Summary:</h1>
     <ul class="reviewChoices" ng-repeat="select in selections">
         <li class="choicesCorrect">{{$index + 1}}. {{select.isCorrect | uppercase}}</li>
         <ul>
-            <li><strong>The question was:</strong>{{select.question}}</li>
-
+            <li> <strong>The question was:</strong> {{select.question}}
+            </li>
             <div ng-model="select.isCorrect" ng-hide="select.isCorrect == 'correct'">
-                <li><strong>Correct Answer:</strong>{{select.answer}}</li>
+                <li> <strong>Correct Answer:</strong> {{select.answer}}
+                </li>
             </div>
-
-            <li><strong>You Selected:</strong>{{select.selectedAnswer}}</li>
+            <li>
+                <strong>You Selected:</strong> {{select.selectedAnswer}}
+            </li>
             <li class="choicesSupportData">{{select.supportData}}</li>
         </ul>
     </ul>
-
     <input class="choices-btn" type="button" value="Retake Quiz" ng-click="retakeTestClick()" />
 </div>
