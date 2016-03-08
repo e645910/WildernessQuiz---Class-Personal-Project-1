@@ -84,4 +84,10 @@ angular.module('wildernessQuiz')
             questionService.removeRecord($scope._id);
             questionService.getNextQA();
         };
+
+        //==================== * back button * ============================
+
+        $scope.go = function ( path ) {
+            $location.path( path );
+};
     });
