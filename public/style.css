@@ -308,10 +308,18 @@ textarea {
     border: 1px solid #3B6182;
 }
 
+.question-back-btn {
+    position: relative;
+    right: 10%
+    bottom: 10%;
+}
+
 .question button:hover {
     background: #FF0000;
     color: #000;
 }
+
+
 
 
 /* -------------- Quiz view ------------------- */
