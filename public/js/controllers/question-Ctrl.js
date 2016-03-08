@@ -1,5 +1,5 @@
 angular.module('wildernessQuiz')
-    .controller('questionCtrl', function($scope, questionService) {
+    .controller('questionCtrl', function($scope, $location, questionService) {
         $scope.showNextBtn = false;
         $scope.showSaveBtn = false;
 
