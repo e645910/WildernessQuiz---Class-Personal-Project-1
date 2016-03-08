@@ -88,6 +88,6 @@ angular.module('wildernessQuiz')
         //==================== * back button * ============================
 
         $scope.goBack = function (path) {
-            $location.path('/views/nav.html');
+            $location.path('/nav');
             };
     });
