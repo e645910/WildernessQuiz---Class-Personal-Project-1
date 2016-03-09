@@ -1,7 +1,7 @@
 body {
     width: 0;
     height: 0;
-    background-color: #EDC9AF;
+    background: #EDC9AF;
     font-family: 'Exo', sans-serif;
 }
 
@@ -26,7 +26,7 @@ textarea {
     left: -20px;
     right: -40px;
     bottom: -40px;
-    background-image: url("./img/login.jpg");
+    background: url("./img/login.jpg");
     background-size: cover;
     z-index: 0;
 }
@@ -57,7 +57,7 @@ textarea {
     font-size: 20px;
     font-size: 1.5vw;
     color: #008000;
-    background-color: #ffffff;
+    background: #ffffff;
     opacity: 0.6;
     padding: 1%;
     border: 1px solid black;
@@ -166,7 +166,7 @@ textarea {
     left: -20px;
     right: -40px;
     bottom: -40px;
-    background-image: url("./img/navBar.jpg");
+    background: url("./img/navBar.jpg");
     background-size: cover;
     z-index: 0;
 }
@@ -331,7 +331,7 @@ textarea {
     right: -40px;
     bottom: -40px;
     padding: 3%;
-    background-image: url("./img/quiz.jpg");
+    background: url("./img/quiz.jpg");
     background-size: cover;
     z-index: 0;
 }
@@ -483,7 +483,7 @@ textarea {
     height: auto;
     margin-bottom: 1%;
     color: #FF0000;
-    background-color: #E5E4E2;
+    background: #E5E4E2;
 }
 
 .choices h1 {
@@ -526,7 +526,7 @@ li strong {
     width: 800px;
     margin-top: 1em;
     color: #835C3B;
-    background-color: #E5E4E2;
+    background: #E5E4E2;
     font-size: 18px;
     font-size: 1.2vw;
     font-weight: bold;
